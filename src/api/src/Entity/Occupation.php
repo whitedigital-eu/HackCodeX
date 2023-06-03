@@ -3,11 +3,13 @@
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\NotExposed;
 use App\Repository\OccupationRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: OccupationRepository::class)]
 #[ApiResource]
+#[NotExposed]
 class Occupation
 {
     #[ORM\Id]

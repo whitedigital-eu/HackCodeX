@@ -3,11 +3,13 @@
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\NotExposed;
 use App\Repository\FormRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: FormRepository::class)]
 #[ApiResource]
+#[NotExposed]
 class Form
 {
     #[ORM\Id]
