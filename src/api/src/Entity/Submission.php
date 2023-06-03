@@ -1,18 +1,25 @@
-<?php declare(strict_types = 1);
+<?php
 
 namespace App\Entity;
 
-use App\Enums\RespondentTypeEnum;
-use App\Repository\RespondentRepository;
+use ApiPlatform\Metadata\ApiResource;
+use App\Enums\SubmissionTypeEnum;
+use App\Repository\SubmissionRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: RespondentRepository::class)]
-class Respondent
+#[ORM\Entity(repositoryClass: SubmissionRepository::class)]
+#[ApiResource]
+class Submission
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
+
+    #[ORM\Column(type: 'string', enumType: SubmissionTypeEnum::class)]
+    private ?SubmissionTypeEnum $type = null;
 
     #[ORM\Column]
     private ?int $pragmatic = null;
@@ -86,54 +93,62 @@ class Respondent
     #[ORM\Column]
     private ?int $control = null;
 
-    #[ORM\Column(type: 'string', enumType: RespondentTypeEnum::class)]
-    private ?RespondentTypeEnum $type = null;
-
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $languages = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $sport = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $math = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $physics = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $geography = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $chemistry = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $computers = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $music = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $crafts = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $religion = null;
 
-    #[ORM\Column(nullable: true)]
+    #[ORM\Column]
     private ?int $art = null;
 
-    #[ORM\ManyToOne]
-    private ?Form $form = null;
+    #[ORM\OneToMany(mappedBy: 'submission', targetEntity: SubmissionResult::class, orphanRemoval: true)]
+    private Collection $submissionResults;
 
-    #[ORM\ManyToOne]
-    private ?Occupation $occupation = null;
-
-    #[ORM\ManyToOne]
-    private ?UniversityProgram $universityProgram = null;
+    public function __construct()
+    {
+        $this->submissionResults = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getType(): ?SubmissionTypeEnum
+    {
+        return $this->type;
+    }
+
+    public function setType(SubmissionTypeEnum $type): static
+    {
+        $this->type = $type;
+
+        return $this;
     }
 
     public function getPragmatic(): ?int
@@ -424,24 +439,12 @@ class Respondent
         return $this;
     }
 
-    public function getType(): ?RespondentTypeEnum
-    {
-        return $this->type;
-    }
-
-    public function setType(RespondentTypeEnum $type): static
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
     public function getLanguages(): ?int
     {
         return $this->languages;
     }
 
-    public function setLanguages(?int $languages): static
+    public function setLanguages(int $languages): static
     {
         $this->languages = $languages;
 
@@ -453,7 +456,7 @@ class Respondent
         return $this->sport;
     }
 
-    public function setSport(?int $sport): static
+    public function setSport(int $sport): static
     {
         $this->sport = $sport;
 
@@ -465,7 +468,7 @@ class Respondent
         return $this->math;
     }
 
-    public function setMath(?int $math): static
+    public function setMath(int $math): static
     {
         $this->math = $math;
 
@@ -477,7 +480,7 @@ class Respondent
         return $this->physics;
     }
 
-    public function setPhysics(?int $physics): static
+    public function setPhysics(int $physics): static
     {
         $this->physics = $physics;
 
@@ -489,7 +492,7 @@ class Respondent
         return $this->geography;
     }
 
-    public function setGeography(?int $geography): static
+    public function setGeography(int $geography): static
     {
         $this->geography = $geography;
 
@@ -501,7 +504,7 @@ class Respondent
         return $this->chemistry;
     }
 
-    public function setChemistry(?int $chemistry): static
+    public function setChemistry(int $chemistry): static
     {
         $this->chemistry = $chemistry;
 
@@ -513,7 +516,7 @@ class Respondent
         return $this->computers;
     }
 
-    public function setComputers(?int $computers): static
+    public function setComputers(int $computers): static
     {
         $this->computers = $computers;
 
@@ -525,7 +528,7 @@ class Respondent
         return $this->music;
     }
 
-    public function setMusic(?int $music): static
+    public function setMusic(int $music): static
     {
         $this->music = $music;
 
@@ -537,7 +540,7 @@ class Respondent
         return $this->crafts;
     }
 
-    public function setCrafts(?int $crafts): static
+    public function setCrafts(int $crafts): static
     {
         $this->crafts = $crafts;
 
@@ -549,7 +552,7 @@ class Respondent
         return $this->religion;
     }
 
-    public function setReligion(?int $religion): static
+    public function setReligion(int $religion): static
     {
         $this->religion = $religion;
 
@@ -561,45 +564,39 @@ class Respondent
         return $this->art;
     }
 
-    public function setArt(?int $art): static
+    public function setArt(int $art): static
     {
         $this->art = $art;
 
         return $this;
     }
 
-    public function getForm(): ?Form
+    /**
+     * @return Collection<int, SubmissionResult>
+     */
+    public function getSubmissionResults(): Collection
     {
-        return $this->form;
+        return $this->submissionResults;
     }
 
-    public function setForm(?Form $form): static
+    public function addSubmissionResult(SubmissionResult $submissionResult): static
     {
-        $this->form = $form;
+        if (!$this->submissionResults->contains($submissionResult)) {
+            $this->submissionResults->add($submissionResult);
+            $submissionResult->setSubmission($this);
+        }
 
         return $this;
     }
 
-    public function getOccupation(): ?Occupation
+    public function removeSubmissionResult(SubmissionResult $submissionResult): static
     {
-        return $this->occupation;
-    }
-
-    public function setOccupation(?Occupation $occupation): static
-    {
-        $this->occupation = $occupation;
-
-        return $this;
-    }
-
-    public function getUniversityProgram(): ?UniversityProgram
-    {
-        return $this->universityProgram;
-    }
-
-    public function setUniversityProgram(?UniversityProgram $universityProgram): static
-    {
-        $this->universityProgram = $universityProgram;
+        if ($this->submissionResults->removeElement($submissionResult)) {
+            // set the owning side to null (unless already changed)
+            if ($submissionResult->getSubmission() === $this) {
+                $submissionResult->setSubmission(null);
+            }
+        }
 
         return $this;
     }
