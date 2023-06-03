@@ -63,3 +63,17 @@ services:
         mem_limit: 2g
         environment:
             NODE_OPTIONS: "--max-old-space-size=1536"
+
+    pgsql:
+        image: postgres:15.3-bullseye
+        container_name: ${PROJECT}pgsql
+        tmpfs: /tmp
+        networks:
+            - backend
+        volumes:
+            - ./pgsql_data:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_USER: hackcodex
+            POSTGRES_PASSWORD: hackcodex2023
