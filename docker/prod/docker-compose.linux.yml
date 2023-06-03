@@ -1,0 +1,83 @@
+networks:
+
+    backend:
+        name: backend
+
+    frontend:
+        name: frontend
+
+services:
+
+    php:
+        image: ghcr.io/960018/php-fpm:testing-amd64
+        container_name: ${PROJECT}php
+        networks:
+            - backend
+        volumes:
+            - ../../src:/var/www/html
+        tmpfs: /tmp
+        shm_size: 4gb
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        working_dir: /var/www/html/api
+        mem_limit: 1g
+        environment:
+            XDEBUG_CONFIG: "idekey=PHPSTORM"
+            PHP_IDE_CONFIG: "serverName=${DOMAIN}"
+
+    nginx:
+        image: ghcr.io/960018/nginx:amd64
+        networks:
+            - backend
+            - frontend
+        volumes:
+            - ../../src:/var/www/html
+            - ./conf.d:/etc/nginx/conf.d
+            - ./certs:/etc/ssl/private
+        labels:
+            - "traefik.enable=true"
+            - "traefik.docker.network=frontend"
+            - "traefik.http.routers.${PROJECT}nginx.rule=Host(`${DOMAIN}`)"
+            - "traefik.http.routers.${PROJECT}nginx.entrypoints=https"
+            - "traefik.udp.routers.${PROJECT}nginx.entrypoints=http3"
+            - "traefik.http.routers.${PROJECT}nginx.tls=true"
+            - "traefik.http.services.${PROJECT}nginx.loadbalancer.server.scheme=https"
+            - "traefik.http.services.${PROJECT}nginx.loadbalancer.server.port=443"
+        tmpfs: /tmp
+        shm_size: 4gb
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        working_dir: /var/www/html
+        mem_limit: 64m
+        ports:
+            - "80:80"
+            - "443:443"
+    node:
+        image: ghcr.io/960018/node:amd64
+        container_name: ${PROJECT}node
+        networks:
+            - backend
+        volumes:
+            - ../../src:/var/www/html
+            - ./certs:/etc/ssl/private
+        working_dir: /var/www/html/portal
+        tty: true
+        mem_limit: 2g
+        environment:
+            NODE_OPTIONS: "--max-old-space-size=1536"
+        ports:
+            - "8000:8000"
+
+    pgsql:
+        image: postgres:15.3-bullseye
+        container_name: ${PROJECT}pgsql
+        tmpfs: /tmp
+        networks:
+            - backend
+        volumes:
+            - ./pgsql_data:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_USER: hackcodex
+            POSTGRES_PASSWORD: hackcodex2023
