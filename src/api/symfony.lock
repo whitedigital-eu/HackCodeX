@@ -61,18 +61,6 @@
             "tests/bootstrap.php"
         ]
     },
-    "snc/redis-bundle": {
-        "version": "3.9999999",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "main",
-            "version": "2.0",
-            "ref": "36b3d9ab65be62de4e085a25e6ca899efa96b1f3"
-        },
-        "files": [
-            "config/packages/snc_redis.yaml"
-        ]
-    },
     "symfony/console": {
         "version": "6.3",
         "recipe": {
@@ -86,7 +74,7 @@
         ]
     },
     "symfony/debug-bundle": {
-        "version": "6.4",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -98,7 +86,7 @@
         ]
     },
     "symfony/flex": {
-        "version": "2.3",
+        "version": "2.9999999",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -138,7 +126,7 @@
         }
     },
     "symfony/messenger": {
-        "version": "6.4",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -190,7 +178,7 @@
         ]
     },
     "symfony/security-bundle": {
-        "version": "6.4",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -202,7 +190,7 @@
         ]
     },
     "symfony/translation": {
-        "version": "6.4",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -215,7 +203,7 @@
         ]
     },
     "symfony/twig-bundle": {
-        "version": "6.4",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -228,7 +216,7 @@
         ]
     },
     "symfony/uid": {
-        "version": "6.4",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -240,7 +228,7 @@
         ]
     },
     "symfony/validator": {
-        "version": "6.4",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -252,7 +240,7 @@
         ]
     },
     "symfony/web-profiler-bundle": {
-        "version": "6.4",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
