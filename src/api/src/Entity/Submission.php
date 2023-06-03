@@ -4,13 +4,14 @@ namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
 use App\Enums\SubmissionTypeEnum;
+use App\Processors\SubmissionProcessor;
 use App\Repository\SubmissionRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: SubmissionRepository::class)]
-#[ApiResource]
+#[ApiResource(processor: SubmissionProcessor::class)]
 class Submission
 {
     #[ORM\Id]
@@ -18,7 +19,7 @@ class Submission
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: 'string', enumType: SubmissionTypeEnum::class)]
+    #[ORM\Column(type: 'string', nullable: false, enumType: SubmissionTypeEnum::class)]
     private ?SubmissionTypeEnum $type = null;
 
     #[ORM\Column]

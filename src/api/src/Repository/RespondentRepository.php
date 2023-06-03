@@ -1,10 +1,14 @@
-<?php declare(strict_types = 1);
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
 use App\Entity\Respondent;
+use App\Entity\Submission;
+use App\Enums\SubmissionTypeEnum;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\Persistence\ManagerRegistry;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\expr;
 
 /**
  * @extends ServiceEntityRepository<Respondent>
@@ -39,28 +43,46 @@ class RespondentRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Respondent[] Returns an array of Respondent objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('r')
-//            ->andWhere('r.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('r.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    public function findRespondentsOrderedBySimilair(Submission $submission): Paginator
+    {
+        $formNumbers = $submission->getType() === SubmissionTypeEnum::Form6th ? [7, 8, 9] : [10, 11, 12];
+        $qb = $this->createQueryBuilder('r');
+        $orderArray = [
+            "ABS(r.pragmatic - :pragmatic)",
+            "ABS(r.domestic - :domestic)",
+//            "ABS(r.traditional - {$submission->getTraditional()})",
+//            "ABS(r.peaceful - {$submission->getPeaceful()})",
+//            "ABS(r.caring - {$submission->getCaring()})",
+//            "ABS(r.tolerant - {$submission->getTolerant()})",
+//            "ABS(r.contemplative - {$submission->getContemplative()})",
+//            "ABS(r.inquisitive - {$submission->getInquisitive()})",
+//            "ABS(r.experimental - {$submission->getExperimental()})",
+//            "ABS(r.maximalist - {$submission->getMaximalist()})",
+//            "ABS(r.dominant - {$submission->getDominant()})",
+//            "ABS(r.ambitious - {$submission->getAmbitious()})",
+//            "ABS(r.tangible - {$submission->getTangible()})",
+//            "ABS(r.intangible - {$submission->getIntangible()})",
+//            "ABS(r.relationships - {$submission->getRelationships()})",
+//            "ABS(r.identity - {$submission->getIdentity()})",
+//            "ABS(r.retention - {$submission->getRetention()})",
+//            "ABS(r.discovery - {$submission->getDiscovery()})",
+//            "ABS(r.others - {$submission->getOthers()})",
+//            "ABS(r.self - {$submission->getSelf()})",
+//            "ABS(r.safety - {$submission->getSafety()})",
+//            "ABS(r.confidence - {$submission->getConfidence()})",
+//            "ABS(r.concord - {$submission->getConcord()})",
+//            "ABS(r.control - {$submission->getControl()})",
+        ];
+        $query = $qb->addSelect('f')->innerJoin('r.form', 'f', 'WITH', 'f.formNumber IN (:formNumbers)')
+            ->setParameters([
+                'formNumbers' => $formNumbers,
+                'pragmatic' => $submission->getPragmatic(),
+                'domestic' => $submission->getDomestic(),
+            ])
+            ->orderBy(implode(' + ', $orderArray), 'ASC')
+            ->getQuery()->setFirstResult(0)
+            ->setMaxResults(2000);
 
-//    public function findOneBySomeField($value): ?Respondent
-//    {
-//        return $this->createQueryBuilder('r')
-//            ->andWhere('r.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+        return new Paginator($query);
+    }
 }
