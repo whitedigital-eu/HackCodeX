@@ -38,7 +38,6 @@
         "symfony/framework-bundle": "*",
         "symfony/runtime": "*",
         "symfony/yaml": "*",
-        "k0d3r1s/package-recipe": "dev-master",
         "monolog/monolog": "*",
         "ocramius/package-versions": "*",
         "predis/predis": "dev-main",
