@@ -5,6 +5,8 @@ const survey = useSurvey();
 
 import Card from "../components/survey/Card.vue";
 import type {Choice} from "../interfaces/survey/Choice";
+import {SurveyState} from "../mixins/Survey";
+import SliderQuiz from "../components/survey/SliderQuiz.vue";
 
 const cardSelected = (choice: Choice) => {
   survey.getSurvey().addChoice(choice)
@@ -14,18 +16,21 @@ const cardSelected = (choice: Choice) => {
 <template>
   <main>
     {{ survey.getSurvey().attribute_summary }}
-    <div class="chooser">
+    <div v-if="survey.getSurvey().state === SurveyState.PICTURE_QUIZ" class="container">
       <Card v-for="(choice, index) in survey.getSurvey().getCurrentPictureQuizQuestion().choices"
             :image="choice.image"
             :class="{'second': index === 1}"
             @cardSelected="cardSelected(choice)"
       />
     </div>
+    <div v-else-if="survey.getSurvey().state === SurveyState.SLIDER_QUIZ" class="container">
+      <SliderQuiz :survey="survey.getSurvey()" />
+    </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-.chooser {
+.container {
   display: flex;
   flex-wrap: nowrap;
   height: calc(100vh - 75px);

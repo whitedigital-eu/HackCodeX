@@ -1,5 +1,6 @@
 import type {Choice, ChoiceAttribute, Choices} from "../interfaces/survey/Choice";
 import {test_part_1} from "../assets/data/quetions";
+import type {Subjects} from "../interfaces/survey/Subjects";
 
 export enum SurveyState {
     PICTURE_QUIZ,
@@ -34,6 +35,20 @@ export class Survey {
         concord: 0,
         control: 0,
     };
+    
+    public subjects: Subjects = {
+        languages: 0,
+        sport: 0,
+        math: 0,
+        physics: 0,
+        geography: 0,
+        chemistry: 0,
+        computers: 0,
+        music: 0,
+        crafts: 0,
+        religion: 0,
+        art: 0,
+    }
     constructor() {
 
     }
@@ -46,12 +61,13 @@ export class Survey {
         let $this = this;
         Object.keys(choice.attributes).forEach((item) => {
             // @ts-ignore
-            $this.attribute_summary[item] += choice[item]
-
-            // @ts-ignore
-            console.log($this.attribute_summary[item], choice[item], item)
+            $this.attribute_summary[item] += choice.attributes[item]
         });
         this.picture_index++;
+
+        if (test_part_1.length <= this.picture_index) {
+            this.setState(SurveyState.SLIDER_QUIZ);
+        }
     }
 
     getCurrentPictureQuizQuestion(): Choices {
