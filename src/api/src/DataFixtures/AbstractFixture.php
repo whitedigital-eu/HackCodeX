@@ -22,4 +22,9 @@ abstract class AbstractFixture extends Fixture
     {
         return (new Randomizer())->pickArrayKeys(array: $array, num: 1)[0];
     }
+
+    protected function getEntity(string $fixture): ?object
+    {
+        return $this->getReference($fixture::$references[$fixture][$this->randomArrayKey($fixture::$references[$fixture])]);
+    }
 }

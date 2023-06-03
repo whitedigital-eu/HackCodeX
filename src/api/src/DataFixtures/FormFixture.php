@@ -20,21 +20,27 @@ class FormFixture extends AbstractFixture implements FixtureGroupInterface
     {
         $path = dirname(__DIR__, 2) . '/resources/schools.json';
         $data = json_decode(file_get_contents($path), true);
+        $a = -1;
         foreach ($data['Sheet1'] as $item) {
-            for ($i = 7; $i <= 12; $i++) {
-                if ('0' !== $item[sprintf('%d. klase', $i)]) {
-                    for ($j = 0; $j < random_int(1, 4); $j++) {
-                        $fixture = (new Form())
-                            ->setFormNumber($i)
-                            ->setSchool($item['Iestādes nosaukums'])
-                            ->setFormLetter(self::LETTERS[$j]);
-                        $manager->persist($fixture);
+            if ('RĪGA' === $item['Pašvaldība']) {
+                for ($i = 7; $i <= 12; $i++) {
+                    if ('0' !== $item[sprintf('%d. klase', $i)]) {
+                        for ($j = 0; $j < random_int(1, 4); $j++) {
+                            $a++;
+                            $fixture = (new Form())
+                                ->setFormNumber($i)
+                                ->setSchool($item['Iestādes nosaukums'])
+                                ->setFormLetter(self::LETTERS[$j]);
+                            $manager->persist($fixture);
+                            $manager->flush();
+
+                            $this->addReference('form' . $a, $fixture);
+                            self::$references[self::class][] = 'form' . $a;
+                        }
                     }
                 }
             }
         }
-
-        $manager->flush();
     }
 
     public static function getGroups(): array

@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Enums\RespondentTypeEnum;
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\RespondentRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -86,9 +86,6 @@ class Respondent
     #[ORM\Column]
     private ?int $control = null;
 
-    #[ORM\Column(type: 'string', enumType: RespondentTypeEnum::class)]
-    private ?RespondentTypeEnum $type = null;
-
     #[ORM\Column(nullable: true)]
     private ?int $languages = null;
 
@@ -123,12 +120,15 @@ class Respondent
     private ?int $art = null;
 
     #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: true)]
     private ?Form $form = null;
 
     #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: true)]
     private ?Occupation $occupation = null;
 
     #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: true)]
     private ?UniversityProgram $universityProgram = null;
 
     public function getId(): ?int
@@ -420,18 +420,6 @@ class Respondent
     public function setControl(int $control): static
     {
         $this->control = $control;
-
-        return $this;
-    }
-
-    public function getType(): ?RespondentTypeEnum
-    {
-        return $this->type;
-    }
-
-    public function setType(RespondentTypeEnum $type): static
-    {
-        $this->type = $type;
 
         return $this;
     }

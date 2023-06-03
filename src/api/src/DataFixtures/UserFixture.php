@@ -18,10 +18,7 @@ class UserFixture extends AbstractFixture implements FixtureGroupInterface
     public function load(ObjectManager $manager): void
     {
         $emails = [
-            'info@whitedigital.eu' => ['roles' => [Role::ROLE_ADMIN->value, ], ],
-            'davis.zalitis@whitedigital.eu' => ['roles' => [Role::ROLE_ADMIN->value, ], ],
-            'imants.liepins@whitedigital.eu' => ['roles' => [Role::ROLE_ADMIN->value, ], ],
-            'andis.cirulis@whitedigital.eu' => ['roles' => [Role::ROLE_ADMIN->value, ], ],
+            'hack@whitedigital.eu' => ['roles' => [Role::ROLE_ADMIN->value, ], ],
         ];
 
         $i = 0;
@@ -29,7 +26,7 @@ class UserFixture extends AbstractFixture implements FixtureGroupInterface
             $fixture = new User();
             $fixture
                 ->setEmail($email)
-                ->setPassword($this->userPasswordHasher->hashPassword($fixture, $data['password'] ?? 'secret'))
+                ->setPassword($this->userPasswordHasher->hashPassword($fixture, $data['password'] ?? 'parole'))
                 ->setRoles($data['roles'])
                 ->setIsActive(true);
 
