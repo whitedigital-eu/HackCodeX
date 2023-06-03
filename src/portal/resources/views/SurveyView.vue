@@ -15,7 +15,6 @@ const cardSelected = (choice: Choice) => {
 
 <template>
   <main>
-    {{ survey.getSurvey().attribute_summary }}
     <div v-if="survey.getSurvey().state === SurveyState.PICTURE_QUIZ" class="container">
       <Card v-for="(choice, index) in survey.getSurvey().getCurrentPictureQuizQuestion().choices"
             :image="choice.image"
@@ -23,7 +22,7 @@ const cardSelected = (choice: Choice) => {
             @cardSelected="cardSelected(choice)"
       />
     </div>
-    <div v-else-if="survey.getSurvey().state === SurveyState.SLIDER_QUIZ" class="container">
+    <div v-else-if="survey.getSurvey().state === SurveyState.SLIDER_QUIZ">
       <SliderQuiz :survey="survey.getSurvey()" />
     </div>
   </main>

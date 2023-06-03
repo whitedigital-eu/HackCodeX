@@ -37,17 +37,17 @@ export class Survey {
     };
     
     public subjects: Subjects = {
-        languages: 0,
-        sport: 0,
-        math: 0,
-        physics: 0,
-        geography: 0,
-        chemistry: 0,
-        computers: 0,
-        music: 0,
-        crafts: 0,
-        religion: 0,
-        art: 0,
+        languages: 4,
+        sport: 4,
+        math: 4,
+        physics: 4,
+        geography: 4,
+        chemistry: 4,
+        computers: 4,
+        music: 4,
+        crafts: 4,
+        religion: 4,
+        art: 4,
     }
     constructor() {
 
@@ -55,6 +55,11 @@ export class Survey {
 
     setState(state: SurveyState) {
         this.state = state;
+    }
+
+    setSubjectValue(subject: string, value: number) {
+        // @ts-ignore
+        this.subjects[subject] =  parseInt(value);
     }
 
     addChoice(choice: Choice) {

@@ -12,7 +12,7 @@ const emit = defineEmits(["cardSelected"])
 <template>
   <div class="card">
     <img alt="option image" :src="image" />
-    <button @click="emit('cardSelected')">
+    <button @click="emit('cardSelected')" class="btn">
       <icon-thumbs-up />
     </button>
   </div>
@@ -34,27 +34,6 @@ const emit = defineEmits(["cardSelected"])
     margin: 0 60px;
     width: 80%;
     max-height: 50%;
-  }
-
-  button {
-    width: 80%;
-    background: transparent;
-    padding: 10px 0;
-    border-radius: 200px;
-    color: #fff;
-    border: 3px solid var(--primary);
-    background-image: -webkit-linear-gradient(30deg, var(--primary) 50%, transparent 50%);
-    background-image: linear-gradient(30deg, var(--primary) 50%, transparent 50%);
-    background-size: 300%;
-    background-repeat: no-repeat;
-    background-position: 0;
-    -webkit-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out;
-
-    &:hover {
-      background-position: 100%;
-      color: var(--primary);
-    }
   }
 
   &.second {

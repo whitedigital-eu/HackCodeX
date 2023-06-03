@@ -2,6 +2,9 @@
 
 import {Survey} from "../../mixins/Survey";
 import SubjectPropery from "./SubjectPropery.vue";
+import IconThumbsUp from "../icons/IconThumbsUp.vue";
+
+const emit = defineEmits(["finish"])
 
 const props = defineProps({
   survey: Survey
@@ -15,7 +18,13 @@ const props = defineProps({
       Lorem ipsum dolor sit amet consectetur. Tortor viverra dignissim porttitor lectus lacus duis urna. Orci id feugiat quisque eu turpis.
     </div>
     <div class="subjects">
-      <SubjectPropery v-for="subject in Object.keys(survey?.subjects)" :subject="subject" />
+      <SubjectPropery v-for="subject in Object.keys(survey?.subjects)" :survey="survey" :subject="subject" />
+    </div>
+
+    <div class="finish">
+      <button @click="emit('finish')" class="btn">
+        Nākamais solis
+      </button>
     </div>
   </div>
 </template>
@@ -41,6 +50,12 @@ const props = defineProps({
       max-width: 500px;
       padding: 0 20px;
 
+    }
+
+    .finish {
+      margin: 0 auto 50px;
+      max-width: 400px;
+      text-align: center;
     }
   }
 </style>
