@@ -1,6 +1,11 @@
 @import './base.css';
 @import url('https://fonts.cdnfonts.com/css/inter');
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-weight: normal;
   font-family: Inter;

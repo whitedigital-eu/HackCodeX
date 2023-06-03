@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type {MenuInterface} from "../../interfaces/menu/MenuInterface";
+import type {MenuInterface} from "@/interfaces/menu/MenuInterface";
 
 const topMenu = ref<MenuInterface[]>([
   {
@@ -20,6 +20,9 @@ const topMenu = ref<MenuInterface[]>([
 
 <template>
   <div class="top-bar">
+    <div class="user">
+      <img src="@/assets/images/profile.png" />
+    </div>
     <div class="menu">
       <router-link v-for="item in topMenu" active-class="active" :to="item.location">{{ item.label}}</router-link>
     </div>
@@ -28,6 +31,20 @@ const topMenu = ref<MenuInterface[]>([
 
 <style lang="scss" scoped>
 .top-bar {
+  .user {
+    position: absolute;
+    height: 80px;
+    right: 20px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
   .menu {
     background: #232325;
     display: flex;
@@ -45,7 +62,7 @@ const topMenu = ref<MenuInterface[]>([
       font-weight: 600;
 
       &.active {
-        background: #F32E81;
+        background: var(--primary);
       }
     }
   }
