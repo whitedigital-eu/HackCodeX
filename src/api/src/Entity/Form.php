@@ -21,6 +21,9 @@ class Form
     #[ORM\Column(length: 1)]
     private ?string $formLetter = null;
 
+    #[ORM\Column]
+    private ?int $formNumber = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -46,6 +49,18 @@ class Form
     public function setFormLetter(string $formLetter): static
     {
         $this->formLetter = $formLetter;
+
+        return $this;
+    }
+
+    public function getFormNumber(): ?int
+    {
+        return $this->formNumber;
+    }
+
+    public function setFormNumber(int $formNumber): static
+    {
+        $this->formNumber = $formNumber;
 
         return $this;
     }
