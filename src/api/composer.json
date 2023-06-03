@@ -32,10 +32,15 @@
         "doctrine/doctrine-bundle": "*",
         "doctrine/orm": "*",
         "doctrine/persistence": "*",
+        "guzzlehttp/guzzle": "*",
         "monolog/monolog": "*",
         "ocramius/package-versions": "*",
+        "openai-php/client": "dev-main",
+        "php-http/discovery": "1.x-dev",
         "phpsimple/orm-traits": "*",
         "predis/predis": "dev-main",
+        "psr/http-factory": "^1.0@dev",
+        "psr/http-factory-implementation": "*",
         "symfony/apache-pack": "*",
         "symfony/asset": "*",
         "symfony/cache": "*",
@@ -53,7 +58,7 @@
         "symfony/finder": "*",
         "symfony/flex": "*",
         "symfony/framework-bundle": "*",
-        "symfony/http-client": "*",
+        "symfony/http-client": "6.3.*",
         "symfony/http-foundation": "*",
         "symfony/http-kernel": "*",
         "symfony/messenger": "*",
@@ -72,7 +77,7 @@
         "symfony/security-bundle": "*",
         "symfony/serializer": "*",
         "symfony/stopwatch": "*",
-        "symfony/translation": "*",
+        "symfony/translation": "6.3.*",
         "symfony/uid": "*",
         "symfony/validator": "*",
         "symfony/var-exporter": "*",
@@ -84,7 +89,7 @@
         "composer/composer": "*",
         "composer/package-versions-deprecated": "*",
         "doctrine/doctrine-fixtures-bundle": "*",
-        "fakerphp/faker": "*",
+        "fakerphp/faker": "^1",
         "friendsofphp/php-cs-fixer": "*",
         "phpunit/phpunit": "*",
         "roave/security-advisories": "*",
@@ -103,7 +108,10 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "8.2"
+        }
     },
     "autoload": {
         "psr-4": {
