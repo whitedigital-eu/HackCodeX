@@ -27,7 +27,7 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
             return random_int(0, 10);
         }
 
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 20_000; $i++) {
             $fixture = (new Respondent())
                 ->setPragmatic(r())
                 ->setDomestic(r())
