@@ -11,7 +11,7 @@ class OccupationFixture extends Fixture implements FixtureGroupInterface
 {
     public function load(ObjectManager $manager): void
     {
-        if (($handle = fopen("/var/www/html/api/resources/prof-klasifikators.csv", 'rb')) !== false) {
+        if (($handle = fopen("/var/www/html/api/resources/occupation-classifiers.csv", 'rb')) !== false) {
             while (($data = fgetcsv($handle, 1000)) !== false) {
                 if (strlen($data[0]) === 7) {
                     $entity = new Occupation();

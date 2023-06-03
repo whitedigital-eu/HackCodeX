@@ -130,6 +130,9 @@ class Respondent
     #[ORM\ManyToOne]
     private ?Occupation $occupation = null;
 
+    #[ORM\ManyToOne]
+    private ?UniversityProgram $universityProgram = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -587,6 +590,18 @@ class Respondent
     public function setOccupation(?Occupation $occupation): static
     {
         $this->occupation = $occupation;
+
+        return $this;
+    }
+
+    public function getUniversityProgram(): ?UniversityProgram
+    {
+        return $this->universityProgram;
+    }
+
+    public function setUniversityProgram(?UniversityProgram $universityProgram): static
+    {
+        $this->universityProgram = $universityProgram;
 
         return $this;
     }
