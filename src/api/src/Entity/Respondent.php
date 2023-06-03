@@ -127,6 +127,9 @@ class Respondent
     #[ORM\ManyToOne]
     private ?Form $form = null;
 
+    #[ORM\ManyToOne]
+    private ?Occupation $occupation = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -572,6 +575,18 @@ class Respondent
     public function setForm(?Form $form): static
     {
         $this->form = $form;
+
+        return $this;
+    }
+
+    public function getOccupation(): ?Occupation
+    {
+        return $this->occupation;
+    }
+
+    public function setOccupation(?Occupation $occupation): static
+    {
+        $this->occupation = $occupation;
 
         return $this;
     }
