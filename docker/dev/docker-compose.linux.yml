@@ -65,6 +65,8 @@ services:
         mem_limit: 2g
         environment:
             NODE_OPTIONS: "--max-old-space-size=1536"
+        ports:
+            - "8000:8000"
 
     pgsql:
         image: postgres:15.3-bullseye
