@@ -3,37 +3,126 @@
     "type": "project",
     "license": "MIT",
     "description": "A minimal Symfony project recommended to create bare bones applications",
-    "minimum-stability": "stable",
-    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "prefer-stable": false,
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2.0",
+        "ext-bcmath": "*",
         "ext-ctype": "*",
+        "ext-curl": "*",
         "ext-iconv": "*",
-        "symfony/console": "6.3.*",
-        "symfony/dotenv": "6.3.*",
-        "symfony/flex": "^2",
-        "symfony/framework-bundle": "6.3.*",
-        "symfony/runtime": "6.3.*",
-        "symfony/yaml": "6.3.*"
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-pdo": "*",
+        "ext-pdo_pgsql": "*",
+        "ext-pgsql": "*",
+        "ext-phpiredis": "*",
+        "ext-random": "*",
+        "ext-redis": "*",
+        "ext-sodium": "*",
+        "ext-xmlreader": "*",
+        "ext-zend-opcache": "*",
+        "ext-zip": "*",
+        "api-platform-tools/classifier": "dev-master",
+        "api-platform-tools/extended-resource": "dev-master",
+        "api-platform/core": "*",
+        "doctrine/cache": "*",
+        "doctrine/collections": "*",
+        "doctrine/common": "*",
+        "doctrine/dbal": "*",
+        "doctrine/doctrine-bundle": "*",
+        "doctrine/orm": "*",
+        "doctrine/persistence": "*",
+        "symfony/console": "*",
+        "symfony/dotenv": "*",
+        "symfony/flex": "*",
+        "symfony/framework-bundle": "*",
+        "symfony/runtime": "*",
+        "symfony/yaml": "*",
+        "k0d3r1s/package-recipe": "dev-master",
+        "monolog/monolog": "*",
+        "ocramius/package-versions": "*",
+        "phpsimple/dbal-utc-datetime": "*",
+        "phpsimple/orm-traits": "*",
+        "phpsimple/queue": "*",
+        "predis/predis": "dev-main",
+        "runtime/frankenphp-symfony": "*",
+        "snc/redis-bundle": "dev-master",
+        "spaghetti/xlsx-parser": "^1.0@dev",
+        "symfony/apache-pack": "*",
+        "symfony/asset": "*",
+        "symfony/cache": "*",
+        "symfony/config": "*",
+        "symfony/contracts": "*",
+        "symfony/debug-bundle": "*",
+        "symfony/dependency-injection": "*",
+        "symfony/doctrine-bridge": "*",
+        "symfony/error-handler": "*",
+        "symfony/event-dispatcher": "*",
+        "symfony/expression-language": "*",
+        "symfony/filesystem": "*",
+        "symfony/finder": "*",
+        "symfony/http-client": "*",
+        "symfony/http-foundation": "*",
+        "symfony/http-kernel": "*",
+        "symfony/messenger": "*",
+        "symfony/monolog-bridge": "*",
+        "symfony/monolog-bundle": "*",
+        "symfony/options-resolver": "*",
+        "symfony/password-hasher": "*",
+        "symfony/polyfill-apcu": "*",
+        "symfony/process": "*",
+        "symfony/property-access": "*",
+        "symfony/property-info": "*",
+        "symfony/proxy-manager-bridge": "*",
+        "symfony/rate-limiter": "*",
+        "symfony/routing": "*",
+        "symfony/security-bundle": "*",
+        "symfony/serializer": "*",
+        "symfony/stopwatch": "*",
+        "symfony/translation": "*",
+        "symfony/uid": "*",
+        "symfony/validator": "*",
+        "symfony/var-exporter": "*",
+        "symfony/web-link": "*",
+        "twig/twig": "*",
+        "vairogs/vairogs": "dev-master"
     },
     "require-dev": {
+        "composer/composer": "*",
+        "composer/package-versions-deprecated": "*",
+        "doctrine/doctrine-fixtures-bundle": "*",
+        "fakerphp/faker": "*",
+        "friendsofphp/php-cs-fixer": "*",
+        "phpunit/phpunit": "*",
+        "roave/security-advisories": "*",
+        "symfony/maker-bundle": "1.0.x-dev",
+        "symfony/phpunit-bridge": "*",
+        "symfony/var-dumper": "*",
+        "symfony/web-profiler-bundle": "*"
     },
     "config": {
         "allow-plugins": {
-            "php-http/discovery": true,
+            "composer/package-versions-deprecated": true,
             "symfony/flex": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "k0d3r1s/package-recipe": true
+        },
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "api-platform-tools/*": "source",
+            "phpsimple/*": "source",
+            "spaghetti/*": "source",
+            "vairogs/*": "source",
+            "viestards/*": "source",
+            "*": "dist"
         },
         "sort-packages": true
     },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "App\\Tests\\": "tests/"
         }
     },
     "replace": {
@@ -43,7 +132,9 @@
         "symfony/polyfill-php73": "*",
         "symfony/polyfill-php74": "*",
         "symfony/polyfill-php80": "*",
-        "symfony/polyfill-php81": "*"
+        "symfony/polyfill-php81": "*",
+        "symfony/polyfill-php82": "*",
+        "symfony/polyfill-php83": "*"
     },
     "scripts": {
         "auto-scripts": {
@@ -62,8 +153,18 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
+            "allow-contrib": true,
+            "docker": false,
             "require": "6.3.*"
+        },
+        "runtime":{
+            "use_putenv": false
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/k0d3r1s/SncRedisBundle"
+        }
+    ]
 }
