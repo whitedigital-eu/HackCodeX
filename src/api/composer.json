@@ -24,8 +24,6 @@
         "ext-xmlreader": "*",
         "ext-zend-opcache": "*",
         "ext-zip": "*",
-        "api-platform-tools/classifier": "dev-master",
-        "api-platform-tools/extended-resource": "dev-master",
         "api-platform/core": "*",
         "doctrine/cache": "*",
         "doctrine/collections": "*",
@@ -43,13 +41,8 @@
         "k0d3r1s/package-recipe": "dev-master",
         "monolog/monolog": "*",
         "ocramius/package-versions": "*",
-        "phpsimple/dbal-utc-datetime": "*",
-        "phpsimple/orm-traits": "*",
-        "phpsimple/queue": "*",
         "predis/predis": "dev-main",
-        "runtime/frankenphp-symfony": "*",
         "snc/redis-bundle": "dev-master",
-        "spaghetti/xlsx-parser": "^1.0@dev",
         "symfony/apache-pack": "*",
         "symfony/asset": "*",
         "symfony/cache": "*",
@@ -86,8 +79,7 @@
         "symfony/validator": "*",
         "symfony/var-exporter": "*",
         "symfony/web-link": "*",
-        "twig/twig": "*",
-        "vairogs/vairogs": "dev-master"
+        "twig/twig": "*"
     },
     "require-dev": {
         "composer/composer": "*",
@@ -106,16 +98,10 @@
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
             "symfony/flex": true,
-            "symfony/runtime": true,
-            "k0d3r1s/package-recipe": true
+            "symfony/runtime": true
         },
         "optimize-autoloader": true,
         "preferred-install": {
-            "api-platform-tools/*": "source",
-            "phpsimple/*": "source",
-            "spaghetti/*": "source",
-            "vairogs/*": "source",
-            "viestards/*": "source",
             "*": "dist"
         },
         "sort-packages": true
@@ -160,11 +146,5 @@
         "runtime":{
             "use_putenv": false
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/k0d3r1s/SncRedisBundle"
-        }
-    ]
+    }
 }
