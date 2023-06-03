@@ -30,25 +30,12 @@ export default defineConfig({
     port: 8000,
     https: httpsConfig,
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('tabulator-tables')) return 'tabulator-tables'
-            if (id.includes('@ckeditor')) return 'ckeditor'
-            if (id.includes('lucide')) return 'lucide-icons'
-            if (id.includes('dropzone')) return 'dropzone'
-            return 'vendor'
-          }
-        },
-      },
-    },
-  },
   plugins: [vue()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './resources'),
+      '@components': path.resolve(__dirname, './resources/components'),
+      '@assets': path.resolve(__dirname, './resources/assets'),
     },
   },
 
