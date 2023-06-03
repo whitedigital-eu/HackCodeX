@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace App\DataFixtures;
 
@@ -13,7 +13,7 @@ class OccupationFixture extends Fixture implements FixtureGroupInterface
     {
         if (($handle = fopen("/var/www/html/api/resources/occupation-classifiers.csv", 'rb')) !== false) {
             while (($data = fgetcsv($handle, 1000)) !== false) {
-                if (strlen($data[0]) === 7) {
+                if (7 === strlen($data[0])) {
                     $entity = new Occupation();
                     $entity->setCode($data[0])->setTitle($data[1]);
                     $manager->persist($entity);

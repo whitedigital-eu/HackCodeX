@@ -14,8 +14,8 @@ abstract class AbstractFixture extends Fixture
 
     public function __construct()
     {
-//        $this->factory = Factory::create('en_US');
-//        $this->factory->seed($_ENV['SEED'] ?? 2022);
+        $this->factory = Factory::create('en_US');
+        $this->factory->seed($_ENV['SEED'] ?? 2022);
     }
 
     protected function randomArrayKey(array $array): mixed

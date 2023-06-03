@@ -6,7 +6,6 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symfony\Config\FrameworkConfig;
 
 return static function (FrameworkConfig $config, ContainerConfigurator $container): void {
-    $redisProvider = 'cache.adapter.redis';
     $adapters = [
         'cache.adapter.apcu',
         'cache.adapter.array',
@@ -26,7 +25,6 @@ return static function (FrameworkConfig $config, ContainerConfigurator $containe
         ->cache()
             ->directory('%kernel.cache_dir%/pools')
             ->prefixSeed(Definition::PROJECT->value . '_%env(APP_ENV)%_')
-            //->defaultRedisProvider('snc_redis.cache')
             ->app($projectPool)
             ->system($projectPool);
 };
