@@ -42,7 +42,7 @@ class RespondentRepository extends ServiceEntityRepository
         }
     }
 
-    public function findRespondentsOrderedBySimilar(Submission $submission): Paginator
+    public function findRespondentsOrderedByDifference(Submission $submission): Paginator
     {
         $profileAttributes = [
             'pragmatic',
@@ -70,21 +70,23 @@ class RespondentRepository extends ServiceEntityRepository
             'concord',
             'control',
         ];
-        $query = $this->createQueryBuilder('r')->addSelect('f')
+        $query = $this->createQueryBuilder('r')
+            ->addSelect('f')
+            ->addSelect($this->buildDifferenceNumber($profileAttributes))
             ->innerJoin('r.form', 'f', 'WITH', 'f.formNumber IN (:formNumbers)')
             ->setParameters($this->buildParameterArray($submission, $profileAttributes))
-            ->orderBy($this->buildCriteriaOrderBy($profileAttributes), 'ASC')->getQuery()->setFirstResult(0)
+            ->getQuery()->setFirstResult(0)
             ->setMaxResults(2000);
         return new Paginator($query);
     }
 
-    private function buildCriteriaOrderBy(array $profileAttributes): string
+    private function buildDifferenceNumber(array $profileAttributes): string
     {
         $orderBy = [];
         foreach ($profileAttributes as $profileAttribute) {
             $orderBy[] = "ABS(r.$profileAttribute - :$profileAttribute)";
         }
-        return implode(' + ', $orderBy);
+        return implode(' + ', $orderBy) . " AS difference";
     }
 
     private function buildParameterArray(Submission $submission, array $profileAttributes): array

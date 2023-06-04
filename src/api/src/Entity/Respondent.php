@@ -165,6 +165,8 @@ class Respondent
     #[ORM\JoinColumn(nullable: true)]
     private ?UniversityProgram $universityProgram = null;
 
+    private ?int $difference = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -622,6 +624,18 @@ class Respondent
     public function setUniversityProgram(?UniversityProgram $universityProgram): static
     {
         $this->universityProgram = $universityProgram;
+
+        return $this;
+    }
+
+    public function getDifference(): ?int
+    {
+        return $this->difference;
+    }
+
+    public function setDifference(?int $difference): static
+    {
+        $this->difference = $difference;
 
         return $this;
     }

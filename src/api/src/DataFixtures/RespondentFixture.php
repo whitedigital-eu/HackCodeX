@@ -27,7 +27,7 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
             return random_int(0, 10);
         }
 
-        for ($i = 0; $i < 45000; $i++) {
+        for ($i = 0; $i < 45; $i++) {
             for ($j = 7; $j <= 12; $j++) {
                 $fixture = new Respondent();
                 $this->setForAll($fixture);
@@ -42,7 +42,7 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
 
         $manager->flush();
 
-        for ($i = 0; $i < 45000; $i++) {
+        for ($i = 0; $i < 45; $i++) {
             $fixture = new Respondent();
             $this->setForAll($fixture);
             $fixture->setUniversityProgram($this->getEntity(UniversityProgramFixture::class));
@@ -51,7 +51,7 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
 
         $manager->flush();
 
-        for ($i = 0; $i < 45000; $i++) {
+        for ($i = 0; $i < 45; $i++) {
             $fixture = new Respondent();
             $this->setForAll($fixture);
             $fixture->setOccupation($this->getEntity(OccupationFixture::class));

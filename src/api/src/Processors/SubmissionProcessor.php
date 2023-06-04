@@ -44,10 +44,14 @@ class SubmissionProcessor implements ProcessorInterface
                 asort($submitterScores);
             }
             //select required respondents for school/grade groups - sort by most similar respondents
-            $respondents = $this->respondentRepository->findRespondentsOrderedBySimilar($data);
-            /** @var Respondent $respondent */
-            foreach ($respondents as $respondent) {
+            $respondents = $this->respondentRepository->findRespondentsOrderedByDifference($data);
+            foreach ($respondents as $respondentData) {
+                /** @var Respondent $respondent */
+                $respondent = $respondentData[0];
+                $respondent->setDifference($respondentData['difference']);
                 foreach (array_keys($submitterScores) as $priority => $subject) {
+                    dump($respondent);
+                    exit();
                     $getter = 'get' . ucfirst($subject);
                     $school = $respondent->getForm()?->getSchool();
                     $formLetter = $respondent->getForm()?->getFormLetter();
