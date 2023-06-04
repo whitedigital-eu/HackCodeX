@@ -21,7 +21,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[GetCollection]
 #[ApiFilter(OrderFilter::class, properties: ['result'])]
 #[ApiFilter(NumericFilter::class, properties: ['submission.id'])]
-#[ApiFilter(ExistsFilter::class, properties: ['form.id', 'universityProgram.id', 'occupation.id'])]
+#[ApiFilter(ExistsFilter::class, properties: ['form', 'universityProgram', 'occupation'])]
 #[ApiFilter(GroupFilter::class, arguments: ['parameterName' => 'groups', 'overrideDefaultGroups' => false])]
 class SubmissionResult
 {
