@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Repository;
 
@@ -20,6 +20,33 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RespondentRepository extends ServiceEntityRepository
 {
+    private const ATTRS = [
+        'pragmatic',
+        'domestic',
+        'traditional',
+        'peaceful',
+        'caring',
+        'tolerant',
+        'contemplative',
+        'inquisitive',
+        'experimental',
+        'maximalist',
+        'dominant',
+        'ambitious',
+        'tangible',
+        'intangible',
+        'relationships',
+        'identity',
+        'retention',
+        'discovery',
+        'others',
+        'self',
+        'safety',
+        'confidence',
+        'concord',
+        'control',
+    ];
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Respondent::class);
@@ -43,59 +70,61 @@ class RespondentRepository extends ServiceEntityRepository
         }
     }
 
-    public function findRespondentsOrderedByDifference(Submission $submission): Paginator
+    public function findRespondentsOrderedByDifferenceForForm(Submission $submission): Paginator
     {
-        $profileAttributes = [
-            'pragmatic',
-            'domestic',
-            'traditional',
-            'peaceful',
-            'caring',
-            'tolerant',
-            'contemplative',
-            'inquisitive',
-            'experimental',
-            'maximalist',
-            'dominant',
-            'ambitious',
-            'tangible',
-            'intangible',
-            'relationships',
-            'identity',
-            'retention',
-            'discovery',
-            'others',
-            'self',
-            'safety',
-            'confidence',
-            'concord',
-            'control',
-        ];
         $query = $this->createQueryBuilder('r')->addSelect('f')
-            ->addSelect($this->buildDifferenceNumber($profileAttributes))
+            ->addSelect($this->buildDifferenceNumber())
             ->innerJoin('r.form', 'f', 'WITH', 'f.type = :formType')
-            ->setParameters($this->buildParameterArray($submission, $profileAttributes))->getQuery()->setFirstResult(0)
+            ->setParameters($this->buildParameterArray($submission))->getQuery()->setFirstResult(0)
             ->setMaxResults(2000);
+
         return new Paginator($query);
     }
 
-    private function buildDifferenceNumber(array $profileAttributes): string
+    public function findRespondentsOrderedByDifferenceForUniversity(Submission $submission): Paginator
     {
-        $orderBy = [];
-        foreach ($profileAttributes as $profileAttribute) {
-            $orderBy[] = "ABS(r.$profileAttribute - :$profileAttribute)";
-        }
-        return "(".implode(' + ', $orderBy) . ") AS difference";
+        $query = $this->createQueryBuilder('r')->addSelect('u')
+            ->addSelect($this->buildDifferenceNumber())
+            ->innerJoin('r.universityProgram', 'u')
+            ->setParameters($this->buildParameterArray($submission, false))->getQuery()->setFirstResult(0)
+            ->setMaxResults(2000);
+
+        return new Paginator($query);
     }
 
-    private function buildParameterArray(Submission $submission, array $profileAttributes): array
+    public function findRespondentsOrderedByDifferenceForOccupation(Submission $submission): Paginator
     {
-        $parameters['formType'] = SubmissionTypeEnum::Form6th === $submission->getType() ? FormTypeEnum::SECONDARY
-            : FormTypeEnum::HIGHSCHOOL;
-        foreach ($profileAttributes as $profileAttribute) {
-            $getter = 'get' . ucfirst($profileAttribute);
-            $parameters[$profileAttribute] = $submission->$getter();
+        $query = $this->createQueryBuilder('r')->addSelect('o')
+            ->addSelect($this->buildDifferenceNumber())
+            ->innerJoin('r.occupation', 'o')
+            ->setParameters($this->buildParameterArray($submission, false))->getQuery()->setFirstResult(0)
+            ->setMaxResults(2000);
+
+        return new Paginator($query);
+    }
+
+    private function buildDifferenceNumber(): string
+    {
+        $orderBy = [];
+        foreach (self::ATTRS as $profileAttribute) {
+            $orderBy[] = "ABS(r.$profileAttribute - :$profileAttribute)";
         }
+
+        return '(' . implode(' + ', $orderBy) . ') AS difference';
+    }
+
+    private function buildParameterArray(Submission $submission, bool $isForm = true): array
+    {
+        if ($isForm) {
+            $parameters['formType'] = SubmissionTypeEnum::Form6th === $submission->getType() ? FormTypeEnum::SECONDARY
+                : FormTypeEnum::HIGHSCHOOL;
+        }
+
+        foreach (self::ATTRS as $profileAttribute) {
+            $getter = 'get' . ucfirst($profileAttribute);
+            $parameters[$profileAttribute] = $submission->{$getter}();
+        }
+
         return $parameters;
     }
 }
