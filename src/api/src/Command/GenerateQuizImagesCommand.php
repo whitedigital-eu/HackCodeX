@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Command;
 
@@ -14,12 +14,12 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
-#[AsCommand(name: 'generate-quiz-images', description: 'Add a short description for your command',)]
+#[AsCommand(name: 'generate-quiz-images', description: 'Add a short description for your command', )]
 class GenerateQuizImagesCommand extends Command
 {
     protected OpenAIService $openAiService;
 
-    public function __construct(OpenAIService $openAiService, string $name = null)
+    public function __construct(OpenAIService $openAiService, ?string $name = null)
     {
         parent::__construct($name);
         $this->openAiService = $openAiService;
