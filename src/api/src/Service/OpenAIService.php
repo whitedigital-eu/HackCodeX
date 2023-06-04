@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Service;
 
@@ -21,6 +21,7 @@ class OpenAIService
             'prompt' => $prompt,
             'n' => 1,
         ]);
+
         return $image->data[0]->url;
     }
 
@@ -32,10 +33,11 @@ class OpenAIService
                 [
                     'role' => 'user',
                     'content' => 'Give me an image description, that is no longer than 30 words and does not include humans, based on these characteristics: ' . implode(', ',
-                            $characteristics),
+                        $characteristics),
                 ],
             ],
         ]);
+
         return $response->choices[0]->message->content;
     }
 }

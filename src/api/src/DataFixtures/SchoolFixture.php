@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\School;
 use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;
 use Doctrine\Persistence\ObjectManager;
+
 use function dirname;
 use function file_get_contents;
 use function json_decode;
