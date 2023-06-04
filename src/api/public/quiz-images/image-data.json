@@ -2,14 +2,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/wrldkpoythqfsgiujae.png",
+        "image": "/quiz-images/wrldkpoythqfsgiujae.webp",
         "attributes": {
           "tangible": 1,
           "contemplative": 1
         }
       },
       {
-        "image": "/quiz-images/plwiyuqdfrhtksojaeg.png",
+        "image": "/quiz-images/plwiyuqdfrhtksojaeg.webp",
         "attributes": {
           "concord": 1
         }
@@ -19,7 +19,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hkqgtierdulpaywjfso.png",
+        "image": "/quiz-images/hkqgtierdulpaywjfso.webp",
         "attributes": {
           "safety": 1,
           "relationships": 1,
@@ -27,7 +27,7 @@
         }
       },
       {
-        "image": "/quiz-images/kiwdjfyreaqstugophl.png",
+        "image": "/quiz-images/kiwdjfyreaqstugophl.webp",
         "attributes": {
           "caring": 1,
           "ambitious": 1
@@ -38,13 +38,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/oygahdwskpitrlejquf.png",
+        "image": "/quiz-images/oygahdwskpitrlejquf.webp",
         "attributes": {
           "ambitious": 1
         }
       },
       {
-        "image": "/quiz-images/iroefujagptdkqhyswl.png",
+        "image": "/quiz-images/iroefujagptdkqhyswl.webp",
         "attributes": {
           "relationships": 1,
           "ambitious": 1
@@ -55,14 +55,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hujfiadgtspyrwqelok.png",
+        "image": "/quiz-images/hujfiadgtspyrwqelok.webp",
         "attributes": {
           "pragmatic": 1,
           "caring": 1
         }
       },
       {
-        "image": "/quiz-images/jhtywdqsrlupfkeoiag.png",
+        "image": "/quiz-images/jhtywdqsrlupfkeoiag.webp",
         "attributes": {
           "relationships": 1,
           "dominant": 1
@@ -73,7 +73,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/psehlgtyjurkiqawdof.png",
+        "image": "/quiz-images/psehlgtyjurkiqawdof.webp",
         "attributes": {
           "tolerant": 1,
           "intangible": 1,
@@ -81,7 +81,7 @@
         }
       },
       {
-        "image": "/quiz-images/oujgwaistleqrdyhfpk.png",
+        "image": "/quiz-images/oujgwaistleqrdyhfpk.webp",
         "attributes": {
           "inquisitive": 1,
           "concord": 1,
@@ -93,14 +93,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/iayfworujhptkldegqs.png",
+        "image": "/quiz-images/iayfworujhptkldegqs.webp",
         "attributes": {
           "relationships": 1,
           "confidence": 1
         }
       },
       {
-        "image": "/quiz-images/drweqpoaglhtkujifys.png",
+        "image": "/quiz-images/drweqpoaglhtkujifys.webp",
         "attributes": {
           "retention": 1,
           "tolerant": 1
@@ -111,13 +111,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/egfiksroahqjlptduyw.png",
+        "image": "/quiz-images/egfiksroahqjlptduyw.webp",
         "attributes": {
           "pragmatic": 1
         }
       },
       {
-        "image": "/quiz-images/athjiofywqsegdplukr.png",
+        "image": "/quiz-images/athjiofywqsegdplukr.webp",
         "attributes": {
           "inquisitive": 1,
           "domestic": 1
@@ -128,13 +128,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ogeyuspkrfqhwjtadil.png",
+        "image": "/quiz-images/ogeyuspkrfqhwjtadil.webp",
         "attributes": {
           "control": 1
         }
       },
       {
-        "image": "/quiz-images/yfikaqelwdhgrputjso.png",
+        "image": "/quiz-images/yfikaqelwdhgrputjso.webp",
         "attributes": {
           "inquisitive": 1,
           "peaceful": 1
@@ -145,14 +145,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/idsefjptklyaquwrhgo.png",
+        "image": "/quiz-images/idsefjptklyaquwrhgo.webp",
         "attributes": {
           "caring": 1,
           "relationships": 1
         }
       },
       {
-        "image": "/quiz-images/autogrwepidhlsykfjq.png",
+        "image": "/quiz-images/autogrwepidhlsykfjq.webp",
         "attributes": {
           "control": 1,
           "relationships": 1
@@ -163,7 +163,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/qfoijhlgdytkpsweuar.png",
+        "image": "/quiz-images/qfoijhlgdytkpsweuar.webp",
         "attributes": {
           "pragmatic": 1,
           "maximalist": 1,
@@ -171,7 +171,7 @@
         }
       },
       {
-        "image": "/quiz-images/tpyeflgjduwqishkroa.png",
+        "image": "/quiz-images/tpyeflgjduwqishkroa.webp",
         "attributes": {
           "identity": 1,
           "contemplative": 1
@@ -182,7 +182,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/oispytqukrdelwfaghj.png",
+        "image": "/quiz-images/oispytqukrdelwfaghj.webp",
         "attributes": {
           "experimental": 1,
           "tangible": 1,
@@ -190,7 +190,7 @@
         }
       },
       {
-        "image": "/quiz-images/qagjrukdphswfoitley.png",
+        "image": "/quiz-images/qagjrukdphswfoitley.webp",
         "attributes": {
           "control": 1
         }
@@ -200,7 +200,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/iuphqjlgkdrweaoftsy.png",
+        "image": "/quiz-images/iuphqjlgkdrweaoftsy.webp",
         "attributes": {
           "maximalist": 1,
           "tolerant": 1,
@@ -208,7 +208,7 @@
         }
       },
       {
-        "image": "/quiz-images/wouqgfidkalyrpshtej.png",
+        "image": "/quiz-images/wouqgfidkalyrpshtej.webp",
         "attributes": {
           "maximalist": 1
         }
@@ -218,7 +218,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/osuqfrjahltkgiwpedy.png",
+        "image": "/quiz-images/osuqfrjahltkgiwpedy.webp",
         "attributes": {
           "discovery": 1,
           "domestic": 1,
@@ -226,7 +226,7 @@
         }
       },
       {
-        "image": "/quiz-images/ukrgjidhwteflpqoays.png",
+        "image": "/quiz-images/ukrgjidhwteflpqoays.webp",
         "attributes": {
           "caring": 1,
           "safety": 1
@@ -237,14 +237,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hadpkwqgysiuretlojf.png",
+        "image": "/quiz-images/hadpkwqgysiuretlojf.webp",
         "attributes": {
           "control": 1,
           "others": 1
         }
       },
       {
-        "image": "/quiz-images/ktojsdupifahqyeglwr.png",
+        "image": "/quiz-images/ktojsdupifahqyeglwr.webp",
         "attributes": {
           "self": 1,
           "domestic": 1,
@@ -256,13 +256,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hojrqtdlkfpiygeuaws.png",
+        "image": "/quiz-images/hojrqtdlkfpiygeuaws.webp",
         "attributes": {
           "caring": 1
         }
       },
       {
-        "image": "/quiz-images/uyokwfdiqsrtelgjhpa.png",
+        "image": "/quiz-images/uyokwfdiqsrtelgjhpa.webp",
         "attributes": {
           "identity": 1
         }
@@ -272,7 +272,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ojthqdefrayspglkiuw.png",
+        "image": "/quiz-images/ojthqdefrayspglkiuw.webp",
         "attributes": {
           "safety": 1,
           "contemplative": 1,
@@ -280,7 +280,7 @@
         }
       },
       {
-        "image": "/quiz-images/jedqslagipkuhtwoyrf.png",
+        "image": "/quiz-images/jedqslagipkuhtwoyrf.webp",
         "attributes": {
           "concord": 1,
           "intangible": 1
@@ -291,7 +291,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/iasyqdptrgelwkjhfuo.png",
+        "image": "/quiz-images/iasyqdptrgelwkjhfuo.webp",
         "attributes": {
           "domestic": 1,
           "caring": 1,
@@ -299,7 +299,7 @@
         }
       },
       {
-        "image": "/quiz-images/shwyptdurigafqlkejo.png",
+        "image": "/quiz-images/shwyptdurigafqlkejo.webp",
         "attributes": {
           "others": 1,
           "peaceful": 1,
@@ -311,14 +311,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hpjgqktoawdyurifsel.png",
+        "image": "/quiz-images/hpjgqktoawdyurifsel.webp",
         "attributes": {
           "domestic": 1,
           "concord": 1
         }
       },
       {
-        "image": "/quiz-images/qhorjigkupdlsyafwet.png",
+        "image": "/quiz-images/qhorjigkupdlsyafwet.webp",
         "attributes": {
           "domestic": 1
         }
@@ -328,13 +328,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ylreaphuskfjqtigodw.png",
+        "image": "/quiz-images/ylreaphuskfjqtigodw.webp",
         "attributes": {
           "maximalist": 1
         }
       },
       {
-        "image": "/quiz-images/psufygrjiatqedwohkl.png",
+        "image": "/quiz-images/psufygrjiatqedwohkl.webp",
         "attributes": {
           "identity": 1,
           "safety": 1,
@@ -346,14 +346,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hasowjfgiqlydrektpu.png",
+        "image": "/quiz-images/hasowjfgiqlydrektpu.webp",
         "attributes": {
           "relationships": 1,
           "discovery": 1
         }
       },
       {
-        "image": "/quiz-images/kpouldjehwqigsftrya.png",
+        "image": "/quiz-images/kpouldjehwqigsftrya.webp",
         "attributes": {
           "safety": 1,
           "experimental": 1
@@ -364,14 +364,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ljrewysiapgqtukfodh.png",
+        "image": "/quiz-images/ljrewysiapgqtukfodh.webp",
         "attributes": {
           "control": 1,
           "maximalist": 1
         }
       },
       {
-        "image": "/quiz-images/ewguktypldrasfqojih.png",
+        "image": "/quiz-images/ewguktypldrasfqojih.webp",
         "attributes": {
           "retention": 1,
           "others": 1,
@@ -383,13 +383,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ifewhutjdagprkloyqs.png",
+        "image": "/quiz-images/ifewhutjdagprkloyqs.webp",
         "attributes": {
           "inquisitive": 1
         }
       },
       {
-        "image": "/quiz-images/rqudaiwoftphjygleks.png",
+        "image": "/quiz-images/rqudaiwoftphjygleks.webp",
         "attributes": {
           "intangible": 1,
           "pragmatic": 1
@@ -400,13 +400,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/fjoelrgsthdpuakywqi.png",
+        "image": "/quiz-images/fjoelrgsthdpuakywqi.webp",
         "attributes": {
           "dominant": 1
         }
       },
       {
-        "image": "/quiz-images/ipuresftlkywdqahjgo.png",
+        "image": "/quiz-images/ipuresftlkywdqahjgo.webp",
         "attributes": {
           "retention": 1,
           "maximalist": 1,
@@ -418,13 +418,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/qrodtjyuhwgslkpafei.png",
+        "image": "/quiz-images/qrodtjyuhwgslkpafei.webp",
         "attributes": {
           "tangible": 1
         }
       },
       {
-        "image": "/quiz-images/oqhajuwlytgsrkfpied.png",
+        "image": "/quiz-images/oqhajuwlytgsrkfpied.webp",
         "attributes": {
           "caring": 1
         }
@@ -434,7 +434,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/skgqiwlfaretdhpyjou.png",
+        "image": "/quiz-images/skgqiwlfaretdhpyjou.webp",
         "attributes": {
           "retention": 1,
           "self": 1,
@@ -442,7 +442,7 @@
         }
       },
       {
-        "image": "/quiz-images/tfsghrjoaypuklwqdie.png",
+        "image": "/quiz-images/tfsghrjoaypuklwqdie.webp",
         "attributes": {
           "concord": 1
         }
@@ -452,13 +452,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/fohjlspgdykirtuqwae.png",
+        "image": "/quiz-images/fohjlspgdykirtuqwae.webp",
         "attributes": {
           "ambitious": 1
         }
       },
       {
-        "image": "/quiz-images/whlaqitjdfeorgpkyus.png",
+        "image": "/quiz-images/whlaqitjdfeorgpkyus.webp",
         "attributes": {
           "contemplative": 1,
           "identity": 1,
@@ -470,7 +470,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ywkoughaqjfdiepstrl.png",
+        "image": "/quiz-images/ywkoughaqjfdiepstrl.webp",
         "attributes": {
           "relationships": 1,
           "peaceful": 1,
@@ -478,7 +478,7 @@
         }
       },
       {
-        "image": "/quiz-images/fythlaiejgukwsoqpdr.png",
+        "image": "/quiz-images/fythlaiejgukwsoqpdr.webp",
         "attributes": {
           "domestic": 1,
           "caring": 1,
@@ -490,14 +490,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/tsidqupolyrajkhewgf.png",
+        "image": "/quiz-images/tsidqupolyrajkhewgf.webp",
         "attributes": {
           "ambitious": 1,
           "safety": 1
         }
       },
       {
-        "image": "/quiz-images/dqykalfigopwejsrhut.png",
+        "image": "/quiz-images/dqykalfigopwejsrhut.webp",
         "attributes": {
           "maximalist": 1,
           "tangible": 1,
@@ -509,13 +509,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/iuaskjtdolgwreqhfyp.png",
+        "image": "/quiz-images/iuaskjtdolgwreqhfyp.webp",
         "attributes": {
           "identity": 1
         }
       },
       {
-        "image": "/quiz-images/urlyfgjhoekstipawqd.png",
+        "image": "/quiz-images/urlyfgjhoekstipawqd.webp",
         "attributes": {
           "retention": 1,
           "pragmatic": 1
@@ -526,7 +526,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/qrdpiaytkshelgwjfuo.png",
+        "image": "/quiz-images/qrdpiaytkshelgwjfuo.webp",
         "attributes": {
           "self": 1,
           "confidence": 1,
@@ -534,7 +534,7 @@
         }
       },
       {
-        "image": "/quiz-images/yfkwjdhpsriulagotqe.png",
+        "image": "/quiz-images/yfkwjdhpsriulagotqe.webp",
         "attributes": {
           "relationships": 1
         }
@@ -544,7 +544,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/rswudqgofykjtlpeahi.png",
+        "image": "/quiz-images/rswudqgofykjtlpeahi.webp",
         "attributes": {
           "control": 1,
           "intangible": 1,
@@ -552,7 +552,7 @@
         }
       },
       {
-        "image": "/quiz-images/spritowdhkgyfaqljeu.png",
+        "image": "/quiz-images/spritowdhkgyfaqljeu.webp",
         "attributes": {
           "tangible": 1,
           "intangible": 1
@@ -563,7 +563,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/lspkfedthgqauiwyroj.png",
+        "image": "/quiz-images/lspkfedthgqauiwyroj.webp",
         "attributes": {
           "control": 1,
           "self": 1,
@@ -571,7 +571,7 @@
         }
       },
       {
-        "image": "/quiz-images/oeujsrpgawitkdqflhy.png",
+        "image": "/quiz-images/oeujsrpgawitkdqflhy.webp",
         "attributes": {
           "dominant": 1
         }
@@ -581,7 +581,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/lkwogriufdhqstpjyea.png",
+        "image": "/quiz-images/lkwogriufdhqstpjyea.webp",
         "attributes": {
           "contemplative": 1,
           "caring": 1,
@@ -589,7 +589,7 @@
         }
       },
       {
-        "image": "/quiz-images/urpjwkgdiqolhftseay.png",
+        "image": "/quiz-images/urpjwkgdiqolhftseay.webp",
         "attributes": {
           "traditional": 1,
           "identity": 1,
@@ -601,13 +601,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/gdtwujsrfphylaoiqke.png",
+        "image": "/quiz-images/gdtwujsrfphylaoiqke.webp",
         "attributes": {
           "tolerant": 1
         }
       },
       {
-        "image": "/quiz-images/uwopsertqlhjydigkfa.png",
+        "image": "/quiz-images/uwopsertqlhjydigkfa.webp",
         "attributes": {
           "safety": 1,
           "retention": 1,
@@ -619,13 +619,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/lskueitjoafhpwgqdyr.png",
+        "image": "/quiz-images/lskueitjoafhpwgqdyr.webp",
         "attributes": {
           "pragmatic": 1
         }
       },
       {
-        "image": "/quiz-images/uqktsrpjohiwlydfega.png",
+        "image": "/quiz-images/uqktsrpjohiwlydfega.webp",
         "attributes": {
           "experimental": 1,
           "identity": 1,
@@ -637,7 +637,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/odarijgwytqepfhkusl.png",
+        "image": "/quiz-images/odarijgwytqepfhkusl.webp",
         "attributes": {
           "retention": 1,
           "control": 1,
@@ -645,7 +645,7 @@
         }
       },
       {
-        "image": "/quiz-images/parygiwethjouqsldfk.png",
+        "image": "/quiz-images/parygiwethjouqsldfk.webp",
         "attributes": {
           "discovery": 1,
           "maximalist": 1,
@@ -657,14 +657,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/tdqhljrwisugafeykpo.png",
+        "image": "/quiz-images/tdqhljrwisugafeykpo.webp",
         "attributes": {
           "domestic": 1,
           "contemplative": 1
         }
       },
       {
-        "image": "/quiz-images/fsowgiuyqhapjrdltek.png",
+        "image": "/quiz-images/fsowgiuyqhapjrdltek.webp",
         "attributes": {
           "domestic": 1
         }
@@ -674,7 +674,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hloskdqutwpriyjafeg.png",
+        "image": "/quiz-images/hloskdqutwpriyjafeg.webp",
         "attributes": {
           "experimental": 1,
           "inquisitive": 1,
@@ -682,7 +682,7 @@
         }
       },
       {
-        "image": "/quiz-images/yohtiswdrgepfluqjak.png",
+        "image": "/quiz-images/yohtiswdrgepfluqjak.webp",
         "attributes": {
           "others": 1
         }
@@ -692,7 +692,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/wpiadyutefrgqsokjhl.png",
+        "image": "/quiz-images/wpiadyutefrgqsokjhl.webp",
         "attributes": {
           "discovery": 1,
           "experimental": 1,
@@ -700,7 +700,7 @@
         }
       },
       {
-        "image": "/quiz-images/kpsiaulftjwdrhyeqog.png",
+        "image": "/quiz-images/kpsiaulftjwdrhyeqog.webp",
         "attributes": {
           "dominant": 1,
           "intangible": 1
@@ -711,13 +711,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ftlguehjqpdowkasyir.png",
+        "image": "/quiz-images/ftlguehjqpdowkasyir.webp",
         "attributes": {
           "ambitious": 1
         }
       },
       {
-        "image": "/quiz-images/wiyjekhglpsoafrtqud.png",
+        "image": "/quiz-images/wiyjekhglpsoafrtqud.webp",
         "attributes": {
           "maximalist": 1
         }
@@ -727,14 +727,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/alufdpwyhjktoeqgisr.png",
+        "image": "/quiz-images/alufdpwyhjktoeqgisr.webp",
         "attributes": {
           "contemplative": 1,
           "control": 1
         }
       },
       {
-        "image": "/quiz-images/pjshqftkgerawldyoui.png",
+        "image": "/quiz-images/pjshqftkgerawldyoui.webp",
         "attributes": {
           "confidence": 1,
           "intangible": 1,
@@ -746,7 +746,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hryajdqiwotpfsgkule.png",
+        "image": "/quiz-images/hryajdqiwotpfsgkule.webp",
         "attributes": {
           "tolerant": 1,
           "peaceful": 1,
@@ -754,7 +754,7 @@
         }
       },
       {
-        "image": "/quiz-images/ghkrdpflsquieoayjtw.png",
+        "image": "/quiz-images/ghkrdpflsquieoayjtw.webp",
         "attributes": {
           "tangible": 1
         }
@@ -764,7 +764,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/fkjgeyqwistarplhoud.png",
+        "image": "/quiz-images/fkjgeyqwistarplhoud.webp",
         "attributes": {
           "self": 1,
           "contemplative": 1,
@@ -772,7 +772,7 @@
         }
       },
       {
-        "image": "/quiz-images/akfiwospyjludgetqhr.png",
+        "image": "/quiz-images/akfiwospyjludgetqhr.webp",
         "attributes": {
           "caring": 1
         }
@@ -782,14 +782,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/gthdraqfilejskwupyo.png",
+        "image": "/quiz-images/gthdraqfilejskwupyo.webp",
         "attributes": {
           "control": 1,
           "caring": 1
         }
       },
       {
-        "image": "/quiz-images/hgfkeljytipuwdsqaor.png",
+        "image": "/quiz-images/hgfkeljytipuwdsqaor.webp",
         "attributes": {
           "maximalist": 1
         }
@@ -799,13 +799,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hdsokqfptyiagjwrule.png",
+        "image": "/quiz-images/hdsokqfptyiagjwrule.webp",
         "attributes": {
           "retention": 1
         }
       },
       {
-        "image": "/quiz-images/uydhepwifsoaqlgtkjr.png",
+        "image": "/quiz-images/uydhepwifsoaqlgtkjr.webp",
         "attributes": {
           "peaceful": 1,
           "confidence": 1,
@@ -817,13 +817,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/jqhsideltyprwufkoag.png",
+        "image": "/quiz-images/jqhsideltyprwufkoag.webp",
         "attributes": {
           "relationships": 1
         }
       },
       {
-        "image": "/quiz-images/sghwfaylkiqojrudpet.png",
+        "image": "/quiz-images/sghwfaylkiqojrudpet.webp",
         "attributes": {
           "concord": 1,
           "maximalist": 1
@@ -834,13 +834,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/eyrdofjqpuakgshliwt.png",
+        "image": "/quiz-images/eyrdofjqpuakgshliwt.webp",
         "attributes": {
           "domestic": 1
         }
       },
       {
-        "image": "/quiz-images/iwlthsdfoukrpjegyqa.png",
+        "image": "/quiz-images/iwlthsdfoukrpjegyqa.webp",
         "attributes": {
           "relationships": 1,
           "self": 1
@@ -851,14 +851,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/jtghaqluwsyferkdpoi.png",
+        "image": "/quiz-images/jtghaqluwsyferkdpoi.webp",
         "attributes": {
           "caring": 1,
           "identity": 1
         }
       },
       {
-        "image": "/quiz-images/gifwrqkhdauyjtpolse.png",
+        "image": "/quiz-images/gifwrqkhdauyjtpolse.webp",
         "attributes": {
           "inquisitive": 1,
           "domestic": 1
@@ -869,13 +869,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/laokhpyiurjdfqgstew.png",
+        "image": "/quiz-images/laokhpyiurjdfqgstew.webp",
         "attributes": {
           "caring": 1
         }
       },
       {
-        "image": "/quiz-images/dyhuelrfijoqwktsagp.png",
+        "image": "/quiz-images/dyhuelrfijoqwktsagp.webp",
         "attributes": {
           "discovery": 1
         }
@@ -885,13 +885,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/afolhpdjtkiurewgqsy.png",
+        "image": "/quiz-images/afolhpdjtkiurewgqsy.webp",
         "attributes": {
           "caring": 1
         }
       },
       {
-        "image": "/quiz-images/edkwijaslhutproyfgq.png",
+        "image": "/quiz-images/edkwijaslhutproyfgq.webp",
         "attributes": {
           "self": 1,
           "tolerant": 1
@@ -902,13 +902,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/orfhypqgjueaitsklwd.png",
+        "image": "/quiz-images/orfhypqgjueaitsklwd.webp",
         "attributes": {
           "self": 1
         }
       },
       {
-        "image": "/quiz-images/juwarikheoflgytpsqd.png",
+        "image": "/quiz-images/juwarikheoflgytpsqd.webp",
         "attributes": {
           "inquisitive": 1,
           "peaceful": 1,
@@ -920,7 +920,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/dkurjalgyeoqstwphif.png",
+        "image": "/quiz-images/dkurjalgyeoqstwphif.webp",
         "attributes": {
           "others": 1,
           "dominant": 1,
@@ -928,7 +928,7 @@
         }
       },
       {
-        "image": "/quiz-images/rejygwofpktshqaulid.png",
+        "image": "/quiz-images/rejygwofpktshqaulid.webp",
         "attributes": {
           "pragmatic": 1,
           "concord": 1,
@@ -940,13 +940,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/eslpiawfrdkhugyqtoj.png",
+        "image": "/quiz-images/eslpiawfrdkhugyqtoj.webp",
         "attributes": {
           "maximalist": 1
         }
       },
       {
-        "image": "/quiz-images/fkdasolqirwejyhgput.png",
+        "image": "/quiz-images/fkdasolqirwejyhgput.webp",
         "attributes": {
           "experimental": 1,
           "retention": 1
@@ -957,7 +957,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/sraoydtguqhiflpkejw.png",
+        "image": "/quiz-images/sraoydtguqhiflpkejw.webp",
         "attributes": {
           "inquisitive": 1,
           "self": 1,
@@ -965,7 +965,7 @@
         }
       },
       {
-        "image": "/quiz-images/uaojdkgqsfeihtlwpry.png",
+        "image": "/quiz-images/uaojdkgqsfeihtlwpry.webp",
         "attributes": {
           "traditional": 1,
           "tangible": 1
@@ -976,7 +976,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/wkeoaijtsqruhydpgfl.png",
+        "image": "/quiz-images/wkeoaijtsqruhydpgfl.webp",
         "attributes": {
           "self": 1,
           "experimental": 1,
@@ -984,7 +984,7 @@
         }
       },
       {
-        "image": "/quiz-images/krdseytjlpgiwuqhfoa.png",
+        "image": "/quiz-images/krdseytjlpgiwuqhfoa.webp",
         "attributes": {
           "maximalist": 1,
           "relationships": 1,
@@ -996,14 +996,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/lkytafosihpegwudjrq.png",
+        "image": "/quiz-images/lkytafosihpegwudjrq.webp",
         "attributes": {
           "discovery": 1,
           "caring": 1
         }
       },
       {
-        "image": "/quiz-images/lugksopetifjawrqdyh.png",
+        "image": "/quiz-images/lugksopetifjawrqdyh.webp",
         "attributes": {
           "caring": 1,
           "identity": 1,
@@ -1015,14 +1015,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/piqklygfsduaerwhtoj.png",
+        "image": "/quiz-images/piqklygfsduaerwhtoj.webp",
         "attributes": {
           "domestic": 1,
           "tangible": 1
         }
       },
       {
-        "image": "/quiz-images/rahiefdgkjqoyspuwtl.png",
+        "image": "/quiz-images/rahiefdgkjqoyspuwtl.webp",
         "attributes": {
           "inquisitive": 1,
           "contemplative": 1
@@ -1033,14 +1033,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/jgtakuqoelihrpfsywd.png",
+        "image": "/quiz-images/jgtakuqoelihrpfsywd.webp",
         "attributes": {
           "identity": 1,
           "tangible": 1
         }
       },
       {
-        "image": "/quiz-images/hsaiuloqwkejygfdtrp.png",
+        "image": "/quiz-images/hsaiuloqwkejygfdtrp.webp",
         "attributes": {
           "control": 1,
           "pragmatic": 1
@@ -1051,13 +1051,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/adugrtkyfsljpeoqiwh.png",
+        "image": "/quiz-images/adugrtkyfsljpeoqiwh.webp",
         "attributes": {
           "contemplative": 1
         }
       },
       {
-        "image": "/quiz-images/dfyqkphgialeujotwrs.png",
+        "image": "/quiz-images/dfyqkphgialeujotwrs.webp",
         "attributes": {
           "tangible": 1
         }
@@ -1067,14 +1067,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/jyoretlgdkhpiusfwaq.png",
+        "image": "/quiz-images/jyoretlgdkhpiusfwaq.webp",
         "attributes": {
           "ambitious": 1,
           "retention": 1
         }
       },
       {
-        "image": "/quiz-images/qpktdhjyeifroawlgsu.png",
+        "image": "/quiz-images/qpktdhjyeifroawlgsu.webp",
         "attributes": {
           "others": 1,
           "tangible": 1,
@@ -1086,7 +1086,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/fhuoawikdejptrqygsl.png",
+        "image": "/quiz-images/fhuoawikdejptrqygsl.webp",
         "attributes": {
           "pragmatic": 1,
           "tangible": 1,
@@ -1094,7 +1094,7 @@
         }
       },
       {
-        "image": "/quiz-images/khrylsoiaduegqwfjtp.png",
+        "image": "/quiz-images/khrylsoiaduegqwfjtp.webp",
         "attributes": {
           "inquisitive": 1,
           "control": 1,
@@ -1106,7 +1106,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/lyqthopgsafrjwduiek.png",
+        "image": "/quiz-images/lyqthopgsafrjwduiek.webp",
         "attributes": {
           "relationships": 1,
           "others": 1,
@@ -1114,7 +1114,7 @@
         }
       },
       {
-        "image": "/quiz-images/kqojtflidwyhesuagrp.png",
+        "image": "/quiz-images/kqojtflidwyhesuagrp.webp",
         "attributes": {
           "self": 1,
           "relationships": 1,
@@ -1126,13 +1126,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ufwyqgripjaktolshde.png",
+        "image": "/quiz-images/ufwyqgripjaktolshde.webp",
         "attributes": {
           "self": 1
         }
       },
       {
-        "image": "/quiz-images/wdrqoluiejsthgayfkp.png",
+        "image": "/quiz-images/wdrqoluiejsthgayfkp.webp",
         "attributes": {
           "safety": 1,
           "experimental": 1,
@@ -1144,14 +1144,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/esdpqrhailgwjkoftyu.png",
+        "image": "/quiz-images/esdpqrhailgwjkoftyu.webp",
         "attributes": {
           "relationships": 1,
           "safety": 1
         }
       },
       {
-        "image": "/quiz-images/lfateojqrpsyigdukwh.png",
+        "image": "/quiz-images/lfateojqrpsyigdukwh.webp",
         "attributes": {
           "intangible": 1,
           "ambitious": 1
@@ -1162,14 +1162,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/fijwadulkethqpsrygo.png",
+        "image": "/quiz-images/fijwadulkethqpsrygo.webp",
         "attributes": {
           "self": 1,
           "control": 1
         }
       },
       {
-        "image": "/quiz-images/eoyirjduqhwtlspfkag.png",
+        "image": "/quiz-images/eoyirjduqhwtlspfkag.webp",
         "attributes": {
           "concord": 1
         }
@@ -1179,13 +1179,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ulryewhktjdaqopfisg.png",
+        "image": "/quiz-images/ulryewhktjdaqopfisg.webp",
         "attributes": {
           "caring": 1
         }
       },
       {
-        "image": "/quiz-images/urfaypgtehisojlqkdw.png",
+        "image": "/quiz-images/urfaypgtehisojlqkdw.webp",
         "attributes": {
           "traditional": 1,
           "intangible": 1
@@ -1196,14 +1196,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/tlwiyrkapqhesgdjfou.png",
+        "image": "/quiz-images/tlwiyrkapqhesgdjfou.webp",
         "attributes": {
           "concord": 1,
           "peaceful": 1
         }
       },
       {
-        "image": "/quiz-images/qurfogplesjwhaidkty.png",
+        "image": "/quiz-images/qurfogplesjwhaidkty.webp",
         "attributes": {
           "confidence": 1,
           "dominant": 1,
@@ -1215,14 +1215,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/fiwdoplerhtagkqyjsu.png",
+        "image": "/quiz-images/fiwdoplerhtagkqyjsu.webp",
         "attributes": {
           "contemplative": 1,
           "caring": 1
         }
       },
       {
-        "image": "/quiz-images/pftsgkhiueaorlwqdjy.png",
+        "image": "/quiz-images/pftsgkhiueaorlwqdjy.webp",
         "attributes": {
           "maximalist": 1,
           "experimental": 1
@@ -1233,7 +1233,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/gawuystjhiflqprdeko.png",
+        "image": "/quiz-images/gawuystjhiflqprdeko.webp",
         "attributes": {
           "self": 1,
           "retention": 1,
@@ -1241,7 +1241,7 @@
         }
       },
       {
-        "image": "/quiz-images/jutadpslheqfyoikrwg.png",
+        "image": "/quiz-images/jutadpslheqfyoikrwg.webp",
         "attributes": {
           "maximalist": 1
         }
@@ -1251,7 +1251,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/gfwpejyhdsiolaqrtuk.png",
+        "image": "/quiz-images/gfwpejyhdsiolaqrtuk.webp",
         "attributes": {
           "others": 1,
           "ambitious": 1,
@@ -1259,7 +1259,7 @@
         }
       },
       {
-        "image": "/quiz-images/ipshugwfkqdlaterjoy.png",
+        "image": "/quiz-images/ipshugwfkqdlaterjoy.webp",
         "attributes": {
           "control": 1
         }
@@ -1269,13 +1269,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/quojdlewfspyitakrgh.png",
+        "image": "/quiz-images/quojdlewfspyitakrgh.webp",
         "attributes": {
           "safety": 1
         }
       },
       {
-        "image": "/quiz-images/oluptkiejrdsgywqhaf.png",
+        "image": "/quiz-images/oluptkiejrdsgywqhaf.webp",
         "attributes": {
           "safety": 1,
           "retention": 1,
@@ -1287,7 +1287,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/oujsqhdtayifplwrgek.png",
+        "image": "/quiz-images/oujsqhdtayifplwrgek.webp",
         "attributes": {
           "control": 1,
           "safety": 1,
@@ -1295,7 +1295,7 @@
         }
       },
       {
-        "image": "/quiz-images/tjqolrywdseugfpiahk.png",
+        "image": "/quiz-images/tjqolrywdseugfpiahk.webp",
         "attributes": {
           "control": 1,
           "domestic": 1
@@ -1306,7 +1306,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/wehqtoaiukgspjryfld.png",
+        "image": "/quiz-images/wehqtoaiukgspjryfld.webp",
         "attributes": {
           "retention": 1,
           "pragmatic": 1,
@@ -1314,7 +1314,7 @@
         }
       },
       {
-        "image": "/quiz-images/iouhftsewgpqdyajklr.png",
+        "image": "/quiz-images/iouhftsewgpqdyajklr.webp",
         "attributes": {
           "self": 1
         }
@@ -1324,7 +1324,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/fihuolqtpdyrkgjwsae.png",
+        "image": "/quiz-images/fihuolqtpdyrkgjwsae.webp",
         "attributes": {
           "confidence": 1,
           "concord": 1,
@@ -1332,7 +1332,7 @@
         }
       },
       {
-        "image": "/quiz-images/hqstfiapojygekdlurw.png",
+        "image": "/quiz-images/hqstfiapojygekdlurw.webp",
         "attributes": {
           "traditional": 1,
           "intangible": 1,
@@ -1344,7 +1344,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/tjwigsrpdlaoqyeuhfk.png",
+        "image": "/quiz-images/tjwigsrpdlaoqyeuhfk.webp",
         "attributes": {
           "dominant": 1,
           "contemplative": 1,
@@ -1352,7 +1352,7 @@
         }
       },
       {
-        "image": "/quiz-images/pfalgotwkqdejyihsur.png",
+        "image": "/quiz-images/pfalgotwkqdejyihsur.webp",
         "attributes": {
           "peaceful": 1,
           "tolerant": 1
@@ -1363,7 +1363,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/akulphstdwyrqfgjeoi.png",
+        "image": "/quiz-images/akulphstdwyrqfgjeoi.webp",
         "attributes": {
           "pragmatic": 1,
           "experimental": 1,
@@ -1371,7 +1371,7 @@
         }
       },
       {
-        "image": "/quiz-images/otgerqwkapysfjhulid.png",
+        "image": "/quiz-images/otgerqwkapysfjhulid.webp",
         "attributes": {
           "self": 1
         }
@@ -1381,13 +1381,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/kfpialrqodjgyswhtue.png",
+        "image": "/quiz-images/kfpialrqodjgyswhtue.webp",
         "attributes": {
           "intangible": 1
         }
       },
       {
-        "image": "/quiz-images/uaphiesktfyjlqwordg.png",
+        "image": "/quiz-images/uaphiesktfyjlqwordg.webp",
         "attributes": {
           "domestic": 1,
           "safety": 1,
@@ -1399,13 +1399,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/rdqfpgakwloiuyhjtse.png",
+        "image": "/quiz-images/rdqfpgakwloiuyhjtse.webp",
         "attributes": {
           "contemplative": 1
         }
       },
       {
-        "image": "/quiz-images/opkhewlqyjagutsfdri.png",
+        "image": "/quiz-images/opkhewlqyjagutsfdri.webp",
         "attributes": {
           "dominant": 1
         }
@@ -1415,14 +1415,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ypdwjtksrlaougfihqe.png",
+        "image": "/quiz-images/ypdwjtksrlaougfihqe.webp",
         "attributes": {
           "safety": 1,
           "self": 1
         }
       },
       {
-        "image": "/quiz-images/fgwjkoeuyrplaitqdsh.png",
+        "image": "/quiz-images/fgwjkoeuyrplaitqdsh.webp",
         "attributes": {
           "intangible": 1,
           "tangible": 1
@@ -1433,14 +1433,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hiudgapljtkrweqyfos.png",
+        "image": "/quiz-images/hiudgapljtkrweqyfos.webp",
         "attributes": {
           "experimental": 1,
           "dominant": 1
         }
       },
       {
-        "image": "/quiz-images/awihpdtojyskqgrlufe.png",
+        "image": "/quiz-images/awihpdtojyskqgrlufe.webp",
         "attributes": {
           "self": 1,
           "contemplative": 1
@@ -1451,13 +1451,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/taqirugwdjhokelyfps.png",
+        "image": "/quiz-images/taqirugwdjhokelyfps.webp",
         "attributes": {
           "experimental": 1
         }
       },
       {
-        "image": "/quiz-images/lyrhwaestgiofkdpqju.png",
+        "image": "/quiz-images/lyrhwaestgiofkdpqju.webp",
         "attributes": {
           "tolerant": 1,
           "experimental": 1,
@@ -1469,7 +1469,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/kujqeafyglpowthdsri.png",
+        "image": "/quiz-images/kujqeafyglpowthdsri.webp",
         "attributes": {
           "self": 1,
           "retention": 1,
@@ -1477,7 +1477,7 @@
         }
       },
       {
-        "image": "/quiz-images/stqpikyualwrjhoefdg.png",
+        "image": "/quiz-images/stqpikyualwrjhoefdg.webp",
         "attributes": {
           "experimental": 1,
           "tolerant": 1,
@@ -1489,13 +1489,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ftwlgphykjioserauqd.png",
+        "image": "/quiz-images/ftwlgphykjioserauqd.webp",
         "attributes": {
           "inquisitive": 1
         }
       },
       {
-        "image": "/quiz-images/pgoywfrilheatqudkjs.png",
+        "image": "/quiz-images/pgoywfrilheatqudkjs.webp",
         "attributes": {
           "experimental": 1,
           "dominant": 1,
@@ -1507,7 +1507,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ualpdjyhetkfwsgrioq.png",
+        "image": "/quiz-images/ualpdjyhetkfwsgrioq.webp",
         "attributes": {
           "confidence": 1,
           "identity": 1,
@@ -1515,7 +1515,7 @@
         }
       },
       {
-        "image": "/quiz-images/adtpegfowyjqhskuirl.png",
+        "image": "/quiz-images/adtpegfowyjqhskuirl.webp",
         "attributes": {
           "ambitious": 1,
           "tangible": 1
@@ -1526,7 +1526,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/otsrphkugjidwfylqae.png",
+        "image": "/quiz-images/otsrphkugjidwfylqae.webp",
         "attributes": {
           "intangible": 1,
           "retention": 1,
@@ -1534,7 +1534,7 @@
         }
       },
       {
-        "image": "/quiz-images/grusfioaekphltdwqjy.png",
+        "image": "/quiz-images/grusfioaekphltdwqjy.webp",
         "attributes": {
           "maximalist": 1,
           "relationships": 1
@@ -1545,13 +1545,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/tyljdhqakueigrwspfo.png",
+        "image": "/quiz-images/tyljdhqakueigrwspfo.webp",
         "attributes": {
           "tolerant": 1
         }
       },
       {
-        "image": "/quiz-images/arkgpfthlsowideuqjy.png",
+        "image": "/quiz-images/arkgpfthlsowideuqjy.webp",
         "attributes": {
           "experimental": 1,
           "control": 1
@@ -1562,14 +1562,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/wyesjrkaipglhftoudq.png",
+        "image": "/quiz-images/wyesjrkaipglhftoudq.webp",
         "attributes": {
           "retention": 1,
           "ambitious": 1
         }
       },
       {
-        "image": "/quiz-images/pyrqohtdwjkaifgeusl.png",
+        "image": "/quiz-images/pyrqohtdwjkaifgeusl.webp",
         "attributes": {
           "discovery": 1,
           "intangible": 1
@@ -1580,13 +1580,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ykiqhwtdeljfuprgaso.png",
+        "image": "/quiz-images/ykiqhwtdeljfuprgaso.webp",
         "attributes": {
           "domestic": 1
         }
       },
       {
-        "image": "/quiz-images/iajurlhdsetyqkowgfp.png",
+        "image": "/quiz-images/iajurlhdsetyqkowgfp.webp",
         "attributes": {
           "concord": 1
         }
@@ -1596,13 +1596,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hyqstkeawgjopfudril.png",
+        "image": "/quiz-images/hyqstkeawgjopfudril.webp",
         "attributes": {
           "safety": 1
         }
       },
       {
-        "image": "/quiz-images/auerydligtpjofwhskq.png",
+        "image": "/quiz-images/auerydligtpjofwhskq.webp",
         "attributes": {
           "domestic": 1,
           "ambitious": 1
@@ -1613,7 +1613,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/sjwgtrekluahipofqdy.png",
+        "image": "/quiz-images/sjwgtrekluahipofqdy.webp",
         "attributes": {
           "maximalist": 1,
           "retention": 1,
@@ -1621,7 +1621,7 @@
         }
       },
       {
-        "image": "/quiz-images/twyfuhseoiqalkjgrdp.png",
+        "image": "/quiz-images/twyfuhseoiqalkjgrdp.webp",
         "attributes": {
           "discovery": 1
         }
@@ -1631,13 +1631,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/heywdfarqisptojkugl.png",
+        "image": "/quiz-images/heywdfarqisptojkugl.webp",
         "attributes": {
           "retention": 1
         }
       },
       {
-        "image": "/quiz-images/pjiufdreshtgaylwokq.png",
+        "image": "/quiz-images/pjiufdreshtgaylwokq.webp",
         "attributes": {
           "inquisitive": 1,
           "maximalist": 1
@@ -1648,13 +1648,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/kithrfpojwyeldagsqu.png",
+        "image": "/quiz-images/kithrfpojwyeldagsqu.webp",
         "attributes": {
           "control": 1
         }
       },
       {
-        "image": "/quiz-images/lkihowfeysqpdjtraug.png",
+        "image": "/quiz-images/lkihowfeysqpdjtraug.webp",
         "attributes": {
           "dominant": 1,
           "traditional": 1,
@@ -1666,7 +1666,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/sakeprldhtqiofgyjuw.png",
+        "image": "/quiz-images/sakeprldhtqiofgyjuw.webp",
         "attributes": {
           "tangible": 1,
           "domestic": 1,
@@ -1674,7 +1674,7 @@
         }
       },
       {
-        "image": "/quiz-images/kqfgsalurteodyjhpiw.png",
+        "image": "/quiz-images/kqfgsalurteodyjhpiw.webp",
         "attributes": {
           "others": 1
         }
@@ -1684,14 +1684,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/gpiyfltwhjdekrqosau.png",
+        "image": "/quiz-images/gpiyfltwhjdekrqosau.webp",
         "attributes": {
           "relationships": 1,
           "tangible": 1
         }
       },
       {
-        "image": "/quiz-images/lrfdtawuojeshpgyikq.png",
+        "image": "/quiz-images/lrfdtawuojeshpgyikq.webp",
         "attributes": {
           "retention": 1
         }
@@ -1701,13 +1701,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/dasohwreiytpjqklugf.png",
+        "image": "/quiz-images/dasohwreiytpjqklugf.webp",
         "attributes": {
           "retention": 1
         }
       },
       {
-        "image": "/quiz-images/rwefohalguksqjpdyti.png",
+        "image": "/quiz-images/rwefohalguksqjpdyti.webp",
         "attributes": {
           "confidence": 1,
           "pragmatic": 1,
@@ -1719,7 +1719,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/eskojgwryhqlpaitduf.png",
+        "image": "/quiz-images/eskojgwryhqlpaitduf.webp",
         "attributes": {
           "domestic": 1,
           "self": 1,
@@ -1727,7 +1727,7 @@
         }
       },
       {
-        "image": "/quiz-images/qyskojauehtpfidlwgr.png",
+        "image": "/quiz-images/qyskojauehtpfidlwgr.webp",
         "attributes": {
           "control": 1,
           "traditional": 1
@@ -1738,7 +1738,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/hwrgikyojlpqafdetus.png",
+        "image": "/quiz-images/hwrgikyojlpqafdetus.webp",
         "attributes": {
           "maximalist": 1,
           "inquisitive": 1,
@@ -1746,7 +1746,7 @@
         }
       },
       {
-        "image": "/quiz-images/ulrhywoiasdjgtekfqp.png",
+        "image": "/quiz-images/ulrhywoiasdjgtekfqp.webp",
         "attributes": {
           "intangible": 1
         }
@@ -1756,14 +1756,14 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/apikqyuwljhegfsrdto.png",
+        "image": "/quiz-images/apikqyuwljhegfsrdto.webp",
         "attributes": {
           "maximalist": 1,
           "control": 1
         }
       },
       {
-        "image": "/quiz-images/rdahijyfgelutkwpsoq.png",
+        "image": "/quiz-images/rdahijyfgelutkwpsoq.webp",
         "attributes": {
           "domestic": 1,
           "peaceful": 1,
@@ -1775,13 +1775,13 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ueghyorslfaptqjkidw.png",
+        "image": "/quiz-images/ueghyorslfaptqjkidw.webp",
         "attributes": {
           "identity": 1
         }
       },
       {
-        "image": "/quiz-images/ugsijpdyeqtofrlhkwa.png",
+        "image": "/quiz-images/ugsijpdyeqtofrlhkwa.webp",
         "attributes": {
           "relationships": 1
         }
@@ -1791,7 +1791,7 @@
   {
     "choices": [
       {
-        "image": "/quiz-images/ahtejgisouqkydlrwpf.png",
+        "image": "/quiz-images/ahtejgisouqkydlrwpf.webp",
         "attributes": {
           "self": 1,
           "maximalist": 1,
@@ -1799,7 +1799,7 @@
         }
       },
       {
-        "image": "/quiz-images/iujhowgyedtsklprafq.png",
+        "image": "/quiz-images/iujhowgyedtsklprafq.webp",
         "attributes": {
           "confidence": 1,
           "experimental": 1,
