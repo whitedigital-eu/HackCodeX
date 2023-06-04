@@ -31,25 +31,6 @@ const props = defineProps({
 <style scoped lang="scss">
   .slider-quiz {
 
-    h1 {
-      font-size: 64px;
-      font-weight: 700;
-      line-height: 80px;
-      text-align: center;
-      width: 100%;
-    }
-
-    .description {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      text-align: center;
-      margin: 0 auto;
-      max-width: 500px;
-      padding: 0 20px;
-
-    }
-
     .finish {
       margin: 0 auto 50px;
       max-width: 400px;

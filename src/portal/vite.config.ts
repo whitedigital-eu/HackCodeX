@@ -4,9 +4,10 @@ import path from 'path'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import {existsSync} from "fs";
 
 const httpsConfig =
-    process.env.NODE_ENV !== 'production'
+    existsSync('/etc/ssl/private/local.io.key')
         ? {
           key: readFileSync('/etc/ssl/private/local.io.key'),
           cert: readFileSync('/etc/ssl/private/local.io.crt'),
