@@ -5,6 +5,8 @@ import type {Subjects} from "../interfaces/survey/Subjects";
 export enum SurveyState {
     PICTURE_QUIZ,
     SLIDER_QUIZ,
+    STATISTIC,
+    SUMMARY,
 }
 export class Survey {
     public state: SurveyState = SurveyState.PICTURE_QUIZ;

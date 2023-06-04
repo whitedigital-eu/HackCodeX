@@ -1,10 +1,9 @@
 <script setup lang="ts">
 
-import {Survey} from "../../mixins/Survey";
-import SubjectPropery from "./SubjectPropery.vue";
-import IconThumbsUp from "../icons/IconThumbsUp.vue";
+import {Survey, SurveyState} from "../../mixins/Survey";
+import SubjectProperty from "./SubjectPropery.vue";
 
-const emit = defineEmits(["finish"])
+const emit = defineEmits(["nextStep"])
 
 const props = defineProps({
   survey: Survey
@@ -18,11 +17,11 @@ const props = defineProps({
       Lorem ipsum dolor sit amet consectetur. Tortor viverra dignissim porttitor lectus lacus duis urna. Orci id feugiat quisque eu turpis.
     </div>
     <div class="subjects">
-      <SubjectPropery v-for="subject in Object.keys(survey?.subjects)" :survey="survey" :subject="subject" />
+      <SubjectProperty v-for="subject in Object.keys(survey?.subjects)" :survey="survey" :subject="subject" />
     </div>
 
     <div class="finish">
-      <button @click="emit('finish')" class="btn">
+      <button @click="emit('nextStep', SurveyState.STATISTIC)" class="btn">
         Nākamais solis
       </button>
     </div>
@@ -31,7 +30,6 @@ const props = defineProps({
 
 <style scoped lang="scss">
   .slider-quiz {
-    flex: 1 1 100%;
 
     h1 {
       font-size: 64px;
