@@ -30,10 +30,10 @@ class SubmissionProcessor implements ProcessorInterface
     ];
 
     public function __construct(
-        protected readonly RespondentRepository $respondentRepository,
-        protected readonly SubmissionRepository $submissionRepository,
+        protected readonly RespondentRepository       $respondentRepository,
+        protected readonly SubmissionRepository       $submissionRepository,
         protected readonly SubmissionResultRepository $submissionResultRepository,
-        protected readonly EntityManagerInterface $entityManager,
+        protected readonly EntityManagerInterface     $entityManager,
     )
     {
     }
@@ -57,16 +57,20 @@ class SubmissionProcessor implements ProcessorInterface
             $this->calculateClassgroupSummaryGrades($formGroups);
 
             $weightedFormGroupResults = [];
+            $maxScore = 0;
             foreach ($formGroups as $formId => $subjects) {
-                $weightedFormGroupResults[$formId] = $this->calculateWeightedFormGroupScore($data, $subjects);
+                $score = $this->calculateWeightedFormGroupScore($data, $subjects);
+                $maxScore = max($score, $maxScore);
+                $weightedFormGroupResults[$formId] = $score;
             }
+            $maxScore = $maxScore + $data->getPeaceful();
 
             $this->submissionRepository->save($data);
 
             foreach ($weightedFormGroupResults as $formId => $score) {
                 $entity = new SubmissionResult();
-                $entity->setSubmission($data)
-                    ->setForm($this->entityManager->getReference(Form::class, $formId))->setResult($score);
+                $entity->setSubmission($data)->setForm($this->entityManager->getReference(Form::class, $formId))
+                    ->setResult((int)round($score / $maxScore  * 100));
                 $this->submissionResultRepository->save($entity);
             }
             $this->entityManager->flush();
@@ -79,6 +83,7 @@ class SubmissionProcessor implements ProcessorInterface
     {
         foreach ($formGroups as $formGroupId => $subjectArray) {
             foreach ($subjectArray as $subject => $gradeArray) {
+                //TODO: we should introduce non-integers, to get proper grade, aka 8.3 or 7.6
                 $grade = array_keys($gradeArray, max($gradeArray), true)[0];
                 $formGroups[$formGroupId][$subject] = $grade;
             }

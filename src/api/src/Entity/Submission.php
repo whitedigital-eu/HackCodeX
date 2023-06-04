@@ -1,133 +1,177 @@
-<?php declare(strict_types = 1);
+<?php declare(strict_types=1);
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiFilter;
+use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Serializer\Filter\GroupFilter;
 use App\Enums\SubmissionTypeEnum;
 use App\Processors\SubmissionProcessor;
 use App\Repository\SubmissionRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: SubmissionRepository::class)]
-#[ApiResource(processor: SubmissionProcessor::class)]
+#[ApiResource(normalizationContext: ['groups' => ['submission:read']], denormalizationContext: ['groups' => ['submission:write']], processor: SubmissionProcessor::class)]
+#[ApiFilter(GroupFilter::class, arguments: ['parameterName' => 'groups', 'overrideDefaultGroups' => false])]
 class Submission
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['submission:read'])]
     private ?int $id = null;
 
     #[ORM\Column(type: 'string', nullable: false, enumType: SubmissionTypeEnum::class)]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?SubmissionTypeEnum $type = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $pragmatic = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $domestic = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $traditional = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $peaceful = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $caring = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $tolerant = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $contemplative = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $inquisitive = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $experimental = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $maximalist = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $dominant = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $ambitious = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $tangible = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $intangible = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $relationships = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $identity = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $retention = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $discovery = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $others = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $self = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $safety = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $confidence = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $concord = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $control = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $languages = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $sport = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $math = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $physics = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $geography = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $chemistry = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $computers = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $music = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $crafts = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $religion = null;
 
     #[ORM\Column]
+    #[Groups(['submission:read', 'submission:write'])]
     private ?int $art = null;
 
     #[ORM\OneToMany(mappedBy: 'submission', targetEntity: SubmissionResult::class, orphanRemoval: true)]
+    #[ApiProperty(openapiContext: ['example' => ['/api/submission_results/1']])]
+    #[Groups(['submission:read'])]
     private Collection $submissionResults;
 
     public function __construct()

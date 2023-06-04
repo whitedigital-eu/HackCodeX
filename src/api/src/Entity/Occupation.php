@@ -6,6 +6,7 @@ use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\NotExposed;
 use App\Repository\OccupationRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: OccupationRepository::class)]
 #[ApiResource]
@@ -17,12 +18,14 @@ class Occupation
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['submission_result:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
     private ?string $code = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['submission_result:read'])]
     private ?string $title = null;
 
     public function getId(): ?int
