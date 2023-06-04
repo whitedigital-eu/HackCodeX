@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Repository\RespondentRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -41,6 +42,7 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Index(fields: ['crafts'])]
 #[ORM\Index(fields: ['religion'])]
 #[ORM\Index(fields: ['art'])]
+#[ApiResource]
 class Respondent
 {
     #[ORM\Id]
