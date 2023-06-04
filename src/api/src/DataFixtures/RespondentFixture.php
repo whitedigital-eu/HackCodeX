@@ -36,7 +36,11 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
 
                 $manager->persist($fixture);
             }
+
+            $manager->flush();
         }
+
+        $manager->flush();
 
         for ($i = 0; $i < 45000; $i++) {
             $fixture = new Respondent();
@@ -44,6 +48,8 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
             $fixture->setUniversityProgram($this->getEntity(UniversityProgramFixture::class));
             $manager->persist($fixture);
         }
+
+        $manager->flush();
 
         for ($i = 0; $i < 45000; $i++) {
             $fixture = new Respondent();
