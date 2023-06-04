@@ -31,7 +31,7 @@ class SubmissionResult
     #[Groups(['submission_result:read'])]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'submissionResults')]
+    #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
     #[Groups(['submission_result:read'])]
     #[ApiProperty(openapiContext: ['example' => '/api/submissions/1'])]
