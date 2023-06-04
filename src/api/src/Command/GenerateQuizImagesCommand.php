@@ -39,10 +39,15 @@ class GenerateQuizImagesCommand extends Command
         $randomizer = (new Randomizer());
         $quizData = [];
         $io = new SymfonyStyle($input, $output);
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $choices = [];
             for ($j = 0; $j < 2; $j++) {
-                $characteristics = array_rand(array_flip(RespondentRepository::ATTRS), $randomizer->getInt(2, 5));
+                $count = $randomizer->getInt(1, 3);
+                $characteristics = [];
+                while (count($characteristics) < $count) {
+                    $characteristics[] = RespondentRepository::ATTRS[$randomizer->getInt(0, count(RespondentRepository::ATTRS) - 1)];
+                    $characteristics = array_values(array_unique($characteristics));
+                }
                 $io->info('Selected characteristics are: ' . implode(', ', $characteristics));
                 $prompt = $this->openAiService->generateImageGenerationPromptBasedOnCharacteristics($characteristics);
                 $io->info("Image generation prompt is: $prompt");
@@ -65,7 +70,7 @@ class GenerateQuizImagesCommand extends Command
             ];
         }
         file_put_contents('/var/www/html/api/public/quiz-images/image-data.json',
-            json_encode($quizData, JSON_THROW_ON_ERROR));
+            json_encode($quizData, JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES));
 
         return Command::SUCCESS;
     }
