@@ -20,7 +20,7 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RespondentRepository extends ServiceEntityRepository
 {
-    private const ATTRS = [
+    public const ATTRS = [
         'pragmatic',
         'domestic',
         'traditional',
