@@ -10,7 +10,7 @@ class OccupationFixture extends AbstractFixture implements FixtureGroupInterface
 {
     public function load(ObjectManager $manager): void
     {
-        if (($handle = fopen('/var/www/html/api/resources/occupation-classifiers.csv', 'rb')) !== false) {
+        if (($handle = fopen('/var/www/html/api/resources/occupation-classifiers.csv', 'rb+')) !== false) {
             $i = -1;
             while (($data = fgetcsv($handle, 1000)) !== false) {
                 if (7 === strlen($data[0])) {

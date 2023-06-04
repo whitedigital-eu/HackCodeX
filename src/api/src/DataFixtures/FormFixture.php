@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Form;
+use App\Enums\FormTypeEnum;
 use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;
 use Doctrine\Persistence\ObjectManager;
 
@@ -23,15 +24,21 @@ class FormFixture extends AbstractFixture implements FixtureGroupInterface
         $a = -1;
         foreach ($data['Sheet1'] as $item) {
             if ('RĪGA' === $item['Pašvaldība']) {
-                for ($i = 7; $i <= 12; $i++) {
+                foreach ([7, 10] as $i) {
                     if ('0' !== $item[sprintf('%d. klase', $i)]) {
                         for ($j = 0; $j < random_int(1, 4); $j++) {
                             $a++;
+                            $type = match ($i) {
+                                7 => FormTypeEnum::SECONDARY,
+                                10 => FormTypeEnum::HIGHSCHOOL,
+                            };
+
                             $fixture = (new Form())
-                                ->setFormNumber($i)
                                 ->setSchool($item['Iestādes nosaukums'])
-                                ->setFormLetter(self::LETTERS[$j]);
+                                ->setFormLetter(self::LETTERS[$j])
+                                ->setType($type);
                             $manager->persist($fixture);
+
                             $manager->flush();
 
                             $this->addReference('form' . $a, $fixture);

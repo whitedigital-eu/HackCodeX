@@ -11,7 +11,7 @@ class UniversityProgramFixture extends AbstractFixture implements FixtureGroupIn
     public function load(ObjectManager $manager): void
     {
         $processedProgrammes = [];
-        if (($handle = fopen('/var/www/html/api/resources/university-majors.csv', 'rb')) !== false) {
+        if (($handle = fopen('/var/www/html/api/resources/university-majors.csv', 'rb+')) !== false) {
             $i = -1;
             while (($data = fgetcsv($handle, 1000)) !== false) {
                 $programName = trim($data[0]) . ' (' . trim($data[1]) . ')';
