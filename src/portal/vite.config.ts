@@ -4,9 +4,10 @@ import path from 'path'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import {existsSync} from "fs";
 
 const httpsConfig =
-    readFileSync('/etc/ssl/private/local.io.key') ?? false
+    existsSync('/etc/ssl/private/local.io.key')
         ? {
           key: readFileSync('/etc/ssl/private/local.io.key'),
           cert: readFileSync('/etc/ssl/private/local.io.crt'),
