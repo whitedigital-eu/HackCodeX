@@ -14,7 +14,7 @@ const emit = defineEmits(["cardSelected"])
     <div class="inner-card" :style="`background-image: url('${image}')`">
 
     </div>
-    <button @click="emit('cardSelected')" class="btn">
+    <button @click="emit('cardSelected')" class="btng">
       <icon-thumbs-up />
     </button>
   </div>
@@ -53,9 +53,13 @@ const emit = defineEmits(["cardSelected"])
   }
 
   position: relative;
-  .btn {
+  .btng {
     position: absolute;
     bottom: 5%;
+
+    svg {
+      display: inline-block;
+    }
   }
 
   &.second {

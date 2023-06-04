@@ -1,128 +1,15 @@
 import type {Choices} from "../../interfaces/survey/Choice";
 
-export const test_part_1: Choices[] = [
-    {
-        choices : [
-            {
-                image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-                attributes: {
-                    pragmatic: 0,
-                    domestic: 0,
-                    traditional: 0,
-                    peaceful: 0,
-                    caring: 0,
-                    tolerant: 0,
-                    contemplative: 0,
-                    inquisitive: 0,
-                    experimental: 0,
-                    maximalist: 1,
-                    dominant: 0,
-                    ambitious: 0,
-                    tangible: 0,
-                    intangible: 0,
-                    relationships: 0,
-                    identity: 0,
-                    retention: 0,
-                    discovery: 0,
-                    others: 0,
-                    self: 0,
-                    safety: 1,
-                    confidence: 0,
-                    concord: 0,
-                    control: 0,
-                }
-            },
-            {
-                image: 'https://images.unsplash.com/photo-1551290470-554bf3a4fa80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80',
-                attributes: {
-                    pragmatic: 0,
-                    domestic: 0,
-                    traditional: 0,
-                    peaceful: 1,
-                    caring: 0,
-                    tolerant: 0,
-                    contemplative: 0,
-                    inquisitive: 0,
-                    experimental: 0,
-                    maximalist: 0,
-                    dominant: 0,
-                    ambitious: 0,
-                    tangible: 0,
-                    intangible: 0,
-                    relationships: 0,
-                    identity: 0,
-                    retention: 0,
-                    discovery: 0,
-                    others: 1,
-                    self: 0,
-                    safety: 0,
-                    confidence: 0,
-                    concord: 0,
-                    control: 0,
-                }
-            },
-        ],
-    },
-    {
-        choices : [
-            {
-                image: 'https://images.unsplash.com/photo-1573492780024-07153f3518af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80',
-                attributes: {
-                    pragmatic: 0,
-                    domestic: 0,
-                    traditional: 0,
-                    peaceful: 1,
-                    caring: 0,
-                    tolerant: 0,
-                    contemplative: 0,
-                    inquisitive: 0,
-                    experimental: 0,
-                    maximalist: 0,
-                    dominant: 0,
-                    ambitious: 0,
-                    tangible: 0,
-                    intangible: 0,
-                    relationships: 0,
-                    identity: 0,
-                    retention: 0,
-                    discovery: 0,
-                    others: 0,
-                    self: 0,
-                    safety: 0,
-                    confidence: 1,
-                    concord: 0,
-                    control: 0,
-                }
-            },
-            {
-                image: 'https://images.unsplash.com/photo-1584237863847-b21b4f7ccd4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1598&q=80',
-                attributes: {
-                    pragmatic: 0,
-                    domestic: 0,
-                    traditional: 0,
-                    peaceful: 1,
-                    caring: 0,
-                    tolerant: 0,
-                    contemplative: 0,
-                    inquisitive: 0,
-                    experimental: 0,
-                    maximalist: 0,
-                    dominant: 0,
-                    ambitious: 0,
-                    tangible: 0,
-                    intangible: 0,
-                    relationships: 0,
-                    identity: 0,
-                    retention: 0,
-                    discovery: 1,
-                    others: 0,
-                    self: 0,
-                    safety: 0,
-                    confidence: 0,
-                    concord: 0,
-                    control: 0,
-                }
-            },
-        ],
+export let test_part_1: Choices[] | null = null;
+
+export const updateQuestions = (choices: any) => {
+    test_part_1 = shuffleArray(choices);
+}
+
+export const shuffleArray = (array: any) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
-];
+    return array;
+}

@@ -1,6 +1,7 @@
 import type {Choice, ChoiceAttribute, Choices} from "../interfaces/survey/Choice";
-import {test_part_1} from "../assets/data/quetions";
+import {test_part_1, updateQuestions} from "../assets/data/quetions";
 import type {Subjects} from "../interfaces/survey/Subjects";
+import axios from "axios";
 
 export enum SurveyState {
     PICTURE_QUIZ,
@@ -9,6 +10,7 @@ export enum SurveyState {
     SUMMARY,
 }
 export class Survey {
+    public answer_limit: number = 20;
     public state: SurveyState = SurveyState.PICTURE_QUIZ;
     public picture_index: number = 0;
     public attribute_summary: ChoiceAttribute = {
@@ -72,12 +74,23 @@ export class Survey {
         });
         this.picture_index++;
 
-        if (test_part_1.length <= this.picture_index) {
+        if (this.answer_limit <= this.picture_index) {
             this.setState(SurveyState.SLIDER_QUIZ);
         }
     }
 
-    getCurrentPictureQuizQuestion(): Choices {
-        return test_part_1[this.picture_index];
+    async loadQuizQuestions() {
+        // https://hack.local.io/quiz-images/image-data.json
+
+        let questions = await axios({
+            method: 'get',
+            url: `/quiz-images/image-data.json`,
+        });
+
+        updateQuestions(questions.data)
+    }
+
+    getCurrentPictureQuizQuestion(): Choices | null {
+        return test_part_1 ? test_part_1[this.picture_index]: null;
     }
 }

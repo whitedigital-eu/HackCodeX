@@ -1,5 +1,6 @@
 @import './base.css';
 @import url('https://fonts.cdnfonts.com/css/inter');
+@import './css/tailwind.css';
 
 body, html {
   margin: 0;
@@ -16,7 +17,7 @@ a {
   text-decoration: none;
 }
 
-button.btn {
+button.btng {
   width: 80%;
   background: transparent;
   padding: 10px 0;
@@ -56,4 +57,11 @@ h1 {
   margin: 0 auto;
   max-width: 500px;
   padding: 0 20px;
+}
+
+.hc-card {
+  background: #FFFFFF;
+  box-shadow: 0 0 10px 1px rgba(10, 10, 10, 0.09);
+  border-radius: 10px;
+  padding: 10px 20px;
 }

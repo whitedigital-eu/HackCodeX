@@ -21,7 +21,7 @@ const props = defineProps({
     </div>
 
     <div class="finish">
-      <button @click="emit('nextStep', SurveyState.STATISTIC)" class="btn">
+      <button @click="emit('nextStep', SurveyState.STATISTIC)" class="btng">
         Nākamais solis
       </button>
     </div>

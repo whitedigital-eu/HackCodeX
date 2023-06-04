@@ -57,7 +57,7 @@ const antonymList = [
     </div>
 
     <div class="finish">
-      <button @click="emit('nextStep', SurveyState.SUMMARY)" class="btn">
+      <button @click="emit('nextStep', SurveyState.SUMMARY)" class="btng">
         Nākamais solis
       </button>
     </div>

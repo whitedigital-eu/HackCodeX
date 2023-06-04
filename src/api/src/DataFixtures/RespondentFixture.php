@@ -32,7 +32,7 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
             return random_int(4, 10);
         }
 
-        $max = 45000;
+        $max = 500;
 
         for ($i = 0; $i < $max; $i++) {
             foreach ([7, 10] as $j) {
