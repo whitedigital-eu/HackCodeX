@@ -117,17 +117,22 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
 
     private function setForForm(Respondent $respondent): void
     {
+        function x(): int
+        {
+            return random_int(4, 10);
+        }
+
         $respondent
-            ->setLanguages(r())
-            ->setSport(r())
-            ->setMath(r())
-            ->setPhysics(r())
-            ->setGeography(r())
-            ->setChemistry(r())
-            ->setComputers(r())
-            ->setMusic(r())
-            ->setCrafts(r())
-            ->setReligion(r())
-            ->setArt(r());
+            ->setLanguages(x())
+            ->setSport(x())
+            ->setMath(x())
+            ->setPhysics(x())
+            ->setGeography(x())
+            ->setChemistry(x())
+            ->setComputers(x())
+            ->setMusic(x())
+            ->setCrafts(x())
+            ->setReligion(x())
+            ->setArt(x());
     }
 }
