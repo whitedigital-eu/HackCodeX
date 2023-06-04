@@ -42,46 +42,58 @@ class RespondentRepository extends ServiceEntityRepository
         }
     }
 
-    public function findRespondentsOrderedBySimilair(Submission $submission): Paginator
+    public function findRespondentsOrderedBySimilar(Submission $submission): Paginator
     {
-        $formNumbers = SubmissionTypeEnum::Form6th === $submission->getType() ? [7, 8, 9] : [10, 11, 12];
-        $qb = $this->createQueryBuilder('r');
-        $orderArray = [
-            'ABS(r.pragmatic - :pragmatic)',
-            'ABS(r.domestic - :domestic)',
-//            "ABS(r.traditional - {$submission->getTraditional()})",
-//            "ABS(r.peaceful - {$submission->getPeaceful()})",
-//            "ABS(r.caring - {$submission->getCaring()})",
-//            "ABS(r.tolerant - {$submission->getTolerant()})",
-//            "ABS(r.contemplative - {$submission->getContemplative()})",
-//            "ABS(r.inquisitive - {$submission->getInquisitive()})",
-//            "ABS(r.experimental - {$submission->getExperimental()})",
-//            "ABS(r.maximalist - {$submission->getMaximalist()})",
-//            "ABS(r.dominant - {$submission->getDominant()})",
-//            "ABS(r.ambitious - {$submission->getAmbitious()})",
-//            "ABS(r.tangible - {$submission->getTangible()})",
-//            "ABS(r.intangible - {$submission->getIntangible()})",
-//            "ABS(r.relationships - {$submission->getRelationships()})",
-//            "ABS(r.identity - {$submission->getIdentity()})",
-//            "ABS(r.retention - {$submission->getRetention()})",
-//            "ABS(r.discovery - {$submission->getDiscovery()})",
-//            "ABS(r.others - {$submission->getOthers()})",
-//            "ABS(r.self - {$submission->getSelf()})",
-//            "ABS(r.safety - {$submission->getSafety()})",
-//            "ABS(r.confidence - {$submission->getConfidence()})",
-//            "ABS(r.concord - {$submission->getConcord()})",
-//            "ABS(r.control - {$submission->getControl()})",
+        $profileAttributes = [
+            'pragmatic',
+            'domestic',
+            'traditional',
+            'peaceful',
+            'caring',
+            'tolerant',
+            'contemplative',
+            'inquisitive',
+            'experimental',
+            'maximalist',
+            'dominant',
+            'ambitious',
+            'tangible',
+            'intangible',
+            'relationships',
+            'identity',
+            'retention',
+            'discovery',
+            'others',
+            'self',
+            'safety',
+            'confidence',
+            'concord',
+            'control',
         ];
-        $query = $qb->addSelect('f')->innerJoin('r.form', 'f', 'WITH', 'f.formNumber IN (:formNumbers)')
-            ->setParameters([
-                'formNumbers' => $formNumbers,
-                'pragmatic' => $submission->getPragmatic(),
-                'domestic' => $submission->getDomestic(),
-            ])
-            ->orderBy(implode(' + ', $orderArray), 'ASC')
-            ->getQuery()->setFirstResult(0)
+        $query = $this->createQueryBuilder('r')->addSelect('f')
+            ->innerJoin('r.form', 'f', 'WITH', 'f.formNumber IN (:formNumbers)')
+            ->setParameters($this->buildParameterArray($submission, $profileAttributes))
+            ->orderBy($this->buildCriteriaOrderBy($profileAttributes), 'ASC')->getQuery()->setFirstResult(0)
             ->setMaxResults(2000);
-
         return new Paginator($query);
+    }
+
+    private function buildCriteriaOrderBy(array $profileAttributes): string
+    {
+        $orderBy = [];
+        foreach ($profileAttributes as $profileAttribute) {
+            $orderBy[] = "ABS(r.$profileAttribute - :$profileAttribute)";
+        }
+        return implode(' + ', $orderBy);
+    }
+
+    private function buildParameterArray(Submission $submission, array $profileAttributes): array
+    {
+        $parameters['formNumbers'] = SubmissionTypeEnum::Form6th === $submission->getType() ? [7, 8, 9] : [10, 11, 12];
+        foreach ($profileAttributes as $profileAttribute) {
+            $getter = 'get' . ucfirst($profileAttribute);
+            $parameters[$profileAttribute] = $submission->$getter();
+        }
+        return $parameters;
     }
 }
