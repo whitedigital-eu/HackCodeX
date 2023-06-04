@@ -3,14 +3,11 @@
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiFilter;
-use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Serializer\Filter\GroupFilter;
 use App\Enums\SubmissionTypeEnum;
 use App\Processors\SubmissionProcessor;
 use App\Repository\SubmissionRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
@@ -168,15 +165,6 @@ class Submission
     #[ORM\Column]
     #[Groups(['submission:read', 'submission:write'])]
     private ?int $art = null;
-
-    #[ORM\OneToMany(mappedBy: 'submission', targetEntity: SubmissionResult::class, orphanRemoval: true)]
-    #[ApiProperty(openapiContext: ['example' => ['/api/submission_results/1']])]
-    private Collection $submissionResults;
-
-    public function __construct()
-    {
-        $this->submissionResults = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -611,36 +599,6 @@ class Submission
     public function setArt(int $art): static
     {
         $this->art = $art;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, SubmissionResult>
-     */
-    public function getSubmissionResults(): Collection
-    {
-        return $this->submissionResults;
-    }
-
-    public function addSubmissionResult(SubmissionResult $submissionResult): static
-    {
-        if (!$this->submissionResults->contains($submissionResult)) {
-            $this->submissionResults->add($submissionResult);
-            $submissionResult->setSubmission($this);
-        }
-
-        return $this;
-    }
-
-    public function removeSubmissionResult(SubmissionResult $submissionResult): static
-    {
-        if ($this->submissionResults->removeElement($submissionResult)) {
-            // set the owning side to null (unless already changed)
-            if ($submissionResult->getSubmission() === $this) {
-                $submissionResult->setSubmission(null);
-            }
-        }
 
         return $this;
     }

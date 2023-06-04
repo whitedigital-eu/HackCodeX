@@ -2,25 +2,30 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\NotExposed;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Serializer\Filter\GroupFilter;
 use App\Repository\UniversityProgramRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: UniversityProgramRepository::class)]
-#[ApiResource]
-#[NotExposed]
+#[ApiResource(normalizationContext: ['groups' => ['university_program:read']])]
+#[Get]
+#[GetCollection]
+#[ApiFilter(GroupFilter::class, arguments: ['parameterName' => 'groups', 'overrideDefaultGroups' => false])]
 class UniversityProgram
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['submission_result:read'])]
+    #[Groups(['university_program:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['submission_result:read'])]
+    #[Groups(['university_program:read'])]
     private ?string $title = null;
 
     public function getId(): ?int

@@ -63,7 +63,7 @@ class SubmissionProcessor implements ProcessorInterface
                 $maxScore = max($score, $maxScore);
                 $weightedFormGroupResults[$formId] = $score;
             }
-            $maxScore = $maxScore + $data->getPeaceful();
+            $maxScore += $data->getPeaceful();
 
             $this->submissionRepository->save($data);
 

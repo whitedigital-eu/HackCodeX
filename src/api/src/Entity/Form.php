@@ -2,36 +2,41 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\NotExposed;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Serializer\Filter\GroupFilter;
 use App\Enums\FormTypeEnum;
 use App\Repository\FormRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: FormRepository::class)]
-#[ApiResource]
-#[NotExposed]
+#[ApiResource(normalizationContext: ['groups' => ['form:read']])]
+#[Get]
+#[GetCollection]
+#[ApiFilter(GroupFilter::class, arguments: ['parameterName' => 'groups', 'overrideDefaultGroups' => false])]
 #[ORM\Index(fields: ['formLetter'])]
 class Form
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['submission_result:read'])]
+    #[Groups(['form:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 1)]
-    #[Groups(['submission_result:read'])]
+    #[Groups(['form:read'])]
     private ?string $formLetter = null;
 
     #[ORM\Column(type: 'string', nullable: false, enumType: FormTypeEnum::class)]
-    #[Groups(['submission_result:read'])]
+    #[Groups(['form:read'])]
     private ?FormTypeEnum $type = null;
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['submission_result:read'])]
+    #[Groups(['form:read'])]
     private ?School $school = null;
 
     public function getId(): ?int
