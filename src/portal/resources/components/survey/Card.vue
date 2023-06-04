@@ -10,7 +10,10 @@ const emit = defineEmits(["cardSelected"])
 </script>
 
 <template>
-  <div class="card" :style="`background-image: url('${image}')`">
+  <div class="card">
+    <div class="inner-card" :style="`background-image: url('${image}')`">
+
+    </div>
     <button @click="emit('cardSelected')" class="btn">
       <icon-thumbs-up />
     </button>
@@ -27,8 +30,11 @@ const emit = defineEmits(["cardSelected"])
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-position: center;
-  background-size: cover;
+
+  .inner-card {
+    background-position: center;
+    background-size: cover;
+  }
 
   img {
     margin: 0 60px;
