@@ -2,6 +2,7 @@
 
 import {ref, watch} from "vue";
 import {useSurvey} from "../../stores/survey";
+import {t} from "../../assets/data/language";
 
 const survey = useSurvey();
 
@@ -18,7 +19,7 @@ watch(current_number, () => {
 
 <template>
   <div class="slider-bar">
-    <div>{{ subject }}</div>
+    <div>{{ t(subject) }}</div>
     <div class="slider-box">
       <div class="first">1</div>
       <div v-if="current_number != 1 && current_number != 10" class="current" :style="`left: ${(current_number * 10) - 7}%`">{{ current_number }}</div>

@@ -7,9 +7,14 @@ import Card from "../components/survey/Card.vue";
 import type {Choice} from "../interfaces/survey/Choice";
 import {SurveyState} from "../mixins/Survey";
 import SliderQuiz from "../components/survey/SliderQuiz.vue";
+import Statistic from "../components/survey/Statistic.vue";
 
 const cardSelected = (choice: Choice) => {
   survey.getSurvey().addChoice(choice)
+}
+
+const nextStep = (step: SurveyState) => {
+  survey.getSurvey().state = step;
 }
 </script>
 
@@ -23,7 +28,10 @@ const cardSelected = (choice: Choice) => {
       />
     </div>
     <div v-else-if="survey.getSurvey().state === SurveyState.SLIDER_QUIZ">
-      <SliderQuiz :survey="survey.getSurvey()" />
+      <SliderQuiz :survey="survey.getSurvey()" @nextStep="nextStep" />
+    </div>
+    <div v-else-if="survey.getSurvey().state === SurveyState.STATISTIC">
+      <Statistic @nextStep="nextStep"  />
     </div>
   </main>
 </template>
