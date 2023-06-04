@@ -171,7 +171,6 @@ class Submission
 
     #[ORM\OneToMany(mappedBy: 'submission', targetEntity: SubmissionResult::class, orphanRemoval: true)]
     #[ApiProperty(openapiContext: ['example' => ['/api/submission_results/1']])]
-    #[Groups(['submission:read'])]
     private Collection $submissionResults;
 
     public function __construct()
