@@ -7,6 +7,7 @@ use ApiPlatform\Metadata\NotExposed;
 use App\Enums\FormTypeEnum;
 use App\Repository\FormRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: FormRepository::class)]
 #[ApiResource]
@@ -18,15 +19,19 @@ class Form
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['submission_result:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['submission_result:read'])]
     private ?string $school = null;
 
     #[ORM\Column(length: 1)]
+    #[Groups(['submission_result:read'])]
     private ?string $formLetter = null;
 
     #[ORM\Column(type: 'string', nullable: false, enumType: FormTypeEnum::class)]
+    #[Groups(['submission_result:read'])]
     private ?FormTypeEnum $type = null;
 
     public function getId(): ?int
