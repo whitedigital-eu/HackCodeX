@@ -14,7 +14,6 @@ use App\Repository\RespondentRepository;
 use App\Repository\SubmissionRepository;
 use App\Repository\SubmissionResultRepository;
 use Doctrine\ORM\EntityManagerInterface;
-
 use function asort;
 use function end;
 use function max;
@@ -80,7 +79,19 @@ class SubmissionProcessor implements ProcessorInterface
             $maxScore = max($score, $maxScore);
             $weightedFormGroupResults[$formId] = $score;
         }
-        $maxScore += $data->getPeaceful();
+
+        $maxAttribute = '';
+        foreach (RespondentRepository::ATTRS as $attribute) {
+            if (!$maxAttribute) {
+                $maxAttribute = $attribute;
+            } else {
+                $getterMaxAttr = 'get' . ucfirst($maxAttribute);
+                $getterCompare = 'get' . ucfirst($attribute);
+                $maxAttribute = $data->$getterCompare() > $data->$getterMaxAttr() ? $attribute : $maxAttribute;
+            }
+        }
+        $getter = 'get' . ucfirst($maxAttribute);
+        $maxScore += $data->$getter();
 
         $this->submissionRepository->save($data);
 
