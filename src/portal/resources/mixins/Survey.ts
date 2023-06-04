@@ -13,13 +13,13 @@ export class Survey {
     public picture_index: number = 0;
     public attribute_summary: ChoiceAttribute = {
         pragmatic: 0,
-        domestic: 0,
+        domestic: 7,
         traditional: 0,
         peaceful: 0,
         caring: 0,
-        tolerant: 0,
+        tolerant: 8,
         contemplative: 0,
-        inquisitive: 0,
+        inquisitive: 3,
         experimental: 0,
         maximalist: 0,
         dominant: 0,
