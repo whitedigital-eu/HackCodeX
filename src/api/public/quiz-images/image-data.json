@@ -1,0 +1,1811 @@
+[
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/wrldkpoythqfsgiujae.png",
+        "attributes": {
+          "tangible": 1,
+          "contemplative": 1
+        }
+      },
+      {
+        "image": "/quiz-images/plwiyuqdfrhtksojaeg.png",
+        "attributes": {
+          "concord": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hkqgtierdulpaywjfso.png",
+        "attributes": {
+          "safety": 1,
+          "relationships": 1,
+          "confidence": 1
+        }
+      },
+      {
+        "image": "/quiz-images/kiwdjfyreaqstugophl.png",
+        "attributes": {
+          "caring": 1,
+          "ambitious": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/oygahdwskpitrlejquf.png",
+        "attributes": {
+          "ambitious": 1
+        }
+      },
+      {
+        "image": "/quiz-images/iroefujagptdkqhyswl.png",
+        "attributes": {
+          "relationships": 1,
+          "ambitious": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hujfiadgtspyrwqelok.png",
+        "attributes": {
+          "pragmatic": 1,
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/jhtywdqsrlupfkeoiag.png",
+        "attributes": {
+          "relationships": 1,
+          "dominant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/psehlgtyjurkiqawdof.png",
+        "attributes": {
+          "tolerant": 1,
+          "intangible": 1,
+          "pragmatic": 1
+        }
+      },
+      {
+        "image": "/quiz-images/oujgwaistleqrdyhfpk.png",
+        "attributes": {
+          "inquisitive": 1,
+          "concord": 1,
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/iayfworujhptkldegqs.png",
+        "attributes": {
+          "relationships": 1,
+          "confidence": 1
+        }
+      },
+      {
+        "image": "/quiz-images/drweqpoaglhtkujifys.png",
+        "attributes": {
+          "retention": 1,
+          "tolerant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/egfiksroahqjlptduyw.png",
+        "attributes": {
+          "pragmatic": 1
+        }
+      },
+      {
+        "image": "/quiz-images/athjiofywqsegdplukr.png",
+        "attributes": {
+          "inquisitive": 1,
+          "domestic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ogeyuspkrfqhwjtadil.png",
+        "attributes": {
+          "control": 1
+        }
+      },
+      {
+        "image": "/quiz-images/yfikaqelwdhgrputjso.png",
+        "attributes": {
+          "inquisitive": 1,
+          "peaceful": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/idsefjptklyaquwrhgo.png",
+        "attributes": {
+          "caring": 1,
+          "relationships": 1
+        }
+      },
+      {
+        "image": "/quiz-images/autogrwepidhlsykfjq.png",
+        "attributes": {
+          "control": 1,
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/qfoijhlgdytkpsweuar.png",
+        "attributes": {
+          "pragmatic": 1,
+          "maximalist": 1,
+          "ambitious": 1
+        }
+      },
+      {
+        "image": "/quiz-images/tpyeflgjduwqishkroa.png",
+        "attributes": {
+          "identity": 1,
+          "contemplative": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/oispytqukrdelwfaghj.png",
+        "attributes": {
+          "experimental": 1,
+          "tangible": 1,
+          "relationships": 1
+        }
+      },
+      {
+        "image": "/quiz-images/qagjrukdphswfoitley.png",
+        "attributes": {
+          "control": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/iuphqjlgkdrweaoftsy.png",
+        "attributes": {
+          "maximalist": 1,
+          "tolerant": 1,
+          "intangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/wouqgfidkalyrpshtej.png",
+        "attributes": {
+          "maximalist": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/osuqfrjahltkgiwpedy.png",
+        "attributes": {
+          "discovery": 1,
+          "domestic": 1,
+          "control": 1
+        }
+      },
+      {
+        "image": "/quiz-images/ukrgjidhwteflpqoays.png",
+        "attributes": {
+          "caring": 1,
+          "safety": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hadpkwqgysiuretlojf.png",
+        "attributes": {
+          "control": 1,
+          "others": 1
+        }
+      },
+      {
+        "image": "/quiz-images/ktojsdupifahqyeglwr.png",
+        "attributes": {
+          "self": 1,
+          "domestic": 1,
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hojrqtdlkfpiygeuaws.png",
+        "attributes": {
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/uyokwfdiqsrtelgjhpa.png",
+        "attributes": {
+          "identity": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ojthqdefrayspglkiuw.png",
+        "attributes": {
+          "safety": 1,
+          "contemplative": 1,
+          "peaceful": 1
+        }
+      },
+      {
+        "image": "/quiz-images/jedqslagipkuhtwoyrf.png",
+        "attributes": {
+          "concord": 1,
+          "intangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/iasyqdptrgelwkjhfuo.png",
+        "attributes": {
+          "domestic": 1,
+          "caring": 1,
+          "experimental": 1
+        }
+      },
+      {
+        "image": "/quiz-images/shwyptdurigafqlkejo.png",
+        "attributes": {
+          "others": 1,
+          "peaceful": 1,
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hpjgqktoawdyurifsel.png",
+        "attributes": {
+          "domestic": 1,
+          "concord": 1
+        }
+      },
+      {
+        "image": "/quiz-images/qhorjigkupdlsyafwet.png",
+        "attributes": {
+          "domestic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ylreaphuskfjqtigodw.png",
+        "attributes": {
+          "maximalist": 1
+        }
+      },
+      {
+        "image": "/quiz-images/psufygrjiatqedwohkl.png",
+        "attributes": {
+          "identity": 1,
+          "safety": 1,
+          "peaceful": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hasowjfgiqlydrektpu.png",
+        "attributes": {
+          "relationships": 1,
+          "discovery": 1
+        }
+      },
+      {
+        "image": "/quiz-images/kpouldjehwqigsftrya.png",
+        "attributes": {
+          "safety": 1,
+          "experimental": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ljrewysiapgqtukfodh.png",
+        "attributes": {
+          "control": 1,
+          "maximalist": 1
+        }
+      },
+      {
+        "image": "/quiz-images/ewguktypldrasfqojih.png",
+        "attributes": {
+          "retention": 1,
+          "others": 1,
+          "tolerant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ifewhutjdagprkloyqs.png",
+        "attributes": {
+          "inquisitive": 1
+        }
+      },
+      {
+        "image": "/quiz-images/rqudaiwoftphjygleks.png",
+        "attributes": {
+          "intangible": 1,
+          "pragmatic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/fjoelrgsthdpuakywqi.png",
+        "attributes": {
+          "dominant": 1
+        }
+      },
+      {
+        "image": "/quiz-images/ipuresftlkywdqahjgo.png",
+        "attributes": {
+          "retention": 1,
+          "maximalist": 1,
+          "others": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/qrodtjyuhwgslkpafei.png",
+        "attributes": {
+          "tangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/oqhajuwlytgsrkfpied.png",
+        "attributes": {
+          "caring": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/skgqiwlfaretdhpyjou.png",
+        "attributes": {
+          "retention": 1,
+          "self": 1,
+          "discovery": 1
+        }
+      },
+      {
+        "image": "/quiz-images/tfsghrjoaypuklwqdie.png",
+        "attributes": {
+          "concord": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/fohjlspgdykirtuqwae.png",
+        "attributes": {
+          "ambitious": 1
+        }
+      },
+      {
+        "image": "/quiz-images/whlaqitjdfeorgpkyus.png",
+        "attributes": {
+          "contemplative": 1,
+          "identity": 1,
+          "tolerant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ywkoughaqjfdiepstrl.png",
+        "attributes": {
+          "relationships": 1,
+          "peaceful": 1,
+          "others": 1
+        }
+      },
+      {
+        "image": "/quiz-images/fythlaiejgukwsoqpdr.png",
+        "attributes": {
+          "domestic": 1,
+          "caring": 1,
+          "tolerant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/tsidqupolyrajkhewgf.png",
+        "attributes": {
+          "ambitious": 1,
+          "safety": 1
+        }
+      },
+      {
+        "image": "/quiz-images/dqykalfigopwejsrhut.png",
+        "attributes": {
+          "maximalist": 1,
+          "tangible": 1,
+          "traditional": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/iuaskjtdolgwreqhfyp.png",
+        "attributes": {
+          "identity": 1
+        }
+      },
+      {
+        "image": "/quiz-images/urlyfgjhoekstipawqd.png",
+        "attributes": {
+          "retention": 1,
+          "pragmatic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/qrdpiaytkshelgwjfuo.png",
+        "attributes": {
+          "self": 1,
+          "confidence": 1,
+          "tangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/yfkwjdhpsriulagotqe.png",
+        "attributes": {
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/rswudqgofykjtlpeahi.png",
+        "attributes": {
+          "control": 1,
+          "intangible": 1,
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/spritowdhkgyfaqljeu.png",
+        "attributes": {
+          "tangible": 1,
+          "intangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/lspkfedthgqauiwyroj.png",
+        "attributes": {
+          "control": 1,
+          "self": 1,
+          "inquisitive": 1
+        }
+      },
+      {
+        "image": "/quiz-images/oeujsrpgawitkdqflhy.png",
+        "attributes": {
+          "dominant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/lkwogriufdhqstpjyea.png",
+        "attributes": {
+          "contemplative": 1,
+          "caring": 1,
+          "inquisitive": 1
+        }
+      },
+      {
+        "image": "/quiz-images/urpjwkgdiqolhftseay.png",
+        "attributes": {
+          "traditional": 1,
+          "identity": 1,
+          "safety": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/gdtwujsrfphylaoiqke.png",
+        "attributes": {
+          "tolerant": 1
+        }
+      },
+      {
+        "image": "/quiz-images/uwopsertqlhjydigkfa.png",
+        "attributes": {
+          "safety": 1,
+          "retention": 1,
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/lskueitjoafhpwgqdyr.png",
+        "attributes": {
+          "pragmatic": 1
+        }
+      },
+      {
+        "image": "/quiz-images/uqktsrpjohiwlydfega.png",
+        "attributes": {
+          "experimental": 1,
+          "identity": 1,
+          "safety": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/odarijgwytqepfhkusl.png",
+        "attributes": {
+          "retention": 1,
+          "control": 1,
+          "dominant": 1
+        }
+      },
+      {
+        "image": "/quiz-images/parygiwethjouqsldfk.png",
+        "attributes": {
+          "discovery": 1,
+          "maximalist": 1,
+          "pragmatic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/tdqhljrwisugafeykpo.png",
+        "attributes": {
+          "domestic": 1,
+          "contemplative": 1
+        }
+      },
+      {
+        "image": "/quiz-images/fsowgiuyqhapjrdltek.png",
+        "attributes": {
+          "domestic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hloskdqutwpriyjafeg.png",
+        "attributes": {
+          "experimental": 1,
+          "inquisitive": 1,
+          "tangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/yohtiswdrgepfluqjak.png",
+        "attributes": {
+          "others": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/wpiadyutefrgqsokjhl.png",
+        "attributes": {
+          "discovery": 1,
+          "experimental": 1,
+          "maximalist": 1
+        }
+      },
+      {
+        "image": "/quiz-images/kpsiaulftjwdrhyeqog.png",
+        "attributes": {
+          "dominant": 1,
+          "intangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ftlguehjqpdowkasyir.png",
+        "attributes": {
+          "ambitious": 1
+        }
+      },
+      {
+        "image": "/quiz-images/wiyjekhglpsoafrtqud.png",
+        "attributes": {
+          "maximalist": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/alufdpwyhjktoeqgisr.png",
+        "attributes": {
+          "contemplative": 1,
+          "control": 1
+        }
+      },
+      {
+        "image": "/quiz-images/pjshqftkgerawldyoui.png",
+        "attributes": {
+          "confidence": 1,
+          "intangible": 1,
+          "inquisitive": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hryajdqiwotpfsgkule.png",
+        "attributes": {
+          "tolerant": 1,
+          "peaceful": 1,
+          "discovery": 1
+        }
+      },
+      {
+        "image": "/quiz-images/ghkrdpflsquieoayjtw.png",
+        "attributes": {
+          "tangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/fkjgeyqwistarplhoud.png",
+        "attributes": {
+          "self": 1,
+          "contemplative": 1,
+          "pragmatic": 1
+        }
+      },
+      {
+        "image": "/quiz-images/akfiwospyjludgetqhr.png",
+        "attributes": {
+          "caring": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/gthdraqfilejskwupyo.png",
+        "attributes": {
+          "control": 1,
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/hgfkeljytipuwdsqaor.png",
+        "attributes": {
+          "maximalist": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hdsokqfptyiagjwrule.png",
+        "attributes": {
+          "retention": 1
+        }
+      },
+      {
+        "image": "/quiz-images/uydhepwifsoaqlgtkjr.png",
+        "attributes": {
+          "peaceful": 1,
+          "confidence": 1,
+          "identity": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/jqhsideltyprwufkoag.png",
+        "attributes": {
+          "relationships": 1
+        }
+      },
+      {
+        "image": "/quiz-images/sghwfaylkiqojrudpet.png",
+        "attributes": {
+          "concord": 1,
+          "maximalist": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/eyrdofjqpuakgshliwt.png",
+        "attributes": {
+          "domestic": 1
+        }
+      },
+      {
+        "image": "/quiz-images/iwlthsdfoukrpjegyqa.png",
+        "attributes": {
+          "relationships": 1,
+          "self": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/jtghaqluwsyferkdpoi.png",
+        "attributes": {
+          "caring": 1,
+          "identity": 1
+        }
+      },
+      {
+        "image": "/quiz-images/gifwrqkhdauyjtpolse.png",
+        "attributes": {
+          "inquisitive": 1,
+          "domestic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/laokhpyiurjdfqgstew.png",
+        "attributes": {
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/dyhuelrfijoqwktsagp.png",
+        "attributes": {
+          "discovery": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/afolhpdjtkiurewgqsy.png",
+        "attributes": {
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/edkwijaslhutproyfgq.png",
+        "attributes": {
+          "self": 1,
+          "tolerant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/orfhypqgjueaitsklwd.png",
+        "attributes": {
+          "self": 1
+        }
+      },
+      {
+        "image": "/quiz-images/juwarikheoflgytpsqd.png",
+        "attributes": {
+          "inquisitive": 1,
+          "peaceful": 1,
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/dkurjalgyeoqstwphif.png",
+        "attributes": {
+          "others": 1,
+          "dominant": 1,
+          "maximalist": 1
+        }
+      },
+      {
+        "image": "/quiz-images/rejygwofpktshqaulid.png",
+        "attributes": {
+          "pragmatic": 1,
+          "concord": 1,
+          "experimental": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/eslpiawfrdkhugyqtoj.png",
+        "attributes": {
+          "maximalist": 1
+        }
+      },
+      {
+        "image": "/quiz-images/fkdasolqirwejyhgput.png",
+        "attributes": {
+          "experimental": 1,
+          "retention": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/sraoydtguqhiflpkejw.png",
+        "attributes": {
+          "inquisitive": 1,
+          "self": 1,
+          "contemplative": 1
+        }
+      },
+      {
+        "image": "/quiz-images/uaojdkgqsfeihtlwpry.png",
+        "attributes": {
+          "traditional": 1,
+          "tangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/wkeoaijtsqruhydpgfl.png",
+        "attributes": {
+          "self": 1,
+          "experimental": 1,
+          "tangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/krdseytjlpgiwuqhfoa.png",
+        "attributes": {
+          "maximalist": 1,
+          "relationships": 1,
+          "others": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/lkytafosihpegwudjrq.png",
+        "attributes": {
+          "discovery": 1,
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/lugksopetifjawrqdyh.png",
+        "attributes": {
+          "caring": 1,
+          "identity": 1,
+          "tolerant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/piqklygfsduaerwhtoj.png",
+        "attributes": {
+          "domestic": 1,
+          "tangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/rahiefdgkjqoyspuwtl.png",
+        "attributes": {
+          "inquisitive": 1,
+          "contemplative": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/jgtakuqoelihrpfsywd.png",
+        "attributes": {
+          "identity": 1,
+          "tangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/hsaiuloqwkejygfdtrp.png",
+        "attributes": {
+          "control": 1,
+          "pragmatic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/adugrtkyfsljpeoqiwh.png",
+        "attributes": {
+          "contemplative": 1
+        }
+      },
+      {
+        "image": "/quiz-images/dfyqkphgialeujotwrs.png",
+        "attributes": {
+          "tangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/jyoretlgdkhpiusfwaq.png",
+        "attributes": {
+          "ambitious": 1,
+          "retention": 1
+        }
+      },
+      {
+        "image": "/quiz-images/qpktdhjyeifroawlgsu.png",
+        "attributes": {
+          "others": 1,
+          "tangible": 1,
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/fhuoawikdejptrqygsl.png",
+        "attributes": {
+          "pragmatic": 1,
+          "tangible": 1,
+          "domestic": 1
+        }
+      },
+      {
+        "image": "/quiz-images/khrylsoiaduegqwfjtp.png",
+        "attributes": {
+          "inquisitive": 1,
+          "control": 1,
+          "pragmatic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/lyqthopgsafrjwduiek.png",
+        "attributes": {
+          "relationships": 1,
+          "others": 1,
+          "dominant": 1
+        }
+      },
+      {
+        "image": "/quiz-images/kqojtflidwyhesuagrp.png",
+        "attributes": {
+          "self": 1,
+          "relationships": 1,
+          "contemplative": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ufwyqgripjaktolshde.png",
+        "attributes": {
+          "self": 1
+        }
+      },
+      {
+        "image": "/quiz-images/wdrqoluiejsthgayfkp.png",
+        "attributes": {
+          "safety": 1,
+          "experimental": 1,
+          "concord": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/esdpqrhailgwjkoftyu.png",
+        "attributes": {
+          "relationships": 1,
+          "safety": 1
+        }
+      },
+      {
+        "image": "/quiz-images/lfateojqrpsyigdukwh.png",
+        "attributes": {
+          "intangible": 1,
+          "ambitious": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/fijwadulkethqpsrygo.png",
+        "attributes": {
+          "self": 1,
+          "control": 1
+        }
+      },
+      {
+        "image": "/quiz-images/eoyirjduqhwtlspfkag.png",
+        "attributes": {
+          "concord": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ulryewhktjdaqopfisg.png",
+        "attributes": {
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/urfaypgtehisojlqkdw.png",
+        "attributes": {
+          "traditional": 1,
+          "intangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/tlwiyrkapqhesgdjfou.png",
+        "attributes": {
+          "concord": 1,
+          "peaceful": 1
+        }
+      },
+      {
+        "image": "/quiz-images/qurfogplesjwhaidkty.png",
+        "attributes": {
+          "confidence": 1,
+          "dominant": 1,
+          "pragmatic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/fiwdoplerhtagkqyjsu.png",
+        "attributes": {
+          "contemplative": 1,
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/pftsgkhiueaorlwqdjy.png",
+        "attributes": {
+          "maximalist": 1,
+          "experimental": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/gawuystjhiflqprdeko.png",
+        "attributes": {
+          "self": 1,
+          "retention": 1,
+          "safety": 1
+        }
+      },
+      {
+        "image": "/quiz-images/jutadpslheqfyoikrwg.png",
+        "attributes": {
+          "maximalist": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/gfwpejyhdsiolaqrtuk.png",
+        "attributes": {
+          "others": 1,
+          "ambitious": 1,
+          "tangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/ipshugwfkqdlaterjoy.png",
+        "attributes": {
+          "control": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/quojdlewfspyitakrgh.png",
+        "attributes": {
+          "safety": 1
+        }
+      },
+      {
+        "image": "/quiz-images/oluptkiejrdsgywqhaf.png",
+        "attributes": {
+          "safety": 1,
+          "retention": 1,
+          "dominant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/oujsqhdtayifplwrgek.png",
+        "attributes": {
+          "control": 1,
+          "safety": 1,
+          "retention": 1
+        }
+      },
+      {
+        "image": "/quiz-images/tjqolrywdseugfpiahk.png",
+        "attributes": {
+          "control": 1,
+          "domestic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/wehqtoaiukgspjryfld.png",
+        "attributes": {
+          "retention": 1,
+          "pragmatic": 1,
+          "experimental": 1
+        }
+      },
+      {
+        "image": "/quiz-images/iouhftsewgpqdyajklr.png",
+        "attributes": {
+          "self": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/fihuolqtpdyrkgjwsae.png",
+        "attributes": {
+          "confidence": 1,
+          "concord": 1,
+          "safety": 1
+        }
+      },
+      {
+        "image": "/quiz-images/hqstfiapojygekdlurw.png",
+        "attributes": {
+          "traditional": 1,
+          "intangible": 1,
+          "pragmatic": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/tjwigsrpdlaoqyeuhfk.png",
+        "attributes": {
+          "dominant": 1,
+          "contemplative": 1,
+          "intangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/pfalgotwkqdejyihsur.png",
+        "attributes": {
+          "peaceful": 1,
+          "tolerant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/akulphstdwyrqfgjeoi.png",
+        "attributes": {
+          "pragmatic": 1,
+          "experimental": 1,
+          "relationships": 1
+        }
+      },
+      {
+        "image": "/quiz-images/otgerqwkapysfjhulid.png",
+        "attributes": {
+          "self": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/kfpialrqodjgyswhtue.png",
+        "attributes": {
+          "intangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/uaphiesktfyjlqwordg.png",
+        "attributes": {
+          "domestic": 1,
+          "safety": 1,
+          "tangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/rdqfpgakwloiuyhjtse.png",
+        "attributes": {
+          "contemplative": 1
+        }
+      },
+      {
+        "image": "/quiz-images/opkhewlqyjagutsfdri.png",
+        "attributes": {
+          "dominant": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ypdwjtksrlaougfihqe.png",
+        "attributes": {
+          "safety": 1,
+          "self": 1
+        }
+      },
+      {
+        "image": "/quiz-images/fgwjkoeuyrplaitqdsh.png",
+        "attributes": {
+          "intangible": 1,
+          "tangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hiudgapljtkrweqyfos.png",
+        "attributes": {
+          "experimental": 1,
+          "dominant": 1
+        }
+      },
+      {
+        "image": "/quiz-images/awihpdtojyskqgrlufe.png",
+        "attributes": {
+          "self": 1,
+          "contemplative": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/taqirugwdjhokelyfps.png",
+        "attributes": {
+          "experimental": 1
+        }
+      },
+      {
+        "image": "/quiz-images/lyrhwaestgiofkdpqju.png",
+        "attributes": {
+          "tolerant": 1,
+          "experimental": 1,
+          "safety": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/kujqeafyglpowthdsri.png",
+        "attributes": {
+          "self": 1,
+          "retention": 1,
+          "maximalist": 1
+        }
+      },
+      {
+        "image": "/quiz-images/stqpikyualwrjhoefdg.png",
+        "attributes": {
+          "experimental": 1,
+          "tolerant": 1,
+          "confidence": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ftwlgphykjioserauqd.png",
+        "attributes": {
+          "inquisitive": 1
+        }
+      },
+      {
+        "image": "/quiz-images/pgoywfrilheatqudkjs.png",
+        "attributes": {
+          "experimental": 1,
+          "dominant": 1,
+          "contemplative": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ualpdjyhetkfwsgrioq.png",
+        "attributes": {
+          "confidence": 1,
+          "identity": 1,
+          "caring": 1
+        }
+      },
+      {
+        "image": "/quiz-images/adtpegfowyjqhskuirl.png",
+        "attributes": {
+          "ambitious": 1,
+          "tangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/otsrphkugjidwfylqae.png",
+        "attributes": {
+          "intangible": 1,
+          "retention": 1,
+          "ambitious": 1
+        }
+      },
+      {
+        "image": "/quiz-images/grusfioaekphltdwqjy.png",
+        "attributes": {
+          "maximalist": 1,
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/tyljdhqakueigrwspfo.png",
+        "attributes": {
+          "tolerant": 1
+        }
+      },
+      {
+        "image": "/quiz-images/arkgpfthlsowideuqjy.png",
+        "attributes": {
+          "experimental": 1,
+          "control": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/wyesjrkaipglhftoudq.png",
+        "attributes": {
+          "retention": 1,
+          "ambitious": 1
+        }
+      },
+      {
+        "image": "/quiz-images/pyrqohtdwjkaifgeusl.png",
+        "attributes": {
+          "discovery": 1,
+          "intangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ykiqhwtdeljfuprgaso.png",
+        "attributes": {
+          "domestic": 1
+        }
+      },
+      {
+        "image": "/quiz-images/iajurlhdsetyqkowgfp.png",
+        "attributes": {
+          "concord": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hyqstkeawgjopfudril.png",
+        "attributes": {
+          "safety": 1
+        }
+      },
+      {
+        "image": "/quiz-images/auerydligtpjofwhskq.png",
+        "attributes": {
+          "domestic": 1,
+          "ambitious": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/sjwgtrekluahipofqdy.png",
+        "attributes": {
+          "maximalist": 1,
+          "retention": 1,
+          "intangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/twyfuhseoiqalkjgrdp.png",
+        "attributes": {
+          "discovery": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/heywdfarqisptojkugl.png",
+        "attributes": {
+          "retention": 1
+        }
+      },
+      {
+        "image": "/quiz-images/pjiufdreshtgaylwokq.png",
+        "attributes": {
+          "inquisitive": 1,
+          "maximalist": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/kithrfpojwyeldagsqu.png",
+        "attributes": {
+          "control": 1
+        }
+      },
+      {
+        "image": "/quiz-images/lkihowfeysqpdjtraug.png",
+        "attributes": {
+          "dominant": 1,
+          "traditional": 1,
+          "identity": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/sakeprldhtqiofgyjuw.png",
+        "attributes": {
+          "tangible": 1,
+          "domestic": 1,
+          "safety": 1
+        }
+      },
+      {
+        "image": "/quiz-images/kqfgsalurteodyjhpiw.png",
+        "attributes": {
+          "others": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/gpiyfltwhjdekrqosau.png",
+        "attributes": {
+          "relationships": 1,
+          "tangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/lrfdtawuojeshpgyikq.png",
+        "attributes": {
+          "retention": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/dasohwreiytpjqklugf.png",
+        "attributes": {
+          "retention": 1
+        }
+      },
+      {
+        "image": "/quiz-images/rwefohalguksqjpdyti.png",
+        "attributes": {
+          "confidence": 1,
+          "pragmatic": 1,
+          "intangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/eskojgwryhqlpaitduf.png",
+        "attributes": {
+          "domestic": 1,
+          "self": 1,
+          "safety": 1
+        }
+      },
+      {
+        "image": "/quiz-images/qyskojauehtpfidlwgr.png",
+        "attributes": {
+          "control": 1,
+          "traditional": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/hwrgikyojlpqafdetus.png",
+        "attributes": {
+          "maximalist": 1,
+          "inquisitive": 1,
+          "intangible": 1
+        }
+      },
+      {
+        "image": "/quiz-images/ulrhywoiasdjgtekfqp.png",
+        "attributes": {
+          "intangible": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/apikqyuwljhegfsrdto.png",
+        "attributes": {
+          "maximalist": 1,
+          "control": 1
+        }
+      },
+      {
+        "image": "/quiz-images/rdahijyfgelutkwpsoq.png",
+        "attributes": {
+          "domestic": 1,
+          "peaceful": 1,
+          "confidence": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ueghyorslfaptqjkidw.png",
+        "attributes": {
+          "identity": 1
+        }
+      },
+      {
+        "image": "/quiz-images/ugsijpdyeqtofrlhkwa.png",
+        "attributes": {
+          "relationships": 1
+        }
+      }
+    ]
+  },
+  {
+    "choices": [
+      {
+        "image": "/quiz-images/ahtejgisouqkydlrwpf.png",
+        "attributes": {
+          "self": 1,
+          "maximalist": 1,
+          "experimental": 1
+        }
+      },
+      {
+        "image": "/quiz-images/iujhowgyedtsklprafq.png",
+        "attributes": {
+          "confidence": 1,
+          "experimental": 1,
+          "inquisitive": 1
+        }
+      }
+    ]
+  }
+]
