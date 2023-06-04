@@ -30,10 +30,20 @@ const emit = defineEmits(["cardSelected"])
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
+
+  &:hover {
+    .inner-card {
+      transform: scale(1.1);
+    }
+  }
 
   .inner-card {
+    width: 100%;
+    height: 100%;
     background-position: center;
     background-size: cover;
+    transition: 300ms;
   }
 
   img {
