@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\NotExposed;
+use App\Enums\FormTypeEnum;
 use App\Repository\FormRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -12,7 +13,6 @@ use Doctrine\ORM\Mapping as ORM;
 #[NotExposed]
 #[ORM\Index(fields: ['formLetter'])]
 #[ORM\Index(fields: ['school'])]
-#[ORM\Index(fields: ['formNumber'])]
 class Form
 {
     #[ORM\Id]
@@ -26,8 +26,8 @@ class Form
     #[ORM\Column(length: 1)]
     private ?string $formLetter = null;
 
-    #[ORM\Column]
-    private ?int $formNumber = null;
+    #[ORM\Column(type: 'string', nullable: false, enumType: FormTypeEnum::class)]
+    private ?FormTypeEnum $type = null;
 
     public function getId(): ?int
     {
@@ -58,14 +58,14 @@ class Form
         return $this;
     }
 
-    public function getFormNumber(): ?int
+    public function getType(): ?FormTypeEnum
     {
-        return $this->formNumber;
+        return $this->type;
     }
 
-    public function setFormNumber(int $formNumber): static
+    public function setType(?FormTypeEnum $type): self
     {
-        $this->formNumber = $formNumber;
+        $this->type = $type;
 
         return $this;
     }
