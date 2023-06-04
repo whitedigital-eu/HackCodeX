@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Form;
 use App\Enums\FormTypeEnum;
 use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
 use function dirname;
@@ -13,10 +14,11 @@ use function json_decode;
 use function random_int;
 use function sprintf;
 
-class FormFixture extends AbstractFixture implements FixtureGroupInterface
+class FormFixture extends AbstractFixture implements FixtureGroupInterface, DependentFixtureInterface
 {
     private const LETTERS = ['a', 'b', 'c', 'd', ];
 
+    /** @noinspection PhpParamsInspection */
     public function load(ObjectManager $manager): void
     {
         $path = dirname(__DIR__, 2) . '/resources/schools.json';
@@ -25,7 +27,7 @@ class FormFixture extends AbstractFixture implements FixtureGroupInterface
         foreach ($data['Sheet1'] as $item) {
             if ('RĪGA' === $item['Pašvaldība']) {
                 foreach ([7, 10] as $i) {
-                    if ('0' !== $item[sprintf('%d. klase', $i)]) {
+                    if ('0' !== $item[sprintf('%d. klase', $i)] && $school = @$this->getReference($item['Iestādes nosaukums'])) {
                         for ($j = 0; $j < random_int(1, 4); $j++) {
                             $a++;
                             $type = match ($i) {
@@ -34,7 +36,7 @@ class FormFixture extends AbstractFixture implements FixtureGroupInterface
                             };
 
                             $fixture = (new Form())
-                                ->setSchool($item['Iestādes nosaukums'])
+                                ->setSchool($school)
                                 ->setFormLetter(self::LETTERS[$j])
                                 ->setType($type);
                             $manager->persist($fixture);
@@ -53,5 +55,12 @@ class FormFixture extends AbstractFixture implements FixtureGroupInterface
     public static function getGroups(): array
     {
         return ['schools'];
+    }
+
+    public function getDependencies(): array
+    {
+        return [
+            SchoolFixture::class,
+        ];
     }
 }
