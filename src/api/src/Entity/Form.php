@@ -13,7 +13,6 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[ApiResource]
 #[NotExposed]
 #[ORM\Index(fields: ['formLetter'])]
-#[ORM\Index(fields: ['school'])]
 class Form
 {
     #[ORM\Id]
@@ -21,10 +20,6 @@ class Form
     #[ORM\Column]
     #[Groups(['submission_result:read'])]
     private ?int $id = null;
-
-    #[ORM\Column(length: 255)]
-    #[Groups(['submission_result:read'])]
-    private ?string $school = null;
 
     #[ORM\Column(length: 1)]
     #[Groups(['submission_result:read'])]
@@ -34,21 +29,14 @@ class Form
     #[Groups(['submission_result:read'])]
     private ?FormTypeEnum $type = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['submission_result:read'])]
+    private ?School $school = null;
+
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getSchool(): ?string
-    {
-        return $this->school;
-    }
-
-    public function setSchool(string $school): static
-    {
-        $this->school = $school;
-
-        return $this;
     }
 
     public function getFormLetter(): ?string
@@ -71,6 +59,18 @@ class Form
     public function setType(?FormTypeEnum $type): self
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    public function getSchool(): ?School
+    {
+        return $this->school;
+    }
+
+    public function setSchool(?School $school): static
+    {
+        $this->school = $school;
 
         return $this;
     }
