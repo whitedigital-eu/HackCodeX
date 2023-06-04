@@ -10,6 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: FormRepository::class)]
 #[ApiResource]
 #[NotExposed]
+#[ORM\Index(fields: ['formLetter'])]
+#[ORM\Index(fields: ['school'])]
+#[ORM\Index(fields: ['formNumber'])]
 class Form
 {
     #[ORM\Id]

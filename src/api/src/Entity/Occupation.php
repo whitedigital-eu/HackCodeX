@@ -10,6 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: OccupationRepository::class)]
 #[ApiResource]
 #[NotExposed]
+#[ORM\Index(fields: ['code'])]
+#[ORM\Index(fields: ['title'])]
 class Occupation
 {
     #[ORM\Id]

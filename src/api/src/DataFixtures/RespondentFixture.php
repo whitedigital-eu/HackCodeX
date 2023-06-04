@@ -92,7 +92,7 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
             ->setAmbitious(r());
 
         foreach (self::OPP as $item => $opposite) {
-            $val = random_int(0, 10);
+            $val = r();
             if ($this->factory->boolean()) {
                 $respondent->{'set' . ucfirst($item)}($val);
                 $respondent->{'set' . ucfirst($opposite)}(0);
