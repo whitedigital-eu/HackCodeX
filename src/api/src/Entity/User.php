@@ -9,6 +9,7 @@ use PhpSimple\Doctrine\Traits\Entity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Ignore;
+
 use function array_unique;
 
 #[ORM\Entity]

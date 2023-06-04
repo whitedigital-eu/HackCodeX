@@ -35,7 +35,7 @@ class FormFixture extends AbstractFixture implements FixtureGroupInterface
                             $manager->flush();
 
                             $this->addReference('form' . $a, $fixture);
-                            self::$references[self::class][] = 'form' . $a;
+                            self::$references[self::class][$i][] = 'form' . $a;
                         }
                     }
                 }

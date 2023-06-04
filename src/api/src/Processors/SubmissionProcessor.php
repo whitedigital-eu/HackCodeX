@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace App\Processors;
 
@@ -14,9 +14,8 @@ class SubmissionProcessor implements ProcessorInterface
 {
     public function __construct(
         protected readonly RespondentRepository $respondentRepository,
-        protected readonly SubmissionRepository $submissionRepository
-    )
-    {
+        protected readonly SubmissionRepository $submissionRepository,
+    ) {
     }
 
     public function process(mixed $data, Operation $operation, array $uriVariables = [], array $context = [])
@@ -24,9 +23,9 @@ class SubmissionProcessor implements ProcessorInterface
         if ($data instanceof Submission) {
             $formGroups = [];
             $pos = 1;
-            //check if 6th or 9th form
-            if ($data->getType() === SubmissionTypeEnum::Form6th) {
-                //select only respondents between 7-9 form
+            // check if 6th or 9th form
+            if (SubmissionTypeEnum::Form6th === $data->getType()) {
+                // select only respondents between 7-9 form
                 $respondents = $this->respondentRepository->findRespondentsOrderedBySimilair($data);
                 /** @var Respondent $respondent */
                 foreach ($respondents as $respondent) {
@@ -34,7 +33,7 @@ class SubmissionProcessor implements ProcessorInterface
                         $getter = 'get' . ucfirst($subject);
                         $school = $respondent->getForm()?->getSchool();
                         $formLetter = $respondent->getForm()?->getFormLetter();
-                        $grade = $respondent->$getter();
+                        $grade = $respondent->{$getter}();
                         if (empty($formGroups[$school][$formLetter][$subject][$grade])) {
                             $formGroups[$school][$formLetter][$subject][$grade] = 3;
                         } else {
@@ -46,6 +45,7 @@ class SubmissionProcessor implements ProcessorInterface
             }
         }
         $this->submissionRepository->save($data);
+
         return $data;
     }
 
@@ -54,7 +54,7 @@ class SubmissionProcessor implements ProcessorInterface
         foreach ($formGroups as $school => $formLetterArray) {
             foreach ($formLetterArray as $formLetter => $subjectArray) {
                 foreach ($subjectArray as $subject => $gradeArray) {
-                    $grade = array_keys($gradeArray, max($gradeArray))[0];
+                    $grade = array_keys($gradeArray, max($gradeArray), true)[0];
                     $formGroups[$school][$formLetter][$subject] = $grade;
                 }
             }

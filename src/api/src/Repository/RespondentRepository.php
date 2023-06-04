@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Repository;
 
@@ -8,7 +8,6 @@ use App\Enums\SubmissionTypeEnum;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\Persistence\ManagerRegistry;
-use function Symfony\Component\DependencyInjection\Loader\Configurator\expr;
 
 /**
  * @extends ServiceEntityRepository<Respondent>
@@ -45,11 +44,11 @@ class RespondentRepository extends ServiceEntityRepository
 
     public function findRespondentsOrderedBySimilair(Submission $submission): Paginator
     {
-        $formNumbers = $submission->getType() === SubmissionTypeEnum::Form6th ? [7, 8, 9] : [10, 11, 12];
+        $formNumbers = SubmissionTypeEnum::Form6th === $submission->getType() ? [7, 8, 9] : [10, 11, 12];
         $qb = $this->createQueryBuilder('r');
         $orderArray = [
-            "ABS(r.pragmatic - :pragmatic)",
-            "ABS(r.domestic - :domestic)",
+            'ABS(r.pragmatic - :pragmatic)',
+            'ABS(r.domestic - :domestic)',
 //            "ABS(r.traditional - {$submission->getTraditional()})",
 //            "ABS(r.peaceful - {$submission->getPeaceful()})",
 //            "ABS(r.caring - {$submission->getCaring()})",

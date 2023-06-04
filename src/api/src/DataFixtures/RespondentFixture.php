@@ -27,49 +27,28 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
             return random_int(0, 10);
         }
 
-        for ($i = 0; $i < 20_000; $i++) {
-            $fixture = (new Respondent())
-                ->setPragmatic(r())
-                ->setDomestic(r())
-                ->setTraditional(r())
-                ->setPeaceful(r())
-                ->setCaring(r())
-                ->setTolerant(r())
-                ->setContemplative(r())
-                ->setInquisitive(r())
-                ->setExperimental(r())
-                ->setMaximalist(r())
-                ->setDominant(r())
-                ->setAmbitious(r())
-                ->setLanguages(r())
-                ->setSport(r())
-                ->setMath(r())
-                ->setPhysics(r())
-                ->setGeography(r())
-                ->setChemistry(r())
-                ->setComputers(r())
-                ->setMusic(r())
-                ->setCrafts(r())
-                ->setReligion(r())
-                ->setArt(r());
+        for ($i = 0; $i < 45000; $i++) {
+            for ($j = 7; $j <= 12; $j++) {
+                $fixture = new Respondent();
+                $this->setForAll($fixture);
+                $this->setForForm($fixture);
+                $fixture->setForm($this->getForm($j));
 
-            foreach (self::OPP as $item => $opposite) {
-                $val = random_int(0, 10);
-                if ($this->factory->boolean()) {
-                    $fixture->{'set' . ucfirst($item)}($val);
-                    $fixture->{'set' . ucfirst($opposite)}(0);
-                } else {
-                    $fixture->{'set' . ucfirst($opposite)}($val);
-                    $fixture->{'set' . ucfirst($item)}(0);
-                }
+                $manager->persist($fixture);
             }
+        }
 
-            match (random_int(0, 2)) {
-                0 => $fixture->setForm($this->getEntity(FormFixture::class)),
-                1 => $fixture->setOccupation($this->getEntity(OccupationFixture::class)),
-                2 => $fixture->setUniversityProgram($this->getEntity(UniversityProgramFixture::class)),
-            };
+        for ($i = 0; $i < 45000; $i++) {
+            $fixture = new Respondent();
+            $this->setForAll($fixture);
+            $fixture->setUniversityProgram($this->getEntity(UniversityProgramFixture::class));
+            $manager->persist($fixture);
+        }
 
+        for ($i = 0; $i < 45000; $i++) {
+            $fixture = new Respondent();
+            $this->setForAll($fixture);
+            $fixture->setOccupation($this->getEntity(OccupationFixture::class));
             $manager->persist($fixture);
         }
 
@@ -83,5 +62,54 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
             UniversityProgramFixture::class,
             FormFixture::class,
         ];
+    }
+
+    protected function getForm(int $form): ?object
+    {
+        return $this->getReference(FormFixture::$references[FormFixture::class][$form][$this->randomArrayKey(FormFixture::$references[FormFixture::class][$form])]);
+    }
+
+    private function setForAll(Respondent $respondent): void
+    {
+        $respondent
+            ->setPragmatic(r())
+            ->setDomestic(r())
+            ->setTraditional(r())
+            ->setPeaceful(r())
+            ->setCaring(r())
+            ->setTolerant(r())
+            ->setContemplative(r())
+            ->setInquisitive(r())
+            ->setExperimental(r())
+            ->setMaximalist(r())
+            ->setDominant(r())
+            ->setAmbitious(r());
+
+        foreach (self::OPP as $item => $opposite) {
+            $val = random_int(0, 10);
+            if ($this->factory->boolean()) {
+                $respondent->{'set' . ucfirst($item)}($val);
+                $respondent->{'set' . ucfirst($opposite)}(0);
+            } else {
+                $respondent->{'set' . ucfirst($opposite)}($val);
+                $respondent->{'set' . ucfirst($item)}(0);
+            }
+        }
+    }
+
+    private function setForForm(Respondent $respondent): void
+    {
+        $respondent
+            ->setLanguages(r())
+            ->setSport(r())
+            ->setMath(r())
+            ->setPhysics(r())
+            ->setGeography(r())
+            ->setChemistry(r())
+            ->setComputers(r())
+            ->setMusic(r())
+            ->setCrafts(r())
+            ->setReligion(r())
+            ->setArt(r());
     }
 }
