@@ -4,6 +4,7 @@ import axios from "axios";
 import {useSurvey} from "../../stores/survey";
 import Donut from "./Donut.vue";
 import SchoolDetailPopup from "./SchoolDetailPopup.vue";
+import Loading from "../other/Loading.vue";
 
 const survey = useSurvey();
 const schools = ref(null);
@@ -69,7 +70,7 @@ const popup = ref(null);
           </svg>
         </div>
         <div class="school">
-          <div class="inner-school" @click="popup.loadSchool(school.id)">
+          <div class="inner-school" @click="popup.loadSchool(school.form.school.id, school.result, `${ types[school.form.type] } ${ school.form.formLetter.toUpperCase() } klase`)">
             <div class="percent" :style="`background: linear-gradient(109.38deg, ${colorSet[index][0]} 3.46%, ${colorSet[index][1]} 95.43%);`">
               <Donut class="donut" :percent="school.result" />
               {{ school.result }}%
@@ -81,6 +82,7 @@ const popup = ref(null);
           </div>
         </div>
       </template>
+      <Loading v-if="!schools" />
     </div>
   </div>
 </template>
@@ -102,7 +104,7 @@ const popup = ref(null);
       &:hover {
         .inner-school {
           cursor: pointer;
-          box-shadow: 2px 2px 10px 0 black;
+          box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.18);
         }
       }
 

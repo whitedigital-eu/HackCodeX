@@ -3,18 +3,37 @@ import {ref} from "vue";
 import Donut from "./Donut.vue";
 import RatingSliderStatic from "./RatingSliderStatic.vue";
 import axios from "axios";
+import {t} from "../../assets/data/language";
+import Loading from "../other/Loading.vue";
 
 let openPopUp = ref(false);
-const loadSchool = (id: number) => {
+let loaded = ref(false);
+let subjectInfo: any = ref(null);
+let schoolInfo: any = ref(null);
+let percent: any = ref(0);
+let title: any = ref('');
+const loadSchool = async (id: number, p: number, t: string) => {
   openPopUp.value = true;
-
+  percent.value = p
+  title.value = t
+  schoolInfo.value = await getSchoolInfo(id, p, t);
+  subjectInfo.value = await getSubjectInfo(id)
+  loaded.value = true;
+  console.log(subjectInfo)
 }
 
-const getInfo = async (id) => {
-  return await axios({
+const getSchoolInfo = async (id, percent, title) => {
+  return (await axios({
     method: 'get',
-    url: `/api/submission_results?page=1&itemsPerPage=8&exists[form]=true&groups[]=form:read&order[result]=desc&groups[]=school:read&submission.id=${id}`,
-  });
+    url: `/api/schools/${id}?groups[]=transport:read`,
+  })).data;
+}
+
+const getSubjectInfo = async (id) => {
+  return (await axios({
+    method: 'get',
+    url: `/api/summary/${id}`,
+  })).data;
 }
 
 defineExpose({
@@ -26,7 +45,7 @@ defineExpose({
   <div class="bg" v-if="openPopUp"></div>
   <div class="popup-open" v-if="openPopUp">
     <div class="header"><a href="javascript:;" @click.prevent="openPopUp = !openPopUp">&lt; Aizvert</a></div>
-    <div class="content">
+    <div class="content" v-if="loaded">
 
       <div class="flex flex-row flex-wrap">
         <div class="basis-8/12 p-3">
@@ -36,8 +55,8 @@ defineExpose({
           </div>
           <div class="hc-card compatibility mb-6">
             <div class="percent">
-              <Donut class="donut mr-3" :percent="40" />
-              40%
+              <Donut class="donut mr-3" :percent="percent" />
+              {{ percent }}%
             </div>
             Atbilstība Tev:
           </div>
@@ -46,11 +65,13 @@ defineExpose({
             <div class="flex flex-row flex-wrap mb-8 mt-8">
               <div class="basis-7/12">
                 <span class="label">Adrese</span><br>
-                <span class="text">sadasdsad</span>
+                <span class="text">{{ schoolInfo.address }}</span>
               </div>
               <div class="basis-5/12">
                 <span class="label">Pieejamie sabiedriskie transporti</span><br>
-                <span class="text">sadasdsad</span>
+                <span class="text">
+                  <span v-for="tr in schoolInfo.transports" :class="tr.type">{{ tr.number }}</span>
+                </span>
               </div>
             </div>
 
@@ -73,9 +94,7 @@ defineExpose({
               <div class="basis-12/12">
                 <span class="label">Pieejamās ārpus skolas aktivitātes</span><br>
                 <span class="text">
-                  <span class="bordered">Dejosana</span>
-                  <span class="bordered">Dejosana</span>
-                  <span class="bordered">Dejosana</span>
+                  <span v-for="ac in schoolInfo.extraCurricularActivities" class="bordered">{{ ac }}</span>
                 </span>
               </div>
             </div>
@@ -84,19 +103,19 @@ defineExpose({
         </div>
         <div class="basis-4/12 p-3">
           <div class="hc-card mb-6 school-title">
-            <h2>6.-9. A klase</h2>
-            <span class="school-name">Rīgas Franču licejs</span>
+            <h2>{{ title }}</h2>
+            <span class="school-name">{{ schoolInfo.title }}</span>
           </div>
           <div class="hc-card ratings">
             <span class="rating-title">Novērtējums</span>
-            <div class="rating-list">
-              <template v-for="index in 10">
-                <div class="flex flex-row flex-wrap align-content-center">
-                  <div class="basis-8/12 p-3">
-                    <RatingSliderStatic :rating="index" />
+            <div class="rating-list" v-if="subjectInfo">
+              <template v-for="name in Object.keys(subjectInfo)">
+                <div class="flex flex-row flex-wrap items-center">
+                  <div class="basis-7/12 p-3">
+                    <RatingSliderStatic :rating="subjectInfo[name]" />
                   </div>
-                  <div class="basis-4/12 p-3">
-                    Matematika
+                  <div class="basis-5/12 p-3">
+                    {{ t(name) }}
                   </div>
                 </div>
               </template>
@@ -105,6 +124,7 @@ defineExpose({
         </div>
       </div>
     </div>
+    <Loading v-else />
   </div>
 </template>
 
@@ -212,6 +232,33 @@ defineExpose({
           border-radius: 10px;
         }
       }
+    }
+
+    .BUS, .TRAM, .TROL {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 12px;
+      text-align: center;
+
+      background: gray;
+      color: white;
+
+      margin: 5px 2px;
+      display: inline-block;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .BUS {
+      background: #DF8A27;
+    }
+
+    .TRAM {
+      background: #DF2727;
+    }
+
+    .TROL {
+      background: #277CDF;
     }
   }
 </style>

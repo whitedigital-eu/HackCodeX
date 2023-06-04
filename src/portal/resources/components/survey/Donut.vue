@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  percent: number
+  percent: any
 }>()
 </script>
 

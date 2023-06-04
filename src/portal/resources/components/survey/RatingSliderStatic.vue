@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const props = defineProps<{
-  rating: number
+  rating: any
 }>()
 </script>
 
 <template>
   <div class="slide-bg">
-    <div class="filled" :style="`width: ${rating * 10}%`"></div>
+    <div class="filled" :style="`width: ${parseInt(rating) * 10}%`"></div>
   </div>
 </template>
 
