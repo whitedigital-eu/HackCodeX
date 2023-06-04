@@ -56,9 +56,9 @@ class SubmissionProcessor implements ProcessorInterface
                     //each grade will have summarized coefficient, so that the grade with largest coefficient
                     //will be used as final grade for subject
                     if (empty($formGroups[$school][$formLetter][$subject][$grade])) {
-                        $formGroups[$school][$formLetter][$subject][$grade] = 3;
+                        $formGroups[$school][$formLetter][$subject][$grade] = 3; //coeff here
                     } else {
-                        $formGroups[$school][$formLetter][$subject][$grade] += 4;
+                        $formGroups[$school][$formLetter][$subject][$grade] += 4; //coeff here
                     }
                 }
             }
