@@ -1,14 +1,17 @@
-<?php declare(strict_types = 1);
+<?php declare(strict_types=1);
 
 namespace App\Processors;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProcessorInterface;
+use App\Entity\Form;
 use App\Entity\Respondent;
 use App\Entity\Submission;
-use App\Enums\SubmissionTypeEnum;
+use App\Entity\SubmissionResult;
 use App\Repository\RespondentRepository;
 use App\Repository\SubmissionRepository;
+use App\Repository\SubmissionResultRepository;
+use Doctrine\ORM\EntityManagerInterface;
 
 class SubmissionProcessor implements ProcessorInterface
 {
@@ -29,6 +32,8 @@ class SubmissionProcessor implements ProcessorInterface
     public function __construct(
         protected readonly RespondentRepository $respondentRepository,
         protected readonly SubmissionRepository $submissionRepository,
+        protected readonly SubmissionResultRepository $submissionResultRepository,
+        protected readonly EntityManagerInterface $entityManager,
     )
     {
     }
@@ -37,42 +42,45 @@ class SubmissionProcessor implements ProcessorInterface
     {
         if ($data instanceof Submission) {
             $formGroups = $submitterScores = [];
-            //lets sort submitters most valued subjects
-            foreach ($this->subjectAttributes as $subjectAttribute) {
-                $getter = 'get' . ucfirst($subjectAttribute);
-                $submitterScores[$subjectAttribute] = $data->$getter();
-                asort($submitterScores);
-            }
             //select required respondents for school/grade groups - sort by most similar respondents
             $respondents = $this->respondentRepository->findRespondentsOrderedByDifference($data);
             foreach ($respondents as $respondentData) {
                 /** @var Respondent $respondent */
                 $respondent = $respondentData[0];
                 $respondent->setDifference($respondentData['difference']);
-                foreach (array_keys($submitterScores) as $priority => $subject) {
+                foreach ($this->subjectAttributes as $subject) {
                     $this->calculateRespondentGradeCoefficients($respondent, $subject, $formGroups);
                 }
             }
+
             //here we get summary grades for each subject of each class group
             $this->calculateClassgroupSummaryGrades($formGroups);
+
+            $weightedFormGroupResults = [];
+            foreach ($formGroups as $formId => $subjects) {
+                $weightedFormGroupResults[$formId] = $this->calculateWeightedFormGroupScore($data, $subjects);
+            }
+
+            $this->submissionRepository->save($data);
+
+            foreach ($weightedFormGroupResults as $formId => $score) {
+                $entity = new SubmissionResult();
+                $entity->setSubmission($data)
+                    ->setForm($this->entityManager->getReference(Form::class, $formId))->setResult($score);
+                $this->submissionResultRepository->save($entity);
+            }
+            $this->entityManager->flush();
+
+            return $data;
         }
-
-        dump($formGroups);
-        exit();
-        $this->submissionRepository->save($data);
-
-
-        return $data;
     }
 
     private function calculateClassgroupSummaryGrades(array &$formGroups): void
     {
-        foreach ($formGroups as $school => $formLetterArray) {
-            foreach ($formLetterArray as $formLetter => $subjectArray) {
-                foreach ($subjectArray as $subject => $gradeArray) {
-                    $grade = array_keys($gradeArray, max($gradeArray), true)[0];
-                    $formGroups[$school][$formLetter][$subject] = $grade;
-                }
+        foreach ($formGroups as $formGroupId => $subjectArray) {
+            foreach ($subjectArray as $subject => $gradeArray) {
+                $grade = array_keys($gradeArray, max($gradeArray), true)[0];
+                $formGroups[$formGroupId][$subject] = $grade;
             }
         }
     }
@@ -84,16 +92,25 @@ class SubmissionProcessor implements ProcessorInterface
     ): void
     {
         $getter = 'get' . ucfirst($subject);
-        $school = $respondent->getForm()?->getSchool();
-        $formLetter = $respondent->getForm()?->getFormLetter();
+        $formGroupId = $respondent->getForm()?->getId();
         $grade = $respondent->{$getter}();
         //summarize grade coefficients, grouped by school - formLetter - subject - grades
         //each grade will have summarized coefficient, so that the grade with largest coefficient
         //will be used as final grade for subject
-        if (empty($formGroups[$school][$formLetter][$subject][$grade])) {
-            $formGroups[$school][$formLetter][$subject][$grade] = 1/$respondent->getDifference();
+        if (empty($formGroups[$formGroupId][$subject][$grade])) {
+            $formGroups[$formGroupId][$subject][$grade] = 1 / $respondent->getDifference();
         } else {
-            $formGroups[$school][$formLetter][$subject][$grade] += 1/$respondent->getDifference();
+            $formGroups[$formGroupId][$subject][$grade] += 1 / $respondent->getDifference();
         }
+    }
+
+    private function calculateWeightedFormGroupScore(Submission $data, array $subjects): int
+    {
+        $score = 0;
+        foreach ($subjects as $subject => $formSummaryGrade) {
+            $getter = 'get' . ucfirst($subject);
+            $score += ($formSummaryGrade * $data->$getter());
+        }
+        return $score;
     }
 }

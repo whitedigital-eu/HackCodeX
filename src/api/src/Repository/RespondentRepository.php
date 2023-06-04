@@ -85,7 +85,7 @@ class RespondentRepository extends ServiceEntityRepository
         foreach ($profileAttributes as $profileAttribute) {
             $orderBy[] = "ABS(r.$profileAttribute - :$profileAttribute)";
         }
-        return implode(' + ', $orderBy) . " AS difference";
+        return "(".implode(' + ', $orderBy) . ") AS difference";
     }
 
     private function buildParameterArray(Submission $submission, array $profileAttributes): array
