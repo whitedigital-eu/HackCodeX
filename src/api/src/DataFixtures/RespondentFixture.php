@@ -27,6 +27,11 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
             return random_int(0, 10);
         }
 
+        function x(): int
+        {
+            return random_int(4, 10);
+        }
+
         $max = 45000;
 
         for ($i = 0; $i < $max; $i++) {
@@ -117,11 +122,6 @@ class RespondentFixture extends AbstractFixture implements DependentFixtureInter
 
     private function setForForm(Respondent $respondent): void
     {
-        function x(): int
-        {
-            return random_int(4, 10);
-        }
-
         $respondent
             ->setLanguages(x())
             ->setSport(x())
