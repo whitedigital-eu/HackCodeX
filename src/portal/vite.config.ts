@@ -5,13 +5,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-const httpsConfig =
-    process.env.NODE_ENV !== 'production'
-        ? {
-          key: readFileSync('/etc/ssl/private/local.io.key'),
-          cert: readFileSync('/etc/ssl/private/local.io.crt'),
-        }
-        : false
+const httpsConfig = false
 
 
 // https://vitejs.dev/config/
