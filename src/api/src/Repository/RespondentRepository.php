@@ -1,9 +1,10 @@
-<?php declare(strict_types = 1);
+<?php declare(strict_types=1);
 
 namespace App\Repository;
 
 use App\Entity\Respondent;
 use App\Entity\Submission;
+use App\Enums\FormTypeEnum;
 use App\Enums\SubmissionTypeEnum;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
@@ -70,12 +71,10 @@ class RespondentRepository extends ServiceEntityRepository
             'concord',
             'control',
         ];
-        $query = $this->createQueryBuilder('r')
-            ->addSelect('f')
+        $query = $this->createQueryBuilder('r')->addSelect('f')
             ->addSelect($this->buildDifferenceNumber($profileAttributes))
-            ->innerJoin('r.form', 'f', 'WITH', 'f.formNumber IN (:formNumbers)')
-            ->setParameters($this->buildParameterArray($submission, $profileAttributes))
-            ->getQuery()->setFirstResult(0)
+            ->innerJoin('r.form', 'f', 'WITH', 'f.type = :formType')
+            ->setParameters($this->buildParameterArray($submission, $profileAttributes))->getQuery()->setFirstResult(0)
             ->setMaxResults(2000);
         return new Paginator($query);
     }
@@ -91,7 +90,8 @@ class RespondentRepository extends ServiceEntityRepository
 
     private function buildParameterArray(Submission $submission, array $profileAttributes): array
     {
-        $parameters['formNumbers'] = SubmissionTypeEnum::Form6th === $submission->getType() ? [7, 8, 9] : [10, 11, 12];
+        $parameters['formType'] = SubmissionTypeEnum::Form6th === $submission->getType() ? FormTypeEnum::SECONDARY
+            : FormTypeEnum::HIGHSCHOOL;
         foreach ($profileAttributes as $profileAttribute) {
             $getter = 'get' . ucfirst($profileAttribute);
             $parameters[$profileAttribute] = $submission->$getter();

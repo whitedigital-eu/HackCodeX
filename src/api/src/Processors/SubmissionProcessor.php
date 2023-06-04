@@ -50,32 +50,22 @@ class SubmissionProcessor implements ProcessorInterface
                 $respondent = $respondentData[0];
                 $respondent->setDifference($respondentData['difference']);
                 foreach (array_keys($submitterScores) as $priority => $subject) {
-                    dump($respondent);
-                    exit();
-                    $getter = 'get' . ucfirst($subject);
-                    $school = $respondent->getForm()?->getSchool();
-                    $formLetter = $respondent->getForm()?->getFormLetter();
-                    $grade = $respondent->{$getter}();
-                    //summarize grade coefficients, grouped by school - formLetter - subject - grades
-                    //each grade will have summarized coefficient, so that the grade with largest coefficient
-                    //will be used as final grade for subject
-                    if (empty($formGroups[$school][$formLetter][$subject][$grade])) {
-                        $formGroups[$school][$formLetter][$subject][$grade] = 3; //coeff here
-                    } else {
-                        $formGroups[$school][$formLetter][$subject][$grade] += 4; //coeff here
-                    }
+                    $this->calculateRespondentGradeCoefficients($respondent, $subject, $formGroups);
                 }
             }
-
             //here we get summary grades for each subject of each class group
-            $this->calculateSummaryGrades($formGroups);
+            $this->calculateClassgroupSummaryGrades($formGroups);
         }
+
+        dump($formGroups);
+        exit();
         $this->submissionRepository->save($data);
+
 
         return $data;
     }
 
-    private function calculateSummaryGrades(array &$formGroups): void
+    private function calculateClassgroupSummaryGrades(array &$formGroups): void
     {
         foreach ($formGroups as $school => $formLetterArray) {
             foreach ($formLetterArray as $formLetter => $subjectArray) {
@@ -84,6 +74,26 @@ class SubmissionProcessor implements ProcessorInterface
                     $formGroups[$school][$formLetter][$subject] = $grade;
                 }
             }
+        }
+    }
+
+    private function calculateRespondentGradeCoefficients(
+        Respondent $respondent,
+        int|string $subject,
+        array      &$formGroups
+    ): void
+    {
+        $getter = 'get' . ucfirst($subject);
+        $school = $respondent->getForm()?->getSchool();
+        $formLetter = $respondent->getForm()?->getFormLetter();
+        $grade = $respondent->{$getter}();
+        //summarize grade coefficients, grouped by school - formLetter - subject - grades
+        //each grade will have summarized coefficient, so that the grade with largest coefficient
+        //will be used as final grade for subject
+        if (empty($formGroups[$school][$formLetter][$subject][$grade])) {
+            $formGroups[$school][$formLetter][$subject][$grade] = 1/$respondent->getDifference();
+        } else {
+            $formGroups[$school][$formLetter][$subject][$grade] += 1/$respondent->getDifference();
         }
     }
 }
