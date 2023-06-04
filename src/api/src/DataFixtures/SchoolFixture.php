@@ -19,11 +19,12 @@ class SchoolFixture extends AbstractFixture implements FixtureGroupInterface
             if ('RĪGA' === $item['Pašvaldība']) {
                 foreach ([7, 10] as $i) {
                     if ('0' !== $item[sprintf('%d. klase', $i)]) {
-                        $entity = (new School())->setTitle($item['Iestādes nosaukums']);
+                        $entity = (new School())
+                            ->setTitle($item['Iestādes nosaukums']);
                         $manager->persist($entity);
                         $manager->flush();
-//                $this->addReference("school_{$entity->getId()}", $entity);
-//                self::$references[self::class][] = "school_{$entity->getId()}";
+
+                        $this->addReference($entity->getTitle(), $entity);
                         break;
                     }
                 }
