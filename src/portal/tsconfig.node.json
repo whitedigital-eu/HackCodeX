@@ -4,6 +4,10 @@
   "compilerOptions": {
     "composite": true,
     "module": "ESNext",
-    "types": ["node"]
+    "types": ["node"],
+    "noEmit": false,
+    "noEmitOnError": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
   }
 }
