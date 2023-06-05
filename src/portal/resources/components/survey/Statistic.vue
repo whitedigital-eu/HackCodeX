@@ -43,9 +43,9 @@ const antonymList = [
 
 <template>
   <div class="statistic">
-    <h1>Tava statistika</h1>
+    <h1>Rezultāti</h1>
     <div class="description">
-      Lorem ipsum dolor sit amet consectetur. Tortor viverra dignissim porttitor lectus lacus duis urna. Orci id feugiat quisque eu turpis.
+      Rezultāti atspoguļo Tavas svarīgākās vērtības dzīvē un kas nosaka Tavas dzīves izvēles
     </div>
     <div class="graphs">
       <div class="graph-block">

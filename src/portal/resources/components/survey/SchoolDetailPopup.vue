@@ -65,12 +65,13 @@ defineExpose({
             <div class="flex flex-row flex-wrap mb-8 mt-8">
               <div class="basis-7/12">
                 <span class="label">Adrese</span><br>
-                <span class="text">{{ schoolInfo.address }}</span>
+                <span class="text">{{ schoolInfo.address ? schoolInfo.address : '--' }}</span>
               </div>
               <div class="basis-5/12">
                 <span class="label">Pieejamie sabiedriskie transporti</span><br>
                 <span class="text">
                   <span v-for="tr in schoolInfo.transports" :class="tr.type">{{ tr.number }}</span>
+                  <span v-if="schoolInfo.transports.length === 0" >--</span>
                 </span>
               </div>
             </div>
@@ -84,7 +85,7 @@ defineExpose({
                 <span class="label">Paralēlklašu skaits</span><br>
                 <span class="text">4</span>
               </div>
-              <div class="basis-3/12">
+              <div class="basis-6/12">
                 <span class="label">Vidējais skolēnu skaits klasē</span><br>
                 <span class="text">28</span>
               </div>

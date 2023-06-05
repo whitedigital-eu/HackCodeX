@@ -3,18 +3,18 @@ import { ref } from 'vue'
 import type {MenuInterface} from "@/interfaces/menu/MenuInterface";
 
 const topMenu = ref<MenuInterface[]>([
-  {
-    label: 'Par mums',
-    location: 'about',
-  },
-  {
-    label: 'Aptauja',
-    location: 'survey',
-  },
+  // {
+  //   label: 'Par mums',
+  //   location: 'about',
+  // },
   {
     label: 'Atrodi savu nākotni',
-    location: 'future',
-  }
+    location: 'survey',
+  },
+  // {
+  //   label: 'Atrodi savu nākotni',
+  //   location: 'future',
+  // }
 ])
 </script>
 

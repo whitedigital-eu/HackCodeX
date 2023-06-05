@@ -5,9 +5,13 @@ import {useSurvey} from "../../stores/survey";
 import Donut from "./Donut.vue";
 import SchoolDetailPopup from "./SchoolDetailPopup.vue";
 import Loading from "../other/Loading.vue";
+import {shuffleArray} from "../../assets/data/quetions";
+import IconOccupation from "../icons/IconOccupation.vue";
+import IconUniersity from "../icons/IconUniersity.vue";
 
 const survey = useSurvey();
 const schools = ref(null);
+const potentials = ref([]);
 
 const colorSet = [
   ['#00C6FF', '#0072FF'],
@@ -44,10 +48,43 @@ const getSchools = async (id) => {
   });
 }
 
+const getOccupations = async (id) => {
+  return await axios({
+    method: 'get',
+    url: `/api/submission_results?page=1&itemsPerPage=5&exists[occupation]=true&order[result]=desc&groups[]=occupation:read&submission.id=${id}`,
+  });
+}
+
+const getUniversity = async (id) => {
+  return await axios({
+    method: 'get',
+    url: `/api/submission_results?page=1&itemsPerPage=4&exists[universityProgram]=true&order[result]=desc&groups[]=university_program:read&submission.id=${id}`,
+  });
+}
+
 onMounted(async () => {
   const submittedResults = await submitResults();
   const resultId = submittedResults.data.id;
   const schoolsResult = await getSchools(resultId);
+  const occupationResult = await getOccupations(resultId);
+  const universityResult = await getUniversity(resultId);
+
+  occupationResult.data.forEach((item) => {
+    potentials.value.push({
+      type: 'occupation',
+      title: item.occupation.title
+    })
+  })
+
+  universityResult.data.forEach((item) => {
+    potentials.value.push({
+      type: 'university',
+      title: item.universityProgram.title
+    })
+  })
+
+  potentials.value = shuffleArray(potentials.value);
+
   schools.value = schoolsResult.data;
 })
 
@@ -58,9 +95,6 @@ const popup = ref(null);
   <school-detail-popup ref="popup" />
   <div class="summary">
     <h1>Nākamais solis zinībās</h1>
-    <div class="description">
-      Lorem ipsum dolor sit amet consectetur. Tortor viverra dignissim porttitor lectus lacus duis urna. Orci id feugiat quisque eu turpis.
-    </div>
     <div class="schools">
       <template v-for="(school, index) in schools">
         <div v-if="index === 4" class="school picmid">
@@ -84,6 +118,24 @@ const popup = ref(null);
       </template>
       <Loading v-if="!schools" />
     </div>
+  </div>
+  <div class="carrier">
+    <h1>Karjeras iespējas</h1>
+    <div class="description">
+      Bieži vien, pabeidzot šo skolu, cilvēki iet šādas tālākās gaitas
+    </div>
+    <div class="grid gap-x-8 gap-y-4 grid-cols-3 carrier-list">
+      <div class="carrier-entity flex flex-row flex-nowrap" v-for="item in potentials" >
+        <div class="basis-3/12 items-center flex justify-center" :class="item.type">
+          <IconOccupation v-if="item.type === 'occupation'" />
+          <IconUniersity v-if="item.type === 'university'"/>
+        </div>
+        <span class="text-title flex basis-9/12 items-center p-2">
+          <span>{{ item.title }}</span>
+        </span>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -214,6 +266,60 @@ const popup = ref(null);
           left: calc(50% - 62px);
         }
       }
+    }
+  }
+}
+
+.carrier {
+  background: #F7F7F9;
+  padding: 60px 20px;
+
+  .carrier-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    .carrier-entity {
+      border-radius: 15px;
+      background: #ffffff;
+      overflow: hidden;
+
+      svg {
+        height: 40px;
+        width: 40px;
+      }
+
+      .text-title {
+        height: 100%;
+        overflow: hidden;
+
+        span {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 100%;
+
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 20px;
+
+        }
+      }
+
+      .university, .occupation {
+        width: 82px;
+        height: 100%;
+        min-height: 74px;
+      }
+
+      .university {
+        background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
+      }
+
+      .occupation {
+        background: linear-gradient(90deg, #00B09B 0%, #96C93D 100%);
+      }
+
     }
   }
 }
