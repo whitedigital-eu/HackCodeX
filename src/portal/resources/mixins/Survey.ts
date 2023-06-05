@@ -10,7 +10,7 @@ export enum SurveyState {
     SUMMARY,
 }
 export class Survey {
-    public answer_limit: number = 20;
+    public answer_limit: number = 40;
     public state: SurveyState = SurveyState.PICTURE_QUIZ;
     public picture_index: number = 0;
     public attribute_summary: ChoiceAttribute = {

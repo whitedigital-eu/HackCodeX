@@ -119,7 +119,7 @@ const popup = ref(null);
       <Loading v-if="!schools" />
     </div>
   </div>
-  <div class="carrier">
+  <div class="carrier" v-if="schools" >
     <h1>Karjeras iespējas</h1>
     <div class="description">
       Bieži vien, pabeidzot šo skolu, cilvēki iet šādas tālākās gaitas

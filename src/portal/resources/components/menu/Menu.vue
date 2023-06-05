@@ -11,10 +11,6 @@ const topMenu = ref<MenuInterface[]>([
     label: 'Atrodi savu nākotni',
     location: 'survey',
   },
-  // {
-  //   label: 'Atrodi savu nākotni',
-  //   location: 'future',
-  // }
 ])
 </script>
 
@@ -24,7 +20,7 @@ const topMenu = ref<MenuInterface[]>([
       <img src="@/assets/images/profile.png" />
     </div>
     <div class="menu">
-      <router-link v-for="item in topMenu" active-class="active" :to="item.location">{{ item.label}}</router-link>
+      <router-link v-for="item in topMenu" class="active" :to="item.location">{{ item.label}}</router-link>
     </div>
   </div>
 </template>

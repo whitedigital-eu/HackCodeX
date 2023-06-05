@@ -51,7 +51,7 @@ const antonymList = [
       <div class="graph-block">
         <apexchart width="500" type="radar" :options="options" :series="series"></apexchart>
       </div>
-      <div class="graph-block">
+      <div class="graph-block line">
         <Graph2 v-for="antonyms in antonymList" :antonyms="antonyms" />
       </div>
     </div>
@@ -79,12 +79,26 @@ const antonymList = [
       flex-direction: row;
     }
 
+    .line {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px; /* Adjust the width as needed */
+        background-color: rgba(0, 0, 0, 0.08); /* Adjust the color as needed */
+        transform: translateX(-50%);
+      }
+    }
+
     .graph-block {
       flex: 1 1 100%;
       text-align: center;
       padding: 0 20px;
       display: flex;
       justify-content: center;
+      position: relative;
 
       &:last-child {
         display: flex;
