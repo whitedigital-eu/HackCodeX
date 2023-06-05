@@ -44,7 +44,7 @@ defineExpose({
 <template>
   <div class="bg" v-if="openPopUp"></div>
   <div class="popup-open" v-if="openPopUp">
-    <div class="header"><a href="javascript:;" @click.prevent="openPopUp = !openPopUp">&lt; Aizvert</a></div>
+    <div class="header"><a href="javascript:;" @click.prevent="openPopUp = !openPopUp">&lt; Aizvērt</a></div>
     <div class="content" v-if="loaded">
 
       <div class="flex flex-row flex-wrap">
